@@ -1,0 +1,20 @@
+{ TABLE "mis".stmas row size = 153 number of columns = 9 index size = 21 }
+create table "mis".stmas 
+  (
+    stid char(10),
+    stdate date,
+    whid char(10),
+    status char(1),
+    remark char(100),
+    create_by char(10),
+    create_date date,
+    update_by char(10),
+    update_date date,
+    primary key (stid) 
+  );
+revoke all on "mis".stmas from "public";
+
+
+
+
+

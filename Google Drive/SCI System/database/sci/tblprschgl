@@ -1,0 +1,17 @@
+{ TABLE "mis".prschgl row size = 30 number of columns = 5 index size = 39 }
+create table "mis".prschgl 
+  (
+    ps_proj_code char(6) not null ,
+    ps_phase_code char(6) not null ,
+    ps_sched_code char(6),
+    ps_sched_stage integer not null ,
+    ps_gl_ac char(8)
+  );
+revoke all on "mis".prschgl from "public";
+
+create unique index "mis".i_prschgl on "mis".prschgl (ps_proj_code,
+    ps_phase_code,ps_sched_code,ps_sched_stage);
+
+
+
+

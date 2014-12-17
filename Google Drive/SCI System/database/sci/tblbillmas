@@ -1,0 +1,33 @@
+{ TABLE "mis".billmas row size = 126 number of columns = 19 index size = 57 }
+create table "mis".billmas 
+  (
+    bill_proj_code char(6) not null ,
+    bill_phase_code char(6) not null ,
+    bill_unit_no char(10) not null ,
+    bill_type char(1) not null ,
+    bill_code char(6) not null ,
+    bill_renotice char(1),
+    bill_op_code char(6),
+    bill_no char(8) not null ,
+    bill_ref char(8),
+    bill_date date,
+    bill_user_id char(8),
+    bill_addr_to char(1),
+    bill_desc char(30),
+    bill_amt money(16,2),
+    bill_os_amt money(16,2),
+    bill_due_date date,
+    bill_int_rate decimal(5,2),
+    bill_status char(1),
+    bill_touch_date date
+  );
+revoke all on "mis".billmas from "public";
+
+create unique index "mis".i_billmas on "mis".billmas (bill_no);
+    
+create index "mis".n_billmas on "mis".billmas (bill_proj_code,
+    bill_phase_code,bill_unit_no);
+
+
+
+

@@ -1,0 +1,25 @@
+{ TABLE "mis".xjnlmas row size = 133 number of columns = 15 index size = 0 }
+create table "mis".xjnlmas 
+  (
+    jnl_ledger char(2),
+    jnl_number serial not null ,
+    jnl_status char(1),
+    jnl_date_created date,
+    jnl_clerk_id char(8),
+    jnl_trans_desc char(30),
+    jnl_trans_desc2 char(30),
+    jnl_trans_src char(6),
+    jnl_trans_trdno char(8),
+    jnl_trans_ref char(10),
+    jnl_trans_year integer,
+    jnl_trans_period integer,
+    jnl_trans_date date,
+    jnl_total_debit money(16,2),
+    jnl_total_credit money(16,2)
+  );
+revoke all on "mis".xjnlmas from "public";
+
+
+
+
+

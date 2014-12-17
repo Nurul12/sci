@@ -1,0 +1,12 @@
+{ TABLE "mis".batdet row size = 16 number of columns = 2 index size = 0 }
+create table "mis".batdet 
+  (
+    bat_id char(8),
+    bat_rf_name char(8)
+  );
+revoke all on "mis".batdet from "public";
+
+
+
+
+

@@ -1,0 +1,35 @@
+{ TABLE "mis".hglacc row size = 194 number of columns = 23 index size = 21 }
+create table "mis".hglacc 
+  (
+    glac_fyr smallint,
+    glac_no char(8),
+    glac_desc char(30),
+    glac_class char(1),
+    glac_type char(1),
+    glac_p_or_m char(1),
+    glac_accum_ac char(8),
+    glac_parent char(8),
+    glac_open_bal money(16,2),
+    glac_curr_bal money(16,2),
+    glac_actual_1 money(16,2),
+    glac_actual_2 money(16,2),
+    glac_actual_3 money(16,2),
+    glac_actual_4 money(16,2),
+    glac_actual_5 money(16,2),
+    glac_actual_6 money(16,2),
+    glac_actual_7 money(16,2),
+    glac_actual_8 money(16,2),
+    glac_actual_9 money(16,2),
+    glac_actual_10 money(16,2),
+    glac_actual_11 money(16,2),
+    glac_actual_12 money(16,2),
+    glac_actual_13 money(16,2)
+  );
+revoke all on "mis".hglacc from "public";
+
+create unique index "mis".i_hglacc on "mis".hglacc (glac_fyr,glac_no);
+    
+
+
+
+

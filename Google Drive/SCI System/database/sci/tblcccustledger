@@ -1,0 +1,24 @@
+{ TABLE "mis".cccustledger row size = 61 number of columns = 11 index size = 42 }
+create table "mis".cccustledger 
+  (
+    custnum char(8),
+    periode integer,
+    tahun integer,
+    acc_balance decimal(16,2),
+    acc_sales decimal(16,2),
+    acc_payment decimal(16,2),
+    mng_stat char(1),
+    closing_date date,
+    update_date date,
+    update_by char(8),
+    daily_limit char(1)
+  );
+revoke all on "mis".cccustledger from "public";
+
+create index "mis".ix481_1 on "mis".cccustledger (custnum);
+create index "mis".ix481_2 on "mis".cccustledger (periode);
+create index "mis".ix481_3 on "mis".cccustledger (tahun);
+
+
+
+

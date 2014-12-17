@@ -1,0 +1,21 @@
+{ TABLE "mis".ltrhmas row size = 58 number of columns = 8 index size = 39 }
+create table "mis".ltrhmas 
+  (
+    le_no serial not null ,
+    le_cust_no char(8) not null ,
+    le_lett_code char(6) not null ,
+    le_type char(1),
+    le_rem_flag char(1),
+    le_rem_no integer,
+    le_ref char(30),
+    le_date date
+  );
+revoke all on "mis".ltrhmas from "public";
+
+create unique index "mis".u_ltrhmas on "mis".ltrhmas (le_no);
+create index "mis".i_ltrhmas on "mis".ltrhmas (le_cust_no,le_lett_code);
+    
+
+
+
+

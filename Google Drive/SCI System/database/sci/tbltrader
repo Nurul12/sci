@@ -1,0 +1,65 @@
+{ TABLE "mis".trader row size = 598 number of columns = 53 index size = 19 }
+create table "mis".trader 
+  (
+    trd_no char(8) not null ,
+    trd_type char(1) not null ,
+    trd_mode char(8),
+    trd_name char(30),
+    trd_addr1 char(30),
+    trd_addr2 char(30),
+    trd_addr3 char(30),
+    trd_postcode char(6),
+    trd_phone char(12),
+    trd_fax char(12),
+    trd_telex char(18),
+    trd_contact char(20),
+    trd_currency char(3) not null ,
+    trd_glcode char(8),
+    trdc_class char(1) not null ,
+    trdc_addr1_ship char(30),
+    trdc_addr2_ship char(30),
+    trdc_addr3_ship char(30),
+    trdc_pcode_ship char(6),
+    trdc_salesman char(6),
+    trdc_territory char(6),
+    trdc_cr_days smallint not null ,
+    trdc_stmt_type char(1) not null ,
+    trdc_cr_limit money(16,2) not null ,
+    trdc_iv_billed_amt money(16,2),
+    trdc_iv_rcpt_amt money(16,2),
+    trdc_iv_rem_no integer,
+    trdc_iv_lett_ref char(28),
+    trdc_iv_lett_date date,
+    trdc_dn_billed_amt money(16,2),
+    trdc_dn_rcpt_amt money(16,2),
+    trdc_rf_amt money(16,2),
+    trdc_unapplied_amt money(16,2),
+    trdc_balance money(16,2) not null ,
+    trdc_supply_ind char(1) not null ,
+    trdc_ind_reason char(20),
+    trds_class char(1) not null ,
+    trds_purchaser char(6),
+    trds_territory char(6),
+    trds_cr_days smallint not null ,
+    trds_stmt_type char(1) not null ,
+    trds_cr_limit money(16,2) not null ,
+    trds_iv_billed_amt money(16,2),
+    trds_iv_rcpt_amt money(16,2),
+    trds_iv_lett_ref char(28),
+    trds_iv_lett_date date,
+    trds_dn_billed_amt money(16,2),
+    trds_dn_rcpt_amt money(16,2),
+    trds_coll_amt money(16,2),
+    trds_unapplied_amt money(16,2),
+    trds_balance money(16,2) not null ,
+    trds_purchase_ind char(1) not null ,
+    trds_ind_reason char(20)
+  );
+revoke all on "mis".trader from "public";
+
+create unique index "mis".i_trader on "mis".trader (trd_no,trd_type);
+    
+
+
+
+

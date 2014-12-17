@@ -1,0 +1,13 @@
+{ TABLE "mis".tfoth row size = 10 number of columns = 2 index size = 18 }
+create table "mis".tfoth 
+  (
+    tfno char(8) not null constraint "mis".n663_tfot,
+    tfnum decimal(2,0) not null 
+  );
+revoke all on "mis".tfoth from "public";
+
+create unique index "mis".ixtfoth on "mis".tfoth (tfno);
+
+
+
+

@@ -1,0 +1,13 @@
+{ TABLE "mis".poprod row size = 60 number of columns = 3 index size = 0 }
+create table "mis".poprod 
+  (
+    crno char(20),
+    pono char(20),
+    fcode char(20)
+  );
+revoke all on "mis".poprod from "public";
+
+
+
+
+

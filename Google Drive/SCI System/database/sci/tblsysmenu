@@ -1,0 +1,15 @@
+{ TABLE "mis".sysmenu row size = 58 number of columns = 4 index size = 36 }
+create table "mis".sysmenu 
+  (
+    menu_id char(20),
+    menu_desc char(30),
+    menu_sort integer,
+    menu_level integer,
+    primary key (menu_id) 
+  );
+revoke all on "mis".sysmenu from "public";
+
+
+
+
+

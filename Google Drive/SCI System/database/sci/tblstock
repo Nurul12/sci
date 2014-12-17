@@ -1,0 +1,24 @@
+{ TABLE "mis".stock row size = 106 number of columns = 13 index size = 18 }
+create table "mis".stock 
+  (
+    itemnum char(8),
+    userid char(8),
+    itemstat char(1) not null ,
+    desc char(30),
+    grpcode char(3),
+    grpdesc char(25),
+    ucount char(1),
+    umeas char(4),
+    upmeas decimal(14,2),
+    uprice decimal(14,2),
+    glnum char(8),
+    ptype char(1),
+    taxes char(1)
+  );
+revoke all on "mis".stock from "public";
+
+create unique index "mis".i_stock on "mis".stock (itemnum);
+
+
+
+

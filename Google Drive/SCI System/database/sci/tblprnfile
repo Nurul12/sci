@@ -1,0 +1,13 @@
+{ TABLE "mis".prnfile row size = 44 number of columns = 3 index size = 0 }
+create table "mis".prnfile 
+  (
+    prncode char(4),
+    prndesc char(25),
+    prncmd char(15)
+  );
+revoke all on "mis".prnfile from "public";
+
+
+
+
+

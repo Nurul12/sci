@@ -1,0 +1,36 @@
+{ TABLE "mis".sdomas2 row size = 171 number of columns = 26 index size = 0 }
+create table "mis".sdomas2 
+  (
+    donum char(8),
+    refnum char(8),
+    userid char(8),
+    dostat char(1),
+    cust char(8),
+    pack char(1),
+    custstat char(1),
+    slsman char(6),
+    invnum char(8),
+    instat char(1),
+    duedate date,
+    regdate date,
+    dodate date,
+    delito char(8),
+    invrem char(30),
+    dorem char(30),
+    qty decimal(16,2),
+    invamt decimal(16,2),
+    osamt decimal(16,2),
+    invcurr char(2),
+    exrate integer,
+    link char(1),
+    flag char(1),
+    exp char(1),
+    curr char(3),
+    tax_percent smallint
+  );
+revoke all on "mis".sdomas2 from "public";
+
+
+
+
+

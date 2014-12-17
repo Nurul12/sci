@@ -1,0 +1,17 @@
+{ TABLE "mis".contmain row size = 32 number of columns = 5 index size = 40 }
+create table "mis".contmain 
+  (
+    cust char(8),
+    curr char(3),
+    cdate date,
+    citem char(8),
+    cprice money(16,4)
+  );
+revoke all on "mis".contmain from "public";
+
+create index "mis".i_contmain on "mis".contmain (cust,curr,cdate,
+    citem);
+
+
+
+

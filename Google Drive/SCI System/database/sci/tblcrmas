@@ -1,0 +1,32 @@
+{ TABLE "mis".crmas row size = 199 number of columns = 19 index size = 57 }
+create table "mis".crmas 
+  (
+    cr_proj_code char(6) not null ,
+    cr_phase_code char(6) not null ,
+    cr_unit_code char(10) not null ,
+    cr_type char(1),
+    cr_no char(8) not null ,
+    cr_op_code char(6),
+    cr_addr_to char(1),
+    cr_date date,
+    cr_user_id char(8),
+    cr_ref char(8),
+    cr_amt money(16,2),
+    cr_status char(1),
+    cr_unappl_amt money(16,2),
+    cr_rem1 char(30),
+    cr_rem2 char(30),
+    cr_rem3 char(30),
+    cr_rem4 char(30),
+    cr_for char(1),
+    cr_who_gen char(1)
+  );
+revoke all on "mis".crmas from "public";
+
+create unique index "mis".i_crmas on "mis".crmas (cr_no);
+create index "mis".n_crmas on "mis".crmas (cr_proj_code,cr_phase_code,
+    cr_unit_code);
+
+
+
+

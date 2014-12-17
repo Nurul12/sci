@@ -1,0 +1,17 @@
+{ TABLE "mis".loanwk row size = 61 number of columns = 7 index size = 0 }
+create table "mis".loanwk 
+  (
+    wk_proj_code char(6),
+    wk_phase_code char(6),
+    wk_unit_no char(10),
+    wk_fin_code char(6),
+    wk_amt_approved money(16,2),
+    wk_date_approved date,
+    wk_approved_ref char(20)
+  );
+revoke all on "mis".loanwk from "public";
+
+
+
+
+

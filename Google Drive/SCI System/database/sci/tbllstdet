@@ -1,0 +1,30 @@
+{ TABLE "mis".lstdet row size = 439 number of columns = 19 index size = 15 }
+create table "mis".lstdet 
+  (
+    lst_code char(6) not null ,
+    lst_var_no integer,
+    lst_var char(8) not null ,
+    lst_access char(1),
+    lst_file char(10),
+    lst_key1 char(40),
+    lst_u1 char(20),
+    lst_key2 char(40),
+    lst_u2 char(20),
+    lst_key3 char(40),
+    lst_u3 char(20),
+    lst_key4 char(40),
+    lst_u4 char(20),
+    lst_key5 char(40),
+    lst_u5 char(20),
+    lst_key6 char(40),
+    lst_u6 char(20),
+    lst_order char(20),
+    lst_field char(30)
+  );
+revoke all on "mis".lstdet from "public";
+
+create index "mis".i_lstdet on "mis".lstdet (lst_code);
+
+
+
+

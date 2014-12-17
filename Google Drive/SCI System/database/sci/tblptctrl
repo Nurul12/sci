@@ -1,0 +1,15 @@
+{ TABLE "mis".ptctrl row size = 12 number of columns = 3 index size = 9 }
+create table "mis".ptctrl 
+  (
+    dpt_code char(2) not null ,
+    dpt_grp char(2),
+    acc_code char(8) not null 
+  );
+revoke all on "mis".ptctrl from "public";
+
+create unique index "mis".i_ptctrl on "mis".ptctrl (dpt_code);
+    
+
+
+
+

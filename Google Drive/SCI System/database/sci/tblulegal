@@ -1,0 +1,26 @@
+{ TABLE "mis".ulegal row size = 90 number of columns = 14 index size = 48 }
+create table "mis".ulegal 
+  (
+    uleg_proj_code char(6),
+    uleg_phase_code char(6),
+    uleg_unit_no char(10),
+    uleg_fin_code char(6),
+    uleg_sol_code char(6),
+    uleg_code char(6),
+    uleg_step_no integer,
+    uleg_step_name char(8),
+    uleg_sdate_desc char(10),
+    uleg_edate_desc char(10),
+    uleg_sdate date,
+    uleg_edate date,
+    uleg_lett char(6),
+    uleg_lett_sent integer
+  );
+revoke all on "mis".ulegal from "public";
+
+create index "mis".i_ulegal on "mis".ulegal (uleg_proj_code,uleg_phase_code,
+    uleg_unit_no,uleg_fin_code);
+
+
+
+

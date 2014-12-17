@@ -1,0 +1,16 @@
+{ TABLE "mis".arjnldet row size = 38 number of columns = 5 index size = 12 }
+create table "mis".arjnldet 
+  (
+    jvno integer not null ,
+    jdeb char(8),
+    jgl char(8),
+    jdr money(16,2),
+    jcr money(16,2)
+  );
+revoke all on "mis".arjnldet from "public";
+
+create index "mis".i_arjnldet on "mis".arjnldet (jvno);
+
+
+
+

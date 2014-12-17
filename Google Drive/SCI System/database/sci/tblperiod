@@ -1,0 +1,37 @@
+{ TABLE "mis".period row size = 108 number of columns = 27 index size = 0 }
+create table "mis".period 
+  (
+    prd_year integer,
+    prd_from_date_1 date,
+    prd_to_date_1 date,
+    prd_from_date_2 date,
+    prd_to_date_2 date,
+    prd_from_date_3 date,
+    prd_to_date_3 date,
+    prd_from_date_4 date,
+    prd_to_date_4 date,
+    prd_from_date_5 date,
+    prd_to_date_5 date,
+    prd_from_date_6 date,
+    prd_to_date_6 date,
+    prd_from_date_7 date,
+    prd_to_date_7 date,
+    prd_from_date_8 date,
+    prd_to_date_8 date,
+    prd_from_date_9 date,
+    prd_to_date_9 date,
+    prd_from_date_10 date,
+    prd_to_date_10 date,
+    prd_from_date_11 date,
+    prd_to_date_11 date,
+    prd_from_date_12 date,
+    prd_to_date_12 date,
+    prd_from_date_13 date,
+    prd_to_date_13 date
+  );
+revoke all on "mis".period from "public";
+
+
+
+
+

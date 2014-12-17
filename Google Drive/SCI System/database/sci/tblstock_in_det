@@ -1,0 +1,15 @@
+{ TABLE "mis".stock_in_det row size = 41 number of columns = 5 index size = 0 }
+create table "mis".stock_in_det 
+  (
+    st_in_id char(8) not null ,
+    st_in_house integer not null ,
+    st_in_code char(8) not null ,
+    st_in_qty decimal(10,0) not null ,
+    st_in_batch char(15)
+  );
+revoke all on "mis".stock_in_det from "public";
+
+
+
+
+

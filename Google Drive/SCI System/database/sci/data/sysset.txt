@@ -1,0 +1,5 @@
+INVOTHIN|NUMOTHIN|Setting running number untuk modul incoming stock note|7ISJ|1.0||dba|18/10/2011|||
+INVOTHOUT|NUMOTHOUT|Outgoing Stock|7OSJ|1.0||||||
+TRANSFER|NUMTRANSFE|Transfer Order Antar Gudang|7TGJ|51.0|Y|||||
+OPNAME|NUMOPNAME|Stock Opname|7SOJ|10.0||dba|28/10/2011|||
+ADJUST|NUMADJUST|Adjustment|7ADJ|10.0||dba|28/10/2011|||

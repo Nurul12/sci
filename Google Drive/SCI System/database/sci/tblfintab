@@ -1,0 +1,27 @@
+{ TABLE "mis".fintab row size = 276 number of columns = 15 index size = 15 }
+create table "mis".fintab 
+  (
+    fin_code char(6) not null ,
+    fin_name char(30) not null ,
+    fin_addr1 char(30),
+    fin_addr2 char(30),
+    fin_addr3 char(20),
+    fin_post_code char(6),
+    fin_city char(15),
+    fin_state char(15),
+    fin_tel1 char(15),
+    fin_tel2 char(15),
+    fin_fax char(15),
+    fin_telex char(18),
+    fin_contact1 char(30),
+    fin_contact2 char(30),
+    fin_stat char(1)
+  );
+revoke all on "mis".fintab from "public";
+
+create unique index "mis".i_fintab on "mis".fintab (fin_code);
+    
+
+
+
+

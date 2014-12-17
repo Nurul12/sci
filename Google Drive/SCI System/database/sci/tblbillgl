@@ -1,0 +1,16 @@
+{ TABLE "mis".billgl row size = 42 number of columns = 5 index size = 18 }
+create table "mis".billgl 
+  (
+    bill_no char(8),
+    bill_ln_ref char(8),
+    bill_gl char(8),
+    bill_dr_amt money(16,2),
+    bill_cr_amt money(16,2)
+  );
+revoke all on "mis".billgl from "public";
+
+create index "mis".i_billgl on "mis".billgl (bill_no);
+
+
+
+

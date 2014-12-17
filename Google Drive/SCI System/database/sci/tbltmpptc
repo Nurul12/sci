@@ -1,0 +1,12 @@
+{ TABLE "mis".tmpptc row size = 8 number of columns = 1 index size = 18 }
+create table "mis".tmpptc 
+  (
+    cbc_ptc_no char(8)
+  );
+revoke all on "mis".tmpptc from "public";
+
+create index "mis".i_tmpptc on "mis".tmpptc (cbc_ptc_no);
+
+
+
+

@@ -1,0 +1,18 @@
+{ TABLE "mis".pygl row size = 102 number of columns = 7 index size = 30 }
+create table "mis".pygl 
+  (
+    p_supp_no char(8),
+    p_no char(8),
+    p_gl char(8),
+    p_dr_amt money(16,2),
+    p_cr_amt money(16,2),
+    p_desc char(30),
+    p_desc2 char(30)
+  );
+revoke all on "mis".pygl from "public";
+
+create index "mis".i_pygl on "mis".pygl (p_supp_no,p_no);
+
+
+
+

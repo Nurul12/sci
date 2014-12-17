@@ -1,0 +1,32 @@
+{ TABLE "mis".dnmas row size = 199 number of columns = 17 index size = 79 }
+create table "mis".dnmas 
+  (
+    dr_cust_no char(8) not null ,
+    dr_no char(8),
+    dr_ref char(8),
+    dr_op_code char(6),
+    dr_curr char(3),
+    dr_ex_rate decimal(10,5),
+    dr_date date,
+    dr_user_id char(8),
+    dr_amt money(16,2),
+    dr_status char(1),
+    dr_os_amt money(16,2),
+    dr_due_date date,
+    dr_touch_date date,
+    dr_rem1 char(30),
+    dr_rem2 char(30),
+    dr_rem3 char(30),
+    dr_rem4 char(30)
+  );
+revoke all on "mis".dnmas from "public";
+
+create unique index "mis".i_dnmas on "mis".dnmas (dr_no);
+create index "mis".i_dnmas2 on "mis".dnmas (dr_cust_no,dr_no,dr_date);
+    
+create index "mis".i_dnmas3 on "mis".dnmas (dr_status,dr_cust_no,
+    dr_date);
+
+
+
+

@@ -1,0 +1,19 @@
+{ TABLE "mis".pydet row size = 50 number of columns = 8 index size = 30 }
+create table "mis".pydet 
+  (
+    p_supp_no char(8),
+    p_no char(8) not null ,
+    p_alloc_type char(1),
+    p_doc_no char(15),
+    p_amt money(16,2),
+    p_clear_date date,
+    p_status char(1),
+    p_doc_date date
+  );
+revoke all on "mis".pydet from "public";
+
+create index "mis".i_pydet on "mis".pydet (p_supp_no,p_no);
+
+
+
+

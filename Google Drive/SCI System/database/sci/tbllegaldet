@@ -1,0 +1,18 @@
+{ TABLE "mis".legaldet row size = 74 number of columns = 7 index size = 15 }
+create table "mis".legaldet 
+  (
+    legal_code char(6) not null ,
+    legal_step_no integer,
+    legal_step_name char(8) not null ,
+    legal_step_desc char(30),
+    legal_sdate_desc char(10),
+    legal_edate_desc char(10),
+    legal_step_lett char(6)
+  );
+revoke all on "mis".legaldet from "public";
+
+create index "mis".i_legaldet on "mis".legaldet (legal_code);
+
+
+
+

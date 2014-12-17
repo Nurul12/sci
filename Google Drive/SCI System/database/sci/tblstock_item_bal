@@ -1,0 +1,22 @@
+{ TABLE "mis".stock_item_bal row size = 84 number of columns = 11 index size = 0 
+              }
+create table "mis".stock_item_bal 
+  (
+    st_icode char(8) not null ,
+    st_periode integer not null ,
+    st_tahun integer not null ,
+    st_current decimal(16,2) not null ,
+    st_in decimal(16,2) not null ,
+    st_out decimal(16,2) not null ,
+    st_closing_date date,
+    st_update_by char(10),
+    st_update_date date,
+    st_farm char(8) not null ,
+    st_batch char(15)
+  );
+revoke all on "mis".stock_item_bal from "public";
+
+
+
+
+

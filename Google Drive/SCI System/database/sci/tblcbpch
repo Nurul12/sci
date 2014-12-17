@@ -1,0 +1,27 @@
+{ TABLE "mis".cbpch row size = 203 number of columns = 15 index size = 18 }
+create table "mis".cbpch 
+  (
+    cbc_ptc_no char(8) not null ,
+    cbc_vno char(8) not null ,
+    cbc_ref char(8),
+    cbc_dept char(2) not null ,
+    cbc_payee char(25),
+    cbc_user_id char(8),
+    cbc_status char(1),
+    cbc_op_code char(6),
+    cbc_date date,
+    cbc_reg_date date not null ,
+    cbc_amount money(16,2),
+    cbc_rem1 char(30),
+    cbc_rem2 char(30),
+    cbc_rem3 char(30),
+    cbc_rem4 char(30)
+  );
+revoke all on "mis".cbpch from "public";
+
+create unique index "mis".i_cbpch on "mis".cbpch (cbc_ptc_no);
+    
+
+
+
+

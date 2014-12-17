@@ -1,0 +1,15 @@
+{ TABLE "mis".billdet row size = 55 number of columns = 4 index size = 18 }
+create table "mis".billdet 
+  (
+    bill_no char(8) not null ,
+    bill_ln_ref char(8),
+    bill_ln_desc char(30),
+    bill_ln_amt money(16,2)
+  );
+revoke all on "mis".billdet from "public";
+
+create index "mis".i_billdet on "mis".billdet (bill_no);
+
+
+
+

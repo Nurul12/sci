@@ -1,0 +1,29 @@
+{ TABLE "mis".crating row size = 58 number of columns = 14 index size = 87 }
+create table "mis".crating 
+  (
+    trno char(8),
+    keyno integer,
+    docid integer,
+    debtor char(8),
+    sman char(6),
+    docno char(8),
+    docdate date,
+    duedate date,
+    dayno smallint,
+    wkended date,
+    point smallint,
+    grade char(1),
+    ttype char(1),
+    pgrp char(2)
+  );
+revoke all on "mis".crating from "public";
+
+create index "mis".i_crating4 on "mis".crating (trno);
+create index "mis".i_crating on "mis".crating (keyno,ttype);
+create index "mis".i_crating2 on "mis".crating (docno,ttype);
+create index "mis".i_crating3 on "mis".crating (debtor,docno,docdate);
+    
+
+
+
+

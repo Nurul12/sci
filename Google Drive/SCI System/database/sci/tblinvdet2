@@ -1,0 +1,19 @@
+{ TABLE "mis".invdet2 row size = 52 number of columns = 8 index size = 18 }
+create table "mis".invdet2 
+  (
+    invnum char(8) not null ,
+    dept char(2),
+    item char(8) not null ,
+    uprice decimal(14,2),
+    qtywght decimal(14,2),
+    packwght decimal(10,2),
+    mortwght decimal(10,2),
+    spoiwght decimal(10,2)
+  );
+revoke all on "mis".invdet2 from "public";
+
+create index "mis".i_invdet2 on "mis".invdet2 (invnum);
+
+
+
+

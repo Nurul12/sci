@@ -1,0 +1,17 @@
+{ TABLE "mis".pcodet row size = 63 number of columns = 5 index size = 30 }
+create table "mis".pcodet 
+  (
+    co_supp_no char(8) not null ,
+    co_no char(8) not null ,
+    co_line_ref char(8),
+    co_line_desc char(30),
+    co_line_amt money(16,2)
+  );
+revoke all on "mis".pcodet from "public";
+
+create index "mis".i_pcodet on "mis".pcodet (co_supp_no,co_no);
+    
+
+
+
+

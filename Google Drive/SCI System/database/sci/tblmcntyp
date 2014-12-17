@@ -1,0 +1,13 @@
+{ TABLE "mis".mcntyp row size = 4 number of columns = 2 index size = 9 }
+create table "mis".mcntyp 
+  (
+    pgrp char(2),
+    ctyp char(2)
+  );
+revoke all on "mis".mcntyp from "public";
+
+create unique index "mis".i_mcntyp on "mis".mcntyp (pgrp);
+
+
+
+

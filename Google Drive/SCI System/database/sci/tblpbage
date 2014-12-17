@@ -1,0 +1,32 @@
+{ TABLE "mis".pbage row size = 124 number of columns = 20 index size = 57 }
+create table "mis".pbage 
+  (
+    age_proj_code char(6),
+    age_phase_code char(6),
+    age_unit_code char(10),
+    age_period integer,
+    age_month char(3),
+    age_year char(4),
+    age_doc_no char(8),
+    age_doc_date date,
+    age_doc_desc char(30),
+    age_doc_name char(2),
+    age_doc_type char(1),
+    age_doc_for char(1),
+    age_addr_to char(1),
+    age_who_code char(6),
+    age_doc_stat char(1),
+    age_post_stat char(1),
+    age_bill_amt money(16,2),
+    age_os_amt money(16,2),
+    age_paid_amt money(16,2),
+    age_amt money(16,2)
+  );
+revoke all on "mis".pbage from "public";
+
+create index "mis".i_pbage on "mis".pbage (age_proj_code,age_phase_code,
+    age_unit_code,age_period,age_doc_no);
+
+
+
+

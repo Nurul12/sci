@@ -1,0 +1,34 @@
+{ TABLE "mis".upurch row size = 284 number of columns = 21 index size = 105 }
+create table "mis".upurch 
+  (
+    up_proj_code char(6) not null ,
+    up_phase_code char(6) not null ,
+    up_unit_no char(10) not null ,
+    up_pri integer,
+    up_name char(40) not null ,
+    up_addr1 char(40),
+    up_addr2 char(30),
+    up_addr3 char(30),
+    up_post_code char(6),
+    up_city char(15),
+    up_state char(15),
+    up_tel_off char(15),
+    up_tel_home char(15),
+    up_citizenship char(1),
+    up_ic char(15),
+    up_ic_c char(1),
+    up_sex char(1),
+    up_marital_stat char(1),
+    up_occ char(20),
+    up_mthly_in money(16,2),
+    up_birth_date date
+  );
+revoke all on "mis".upurch from "public";
+
+create index "mis".i_upurch on "mis".upurch (up_proj_code,up_phase_code,
+    up_unit_no);
+create index "mis".n_upurch on "mis".upurch (up_name);
+
+
+
+

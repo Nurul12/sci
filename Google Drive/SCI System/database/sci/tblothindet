@@ -1,0 +1,15 @@
+{ TABLE "mis".othindet row size = 32 number of columns = 4 index size = 33 }
+create table "mis".othindet 
+  (
+    othinid char(10),
+    icode char(8),
+    qty decimal(14,2),
+    uom char(6),
+    primary key (othinid,icode) 
+  );
+revoke all on "mis".othindet from "public";
+
+
+
+
+

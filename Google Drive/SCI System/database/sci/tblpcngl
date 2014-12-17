@@ -1,0 +1,18 @@
+{ TABLE "mis".pcngl row size = 102 number of columns = 7 index size = 30 }
+create table "mis".pcngl 
+  (
+    cr_supp_no char(8),
+    cr_no char(8),
+    cr_gl char(8),
+    cr_cr_amt money(16,2),
+    cr_dr_amt money(16,2),
+    cr_desc char(30),
+    cr_desc2 char(30)
+  );
+revoke all on "mis".pcngl from "public";
+
+create index "mis".i_pcngl on "mis".pcngl (cr_supp_no,cr_no);
+
+
+
+

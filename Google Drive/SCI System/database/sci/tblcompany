@@ -1,0 +1,24 @@
+{ TABLE "mis".company row size = 230 number of columns = 14 index size = 0 }
+create table "mis".company 
+  (
+    cp_code char(6),
+    cp_name char(50),
+    cp_no char(10),
+    cp_addr1 char(30),
+    cp_addr2 char(30),
+    cp_addr3 char(24),
+    cp_post_code char(6),
+    cp_phone char(12),
+    cp_fax char(12),
+    cp_telex char(18),
+    cp_contact char(20),
+    cp_base_currency char(3),
+    cp_last_posting char(8),
+    cp_in_progress char(1)
+  );
+revoke all on "mis".company from "public";
+
+
+
+
+

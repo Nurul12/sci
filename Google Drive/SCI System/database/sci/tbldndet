@@ -1,0 +1,15 @@
+{ TABLE "mis".dndet row size = 55 number of columns = 4 index size = 18 }
+create table "mis".dndet 
+  (
+    dr_no char(8) not null ,
+    dr_line_ref char(8),
+    dr_line_desc char(30),
+    dr_line_amt money(16,2)
+  );
+revoke all on "mis".dndet from "public";
+
+create index "mis".i_dndet on "mis".dndet (dr_no);
+
+
+
+

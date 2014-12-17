@@ -1,0 +1,13 @@
+{ TABLE "mis".facat row size = 32 number of columns = 2 index size = 9 }
+create table "mis".facat 
+  (
+    fa_cat char(2),
+    fa_desc char(30)
+  );
+revoke all on "mis".facat from "public";
+
+create unique index "mis".i_facat on "mis".facat (fa_cat);
+
+
+
+

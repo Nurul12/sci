@@ -1,0 +1,40 @@
+{ TABLE "mis".apctrl row size = 86 number of columns = 30 index size = 0 }
+create table "mis".apctrl 
+  (
+    ap_company_code char(6) not null ,
+    ap_age_1_from smallint not null ,
+    ap_age_1_to smallint not null ,
+    ap_age_2_from smallint not null ,
+    ap_age_2_to smallint not null ,
+    ap_age_3_from smallint not null ,
+    ap_age_3_to smallint not null ,
+    ap_age_4_from smallint not null ,
+    ap_age_4_to smallint not null ,
+    ap_age_5_from smallint not null ,
+    ap_age_5_to smallint not null ,
+    ap_age_ovr_5 smallint not null ,
+    ap_auto_adj_no char(1) not null ,
+    ap_debit_no integer not null ,
+    ap_credit_no integer not null ,
+    ap_auto_pay_no char(1) not null ,
+    ap_start_pay_no integer not null ,
+    ap_start_coll_no integer,
+    ap_auto_lett char(1) not null ,
+    ap_lett_no integer not null ,
+    ap_int_rate decimal(5,2),
+    ap_multi_curr char(1),
+    ap_cb_feed char(1),
+    ap_gl_feed char(1) not null ,
+    ap_gl_feed_mode char(1) not null ,
+    ap_acc_code char(8),
+    ap_purc_code char(8),
+    ap_ex_diff char(8),
+    ap_retention smallint,
+    ap_auto_coll_no char(1)
+  );
+revoke all on "mis".apctrl from "public";
+
+
+
+
+

@@ -1,0 +1,32 @@
+{ TABLE "mis".pdnmas row size = 203 number of columns = 18 index size = 66 }
+create table "mis".pdnmas 
+  (
+    dr_supp_no char(8) not null ,
+    dr_no char(8),
+    dr_ref char(8),
+    dr_op_code char(6),
+    dr_curr char(3),
+    dr_ex_rate decimal(10,5),
+    dr_reg_date date,
+    dr_date date,
+    dr_user_id char(8),
+    dr_amt money(16,2),
+    dr_status char(1),
+    dr_os_amt money(16,2),
+    dr_due_date date,
+    dr_touch_date date,
+    dr_rem1 char(30),
+    dr_rem2 char(30),
+    dr_rem3 char(30),
+    dr_rem4 char(30)
+  );
+revoke all on "mis".pdnmas from "public";
+
+create unique index "mis".i_pdnmas on "mis".pdnmas (dr_supp_no,
+    dr_no);
+create index "mis".i_pdnmas2 on "mis".pdnmas (dr_supp_no,dr_no,
+    dr_reg_date);
+
+
+
+

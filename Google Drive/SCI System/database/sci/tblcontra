@@ -1,0 +1,28 @@
+{ TABLE "mis".contra row size = 114 number of columns = 14 index size = 60 }
+create table "mis".contra 
+  (
+    userid char(8),
+    acdate date,
+    debtor char(8),
+    sman char(6),
+    dono char(8),
+    dodate date,
+    bp decimal(12,2),
+    ap decimal(12,2),
+    qtywght decimal(12,2),
+    amount money(16,2),
+    refno char(8),
+    rem char(30),
+    recno integer,
+    docid integer
+  );
+revoke all on "mis".contra from "public";
+
+create index "mis".i_contra1 on "mis".contra (dono);
+create index "mis".i_contra2 on "mis".contra (docid,recno);
+create index "mis".i_contra3 on "mis".contra (docid);
+create index "mis".i_contra4 on "mis".contra (recno);
+
+
+
+

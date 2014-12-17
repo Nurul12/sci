@@ -1,0 +1,21 @@
+{ TABLE "mis".subdept_tmp row size = 199 number of columns = 11 index size = 0 }
+create table "mis".subdept_tmp 
+  (
+    custnum char(8),
+    subcode char(8),
+    subdesc char(25),
+    area char(6),
+    addr1 char(30),
+    addr2 char(30),
+    addr3 char(30),
+    tel char(12),
+    fax char(12),
+    telex char(18),
+    contact char(20)
+  );
+revoke all on "mis".subdept_tmp from "public";
+
+
+
+
+

@@ -1,0 +1,27 @@
+{ TABLE "mis".prfin row size = 122 number of columns = 15 index size = 33 }
+create table "mis".prfin 
+  (
+    pf_proj_code char(6) not null ,
+    pf_phase_code char(6) not null ,
+    pf_fin_code char(6) not null ,
+    pf_desc char(30),
+    pf_b_amt money(16,2),
+    pf_o_amt money(16,2),
+    pf_p_b_amt money(16,2),
+    pf_p_o_amt money(16,2),
+    pf_app_b_amt money(16,2),
+    pf_app_o_amt money(16,2),
+    pf_p_bumi_no integer,
+    pf_p_other_no integer,
+    pf_bumi_no integer,
+    pf_other_no integer,
+    pf_expiry_date date
+  );
+revoke all on "mis".prfin from "public";
+
+create unique index "mis".i_prfin on "mis".prfin (pf_proj_code,
+    pf_phase_code,pf_fin_code);
+
+
+
+

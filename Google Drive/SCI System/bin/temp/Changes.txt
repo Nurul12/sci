@@ -1,0 +1,26 @@
+Program Aplikasi SCI
+
+------------------------------- Version 1.2.1 --------------------------------
+27 Agustus
+- Revisi Report Sales By Cabang, By Month, By Item dan SDB
+
+------------------------------- Version 1.2.0 --------------------------------
+7 Agustus
+- Report Sales By Cabang, By Month, By Item
+
+------------------------------- Version 1.2.0 --------------------------------
+25 Juni
+- Module Export PO,SRN,DO (Module Purchasing dieksport Purchasing DBest untuk Dutamas)
+- Module Import PO (Tambahan Module Accounting)
+- Module Import SRN (Tambahan Module Accounting)
+- Report SDB (Module Sales kategori Internal & Open Market)
+
+------------------------------- Version 1.1.0 --------------------------------
+10 Juni
+- Revisi Import sdomas,sdodet,invdet apabila sudah ada diabaikan, apabila belum diinsert
+- Format Tgl harus dd-mm-yyyy, apabila tidak sesuai program tidak bisa dibuka
+
+------------------------------- Version 1.0.0 --------------------------------
+25 April 2012
+- Initial Release
+- Module Inventory

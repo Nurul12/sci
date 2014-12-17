@@ -1,0 +1,14 @@
+{ TABLE "mis".loantab row size = 36 number of columns = 2 index size = 15 }
+create table "mis".loantab 
+  (
+    loan_code char(6) not null ,
+    loan_desc char(30) not null 
+  );
+revoke all on "mis".loantab from "public";
+
+create unique index "mis".i_loantab on "mis".loantab (loan_code);
+    
+
+
+
+

@@ -1,0 +1,18 @@
+{ TABLE "mis".pdngl row size = 102 number of columns = 7 index size = 30 }
+create table "mis".pdngl 
+  (
+    dr_supp_no char(8),
+    dr_no char(8),
+    dr_gl char(8),
+    dr_dr_amt money(16,2),
+    dr_cr_amt money(16,2),
+    dr_desc char(30),
+    dr_desc2 char(30)
+  );
+revoke all on "mis".pdngl from "public";
+
+create index "mis".i_pdngl on "mis".pdngl (dr_supp_no,dr_no);
+
+
+
+

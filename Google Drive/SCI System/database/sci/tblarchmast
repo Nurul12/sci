@@ -1,0 +1,26 @@
+{ TABLE "mis".archmast row size = 129 number of columns = 15 index size = 12 }
+create table "mis".archmast 
+  (
+    jnl_ledger char(2),
+    jnl_batch_no char(6),
+    jnl_status char(1),
+    jnl_date_created date,
+    jnl_clerk_id char(8),
+    jnl_number serial not null ,
+    jnl_trans_desc char(30),
+    jnl_trans_desc2 char(30),
+    jnl_trans_src char(6),
+    jnl_trans_ref char(10),
+    jnl_trans_year integer,
+    jnl_trans_period smallint,
+    jnl_trans_date date,
+    jnl_total_debit money(16,2),
+    jnl_total_credit money(16,2)
+  );
+revoke all on "mis".archmast from "public";
+
+create index "mis".i_archmast on "mis".archmast (jnl_number);
+
+
+
+

@@ -1,0 +1,16 @@
+{ TABLE "mis".access row size = 67 number of columns = 5 index size = 21 }
+create table "mis".access 
+  (
+    acc_prog_id char(10) not null ,
+    acc_desc char(30),
+    acc_level smallint,
+    acc_askpswd char(1),
+    acc_passwd char(24)
+  );
+revoke all on "mis".access from "public";
+
+create index "mis".i_access on "mis".access (acc_prog_id);
+
+
+
+

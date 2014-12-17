@@ -1,0 +1,21 @@
+{ TABLE "mis".sysgroupdet row size = 46 number of columns = 10 index size = 51 }
+create table "mis".sysgroupdet 
+  (
+    group_id char(10),
+    menu_id char(20),
+    group_add smallint,
+    group_modify smallint,
+    group_delete smallint,
+    group_s1 smallint,
+    group_s2 smallint,
+    group_s3 smallint,
+    group_s4 smallint,
+    group_s5 smallint,
+    primary key (group_id,menu_id) 
+  );
+revoke all on "mis".sysgroupdet from "public";
+
+
+
+
+

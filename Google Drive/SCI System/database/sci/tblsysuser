@@ -1,0 +1,15 @@
+{ TABLE "mis".sysuser row size = 100 number of columns = 4 index size = 21 }
+create table "mis".sysuser 
+  (
+    user_id char(10),
+    user_password char(50),
+    user_name char(30),
+    group_id char(10),
+    primary key (user_id) 
+  );
+revoke all on "mis".sysuser from "public";
+
+
+
+
+

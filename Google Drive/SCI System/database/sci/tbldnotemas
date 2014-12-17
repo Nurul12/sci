@@ -1,0 +1,30 @@
+{ TABLE "mis".dnotemas row size = 156 number of columns = 14 index size = 87 }
+create table "mis".dnotemas 
+  (
+    dr_cust_no char(8) not null ,
+    dr_no char(8) not null ,
+    dr_ref char(8),
+    dr_date date,
+    dr_user_id char(8),
+    dr_status char(1),
+    dr_due_date date,
+    dr_rem1 char(30),
+    dr_rem2 char(30),
+    dr_rem3 char(30),
+    dr_amt money(16,2),
+    dr_os_amt money(16,2),
+    dr_spay char(1),
+    dr_sman char(6)
+  );
+revoke all on "mis".dnotemas from "public";
+
+create unique index "mis".i_dnotemas on "mis".dnotemas (dr_no);
+    
+create index "mis".i_dnotemas2 on "mis".dnotemas (dr_date,dr_cust_no,
+    dr_no);
+create index "mis".i_dnotemas3 on "mis".dnotemas (dr_date,dr_sman,
+    dr_cust_no);
+
+
+
+

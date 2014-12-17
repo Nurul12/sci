@@ -1,0 +1,9 @@
+
+
+create view "mis".v_subdept (custnum,subcode,subdesc,area,custname) as 
+  select x0.custnum ,x0.subcode ,x0.subdesc ,x0.area ,x1.custname 
+    from "mis".subdept x0 ,"mis".custmast x1 where (x0.custnum 
+    = x1.custnum ) ;                                         
+         
+
+

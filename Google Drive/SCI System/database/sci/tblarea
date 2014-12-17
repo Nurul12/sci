@@ -1,0 +1,13 @@
+{ TABLE "mis".area row size = 36 number of columns = 2 index size = 15 }
+create table "mis".area 
+  (
+    a_code char(6),
+    a_name char(30)
+  );
+revoke all on "mis".area from "public";
+
+create unique index "mis".i_area on "mis".area (a_code);
+
+
+
+

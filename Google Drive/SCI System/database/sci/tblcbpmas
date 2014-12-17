@@ -1,0 +1,28 @@
+{ TABLE "mis".cbpmas row size = 209 number of columns = 17 index size = 18 }
+create table "mis".cbpmas 
+  (
+    cbp_no char(8),
+    cbp_ref char(10),
+    cbp_op_code char(6),
+    cbp_payee char(30),
+    cbp_date date,
+    cbp_user_id char(8),
+    cbp_status char(1),
+    cbp_amt money(16,2),
+    cbp_bank_code char(8),
+    cbp_cheque_no char(12),
+    cbp_trn_code char(6),
+    cbp_clear_date date,
+    cbp_cheque_date date,
+    cbp_bank_outch money(16,2),
+    cbp_desc char(30),
+    cbp_desc2 char(30),
+    cbp_desc3 char(30)
+  );
+revoke all on "mis".cbpmas from "public";
+
+create unique index "mis".i_cbpmas on "mis".cbpmas (cbp_no);
+
+
+
+

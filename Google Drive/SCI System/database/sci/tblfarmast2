@@ -1,0 +1,34 @@
+{ TABLE "mis".farmast2 row size = 265 number of columns = 22 index size = 18 }
+create table "mis".farmast2 
+  (
+    fcode char(8),
+    ftype char(1),
+    inventory char(1),
+    fname char(30),
+    add1 char(30),
+    add2 char(30),
+    add3 char(30),
+    tel char(20),
+    fax char(20),
+    contact char(30),
+    glcode char(8),
+    join_date date,
+    capacity decimal(16),
+    territory char(6),
+    collateral integer,
+    object char(1),
+    create_by char(8),
+    create_date date,
+    update_by char(8),
+    update_date date,
+    transp integer,
+    transp2 integer
+  );
+revoke all on "mis".farmast2 from "public";
+
+create unique index "mis".i_farmast2 on "mis".farmast2 (fcode);
+    
+
+
+
+

@@ -1,0 +1,22 @@
+{ TABLE "mis".letmas row size = 69 number of columns = 10 index size = 15 }
+create table "mis".letmas 
+  (
+    lett_code char(6) not null ,
+    lett_desc char(30) not null ,
+    lett_type char(1) not null ,
+    lett_rem_flag char(1),
+    lett_rem_no integer,
+    lett_att_code char(6),
+    lett_step integer,
+    lett_days integer,
+    lett_name char(12),
+    lett_date_type char(1)
+  );
+revoke all on "mis".letmas from "public";
+
+create unique index "mis".i_letmas on "mis".letmas (lett_code);
+    
+
+
+
+

@@ -1,0 +1,20 @@
+{ TABLE "mis".whmast row size = 80 number of columns = 9 index size = 18 }
+create table "mis".whmast 
+  (
+    whid char(8),
+    status char(1),
+    whalias char(10),
+    whname char(30),
+    create_by char(10),
+    create_date date,
+    update_by char(10),
+    update_date date,
+    whparam char(3),
+    primary key (whid)  constraint "mis".u370_3484
+  );
+revoke all on "mis".whmast from "public";
+
+
+
+
+

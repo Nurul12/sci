@@ -1,0 +1,42 @@
+{ TABLE "mis".sdomas row size = 172 number of columns = 26 index size = 111 }
+create table "mis".sdomas 
+  (
+    donum char(8),
+    refnum char(8),
+    userid char(8),
+    dostat char(1),
+    cust char(8),
+    pack char(1),
+    custstat char(1),
+    slsman char(6),
+    invnum char(8),
+    instat char(1),
+    duedate date,
+    regdate date,
+    dodate date,
+    delito char(8),
+    invrem char(30),
+    dorem char(30),
+    qty decimal(16,2),
+    invamt decimal(16,2) not null ,
+    osamt decimal(16,2) not null ,
+    invcurr char(3),
+    exrate integer,
+    link char(1) not null ,
+    flag char(1),
+    exp char(1),
+    curr char(3),
+    tax_percent smallint
+  );
+revoke all on "mis".sdomas from "public";
+
+create unique index "mis".i_sdomas on "mis".sdomas (donum);
+create index "mis".i_sdoinv on "mis".sdomas (invnum);
+create index "mis".i_reginv on "mis".sdomas (regdate,invnum);
+create index "mis".i_dodate on "mis".sdomas (dodate,donum);
+create index "mis".i_dodate1 on "mis".sdomas (dodate,instat,dostat,
+    cust);
+
+
+
+

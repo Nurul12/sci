@@ -1,0 +1,14 @@
+{ TABLE "mis".prodcat row size = 28 number of columns = 2 index size = 10 }
+create table "mis".prodcat 
+  (
+    pccode char(3),
+    pcdesc char(25)
+  );
+revoke all on "mis".prodcat from "public";
+
+create unique index "mis".i_prodcat on "mis".prodcat (pccode);
+    
+
+
+
+

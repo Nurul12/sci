@@ -1,0 +1,17 @@
+{ TABLE "mis".cbpgl row size = 94 number of columns = 6 index size = 18 }
+create table "mis".cbpgl 
+  (
+    cbp_no char(8),
+    cbp_gl char(8),
+    cbp_dr_amt money(16,2),
+    cbp_cr_amt money(16,2),
+    cbp_desc char(30),
+    cbp_desc2 char(30)
+  );
+revoke all on "mis".cbpgl from "public";
+
+create index "mis".i_cbpgl on "mis".cbpgl (cbp_no);
+
+
+
+

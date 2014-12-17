@@ -1,0 +1,17 @@
+{ TABLE "mis".dngl row size = 94 number of columns = 6 index size = 18 }
+create table "mis".dngl 
+  (
+    dr_no char(8),
+    dr_gl char(8),
+    dr_dr_amt money(16,2),
+    dr_cr_amt money(16,2),
+    dr_desc char(30),
+    dr_desc2 char(30)
+  );
+revoke all on "mis".dngl from "public";
+
+create index "mis".i_dngl on "mis".dngl (dr_no);
+
+
+
+

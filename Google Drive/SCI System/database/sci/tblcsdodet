@@ -1,0 +1,19 @@
+{ TABLE "mis".csdodet row size = 34 number of columns = 6 index size = 48 }
+create table "mis".csdodet 
+  (
+    donum char(8),
+    regdate date,
+    dept char(2),
+    item char(8),
+    uprice decimal(10,2),
+    qty decimal(10,2)
+  );
+revoke all on "mis".csdodet from "public";
+
+create index "mis".idx_csdodet_1 on "mis".csdodet (donum);
+create index "mis".idx_csdodet_2 on "mis".csdodet (donum,item);
+    
+
+
+
+

@@ -1,0 +1,16 @@
+{ TABLE "mis".stock_out_det row size = 43 number of columns = 6 index size = 0 }
+create table "mis".stock_out_det 
+  (
+    st_out_id char(8) not null ,
+    st_out_house integer not null ,
+    st_out_code char(8) not null ,
+    st_out_qty decimal(10,0) not null ,
+    st_out_cond smallint not null ,
+    st_out_batch char(15)
+  );
+revoke all on "mis".stock_out_det from "public";
+
+
+
+
+

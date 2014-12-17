@@ -1,0 +1,28 @@
+{ TABLE "mis".usched row size = 122 number of columns = 16 index size = 54 }
+create table "mis".usched 
+  (
+    us_proj_code char(6) not null ,
+    us_phase_code char(6) not null ,
+    us_unit_code char(10) not null ,
+    us_code char(6) not null ,
+    us_stage integer,
+    us_stage_phy char(1),
+    us_stage_mth integer,
+    us_dep_on char(1),
+    us_s_perc decimal(6,2),
+    us_s_amt money(16,2),
+    us_amt_billed money(16,2),
+    us_amt_rcpt money(16,2),
+    us_site_date date,
+    us_site_ref char(20),
+    us_arch_date date,
+    us_arch_ref char(25)
+  );
+revoke all on "mis".usched from "public";
+
+create unique index "mis".i_usched on "mis".usched (us_proj_code,
+    us_phase_code,us_unit_code,us_code,us_stage);
+
+
+
+

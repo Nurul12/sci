@@ -1,0 +1,17 @@
+{ TABLE "mis".tcsdodet row size = 42 number of columns = 7 index size = 0 }
+create table "mis".tcsdodet 
+  (
+    crno char(8),
+    donum char(8),
+    regdate date,
+    dept char(2),
+    item char(8),
+    uprice decimal(10,2),
+    qty decimal(10,2)
+  );
+revoke all on "mis".tcsdodet from "public";
+
+
+
+
+

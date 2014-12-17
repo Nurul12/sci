@@ -1,0 +1,15 @@
+{ TABLE "mis".cbxgl row size = 34 number of columns = 4 index size = 18 }
+create table "mis".cbxgl 
+  (
+    cbx_no char(8),
+    cbx_glacc_no char(8),
+    cbx_debit money(16,2),
+    cbx_credit money(16,2)
+  );
+revoke all on "mis".cbxgl from "public";
+
+create index "mis".i_cbxgl on "mis".cbxgl (cbx_no);
+
+
+
+

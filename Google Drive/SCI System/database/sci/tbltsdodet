@@ -1,0 +1,20 @@
+{ TABLE "mis".tsdodet row size = 59 number of columns = 10 index size = 0 }
+create table "mis".tsdodet 
+  (
+    crno char(8),
+    donum char(8),
+    regdate date,
+    dept char(2),
+    item char(8),
+    uprice decimal(14,2),
+    qtywght decimal(10,2),
+    packwght decimal(7,2),
+    mortwght decimal(7,2),
+    spoiwght decimal(7,2)
+  );
+revoke all on "mis".tsdodet from "public";
+
+
+
+
+

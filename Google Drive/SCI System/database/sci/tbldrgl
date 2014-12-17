@@ -1,0 +1,15 @@
+{ TABLE "mis".drgl row size = 34 number of columns = 4 index size = 18 }
+create table "mis".drgl 
+  (
+    dr_no char(8),
+    dr_gl char(8),
+    dr_dr_amt money(16,2),
+    dr_cr_amt money(16,2)
+  );
+revoke all on "mis".drgl from "public";
+
+create index "mis".i_drgl on "mis".drgl (dr_no);
+
+
+
+

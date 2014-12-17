@@ -1,0 +1,28 @@
+{ TABLE "mis".banktrn row size = 156 number of columns = 17 index size = 18 }
+create table "mis".banktrn 
+  (
+    bk_acname char(8),
+    bk_trans_date date,
+    bk_clerk_id char(8),
+    bk_status char(1),
+    bk_trans_type char(1),
+    bk_trans_code char(6),
+    bk_trans_desc char(30),
+    bk_trans_ref char(10),
+    bk_trans_src char(2),
+    bk_trader_no char(8),
+    bk_payer_ee char(30),
+    bk_cheque_no char(12),
+    bk_debit money(16,2),
+    bk_credit money(16,2),
+    bk_currency char(3),
+    bk_exch_rate decimal(10,6),
+    bk_curr_amt money(16,2)
+  );
+revoke all on "mis".banktrn from "public";
+
+create index "mis".i_banktrn on "mis".banktrn (bk_acname);
+
+
+
+

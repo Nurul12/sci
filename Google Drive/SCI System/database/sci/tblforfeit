@@ -1,0 +1,42 @@
+{ TABLE "mis".forfeit row size = 367 number of columns = 29 index size = 105 }
+create table "mis".forfeit 
+  (
+    f_proj_code char(6) not null ,
+    f_phase_code char(6) not null ,
+    f_unit_no char(10) not null ,
+    f_userid char(8),
+    f_name char(40) not null ,
+    f_race char(1),
+    f_purch_tel_home char(15),
+    f_purch_tel_off char(15),
+    f_cont_vp_date date,
+    f_sp_date date,
+    f_sp_ref char(20),
+    f_unit_pay_sched char(6),
+    f_unit_stage_perc decimal(6,2),
+    f_unit_stage_bill decimal(6,2),
+    f_unit_sol_code char(6),
+    f_unit_sol_ref char(30),
+    f_unit_fin_code char(6),
+    f_unit_fin_ref char(30),
+    f_unit_fin_amt money(16,2),
+    f_unit_sale_amt money(16,2),
+    f_sched_bill_amt money(16,2),
+    f_misc_bill_amt money(16,2),
+    f_dn_bill_amt money(16,2),
+    f_int_bill_amt money(16,2),
+    f_forfeit_date date,
+    f_lett_date date,
+    f_lett_ref char(30),
+    f_rem1 char(30),
+    f_rem2 char(30)
+  );
+revoke all on "mis".forfeit from "public";
+
+create index "mis".n_forfeit on "mis".forfeit (f_proj_code,f_phase_code,
+    f_unit_no);
+create index "mis".i_forfeit on "mis".forfeit (f_name);
+
+
+
+

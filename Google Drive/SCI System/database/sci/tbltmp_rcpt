@@ -1,0 +1,25 @@
+{ TABLE "mis".tmp_rcpt row size = 133 number of columns = 15 index size = 0 }
+create table "mis".tmp_rcpt 
+  (
+    tr_proj_code char(6),
+    tr_phase_code char(6),
+    tr_unit_code char(10),
+    tr_no char(8),
+    tr_date date,
+    tr_user_id char(8),
+    tr_desc char(30),
+    tr_amt money(16,2),
+    tr_bank_code char(8),
+    tr_cheque_no char(12),
+    tr_cheque_date date,
+    tr_bank_inch money(16,2),
+    tr_bank_outch money(16,2),
+    tr_trans_date date,
+    tr_trans_type char(6)
+  );
+revoke all on "mis".tmp_rcpt from "public";
+
+
+
+
+

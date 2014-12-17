@@ -1,0 +1,17 @@
+{ TABLE "mis".arfgl row size = 94 number of columns = 6 index size = 18 }
+create table "mis".arfgl 
+  (
+    f_no char(8),
+    f_gl char(8),
+    f_dr_amt money(16,2),
+    f_cr_amt money(16,2),
+    f_desc char(30),
+    f_desc2 char(30)
+  );
+revoke all on "mis".arfgl from "public";
+
+create index "mis".i_arfgl on "mis".arfgl (f_no);
+
+
+
+

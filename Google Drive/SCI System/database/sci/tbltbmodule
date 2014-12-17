@@ -1,0 +1,14 @@
+{ TABLE "mis".tbmodule row size = 51 number of columns = 3 index size = 51 }
+create table "mis".tbmodule 
+  (
+    moduleid char(30) not null ,
+    choperatorid char(20),
+    chaccess char(1)
+  );
+revoke all on "mis".tbmodule from "public";
+
+create index "mis".ix1007_1 on "mis".tbmodule (moduleid);
+
+
+
+

@@ -1,0 +1,23 @@
+{ TABLE "mis".invoice row size = 397 number of columns = 13 index size = 0 }
+create table "mis".invoice 
+  (
+    inv_type char(1),
+    inv_acc_no char(8),
+    inv_add_line1 char(70),
+    inv_add_line2 char(70),
+    inv_sign1 char(30),
+    inv_sign2 char(30),
+    inv_sign3 char(30),
+    inv_user_id char(8),
+    inv_add_cc1 char(30),
+    inv_add_cc2 char(30),
+    inv_add_cc3 char(30),
+    inv_add_cc4 char(30),
+    inv_add_cc5 char(30)
+  );
+revoke all on "mis".invoice from "public";
+
+
+
+
+

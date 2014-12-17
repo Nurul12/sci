@@ -1,0 +1,15 @@
+{ TABLE "mis".activity row size = 62 number of columns = 5 index size = 0 }
+create table "mis".activity 
+  (
+    tty char(12),
+    who char(8),
+    act char(30),
+    adate date,
+    atime char(8)
+  );
+revoke all on "mis".activity from "public";
+
+
+
+
+

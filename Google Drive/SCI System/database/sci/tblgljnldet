@@ -1,0 +1,15 @@
+{ TABLE "mis".gljnldet row size = 30 number of columns = 4 index size = 12 }
+create table "mis".gljnldet 
+  (
+    jvno integer not null ,
+    jgl char(8),
+    jdr money(16,2),
+    jcr money(16,2)
+  );
+revoke all on "mis".gljnldet from "public";
+
+create index "mis".i_gljnldet on "mis".gljnldet (jvno);
+
+
+
+

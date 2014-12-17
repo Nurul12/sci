@@ -1,0 +1,18 @@
+{ TABLE "mis".aridet row size = 73 number of columns = 7 index size = 18 }
+create table "mis".aridet 
+  (
+    inv_no char(8),
+    inv_ref char(8),
+    inv_par char(30),
+    inv_unit char(4),
+    inv_qty decimal(8,2),
+    inv_unit_amt money(16,2),
+    inv_ext_amt money(16,2)
+  );
+revoke all on "mis".aridet from "public";
+
+create index "mis".i_aridet on "mis".aridet (inv_no);
+
+
+
+

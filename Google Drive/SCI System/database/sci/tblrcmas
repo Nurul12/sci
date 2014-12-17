@@ -1,0 +1,35 @@
+{ TABLE "mis".rcmas row size = 161 number of columns = 20 index size = 79 }
+create table "mis".rcmas 
+  (
+    r_cust_no char(8) not null ,
+    r_no char(8),
+    r_ref char(8),
+    r_op_code char(6),
+    r_date date,
+    r_user_id char(8),
+    r_desc char(30),
+    r_amt money(16,2),
+    r_bank_code char(8),
+    r_curr char(3),
+    r_ex_rate decimal(10,5),
+    r_cheque_no char(12),
+    r_bank_from char(8),
+    r_trn_code char(6),
+    r_clear_date date,
+    r_cheque_date date,
+    r_bank_inch money(16,2),
+    r_bank_outch money(16,2),
+    r_unappl_amt money(16,2),
+    r_status char(1)
+  );
+revoke all on "mis".rcmas from "public";
+
+create unique index "mis".i_rcmas on "mis".rcmas (r_no);
+create index "mis".i_rcmas2 on "mis".rcmas (r_cust_no,r_no,r_clear_date);
+    
+create index "mis".i_rcmas3 on "mis".rcmas (r_status,r_cust_no,
+    r_clear_date);
+
+
+
+

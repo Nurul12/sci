@@ -1,0 +1,14 @@
+{ TABLE "mis".sysmenus row size = 78 number of columns = 2 index size = 33 }
+create table "mis".sysmenus 
+  (
+    menuname char(18),
+    title char(60)
+  );
+revoke all on "mis".sysmenus from "public";
+
+create unique index "mis".sysmenidx on "mis".sysmenus (menuname);
+    
+
+
+
+

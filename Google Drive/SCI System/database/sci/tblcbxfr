@@ -1,0 +1,25 @@
+{ TABLE "mis".cbxfr row size = 144 number of columns = 14 index size = 18 }
+create table "mis".cbxfr 
+  (
+    cbx_no char(8),
+    cbx_ref_no char(8),
+    cbx_clerk_id char(8),
+    cbx_status char(1),
+    cbx_date_created date,
+    cbx_remark char(30),
+    cbx_remark2 char(30),
+    cbx_fr_bkcode char(8),
+    cbx_to_bkcode char(8),
+    cbx_chq_no char(8),
+    cbx_chq_date date,
+    cbx_amt money(16,2),
+    cbx_fr_comm money(16,2),
+    cbx_to_comm money(16,2)
+  );
+revoke all on "mis".cbxfr from "public";
+
+create unique index "mis".i_cbxfr on "mis".cbxfr (cbx_no);
+
+
+
+

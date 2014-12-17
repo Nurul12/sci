@@ -1,0 +1,2 @@
+M0001|Exchange Rate|Maintenance|
+R0001|Exchange Rate Listing|Report|

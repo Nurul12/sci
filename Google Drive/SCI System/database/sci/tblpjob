@@ -1,0 +1,22 @@
+{ TABLE "mis".pjob row size = 88 number of columns = 11 index size = 12 }
+create table "mis".pjob 
+  (
+    job char(4),
+    ledger char(2),
+    uid char(8),
+    pdate date,
+    stime datetime year to second,
+    etime datetime year to second,
+    elapse char(8),
+    rptid char(13),
+    rptdesc char(30),
+    pstat char(1),
+    pg smallint
+  );
+revoke all on "mis".pjob from "public";
+
+create index "mis".i_pjob on "mis".pjob (job);
+
+
+
+

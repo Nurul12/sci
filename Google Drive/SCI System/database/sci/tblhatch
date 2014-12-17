@@ -1,0 +1,17 @@
+{ TABLE "mis".hatch row size = 22 number of columns = 6 index size = 12 }
+create table "mis".hatch 
+  (
+    dept char(2),
+    incdate date,
+    qtyset integer,
+    estper decimal(5,2),
+    hatchdate date,
+    actdoc integer
+  );
+revoke all on "mis".hatch from "public";
+
+create index "mis".i_hatch on "mis".hatch (hatchdate);
+
+
+
+

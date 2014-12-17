@@ -1,0 +1,15 @@
+{ TABLE "mis".glctrl row size = 24 number of columns = 5 index size = 0 }
+create table "mis".glctrl 
+  (
+    gl_company_code char(6),
+    gl_fiscal_year integer,
+    gl_no_of_period smallint,
+    gl_retention_day integer,
+    gl_pl_summ char(8)
+  );
+revoke all on "mis".glctrl from "public";
+
+
+
+
+

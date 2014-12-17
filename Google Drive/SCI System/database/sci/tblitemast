@@ -1,0 +1,26 @@
+{ TABLE "mis".itemast row size = 128 number of columns = 14 index size = 25 }
+create table "mis".itemast 
+  (
+    icode char(8),
+    alias char(8),
+    desc1 char(30),
+    desc2 char(30),
+    uom char(6),
+    uprice decimal(13,3),
+    uw decimal(6,2),
+    unit char(6),
+    stock char(1),
+    ccode char(3),
+    create_by char(8),
+    create_date date,
+    update_by char(8),
+    update_date date
+  );
+revoke all on "mis".itemast from "public";
+
+create index "mis".itemast_01 on "mis".itemast (icode);
+create index "mis".itemast_02 on "mis".itemast (stock);
+
+
+
+

@@ -1,0 +1,44 @@
+{ TABLE "mis".cspmas row size = 803 number of columns = 34 index size = 0 }
+create table "mis".cspmas 
+  (
+    csp_no char(6),
+    csp_ref char(8),
+    csp_op_code char(6),
+    csp_payee char(30),
+    csp_date date,
+    csp_user_id char(8),
+    csp_status char(1),
+    csp_amt money(16,2),
+    csp_cheque_no char(12),
+    csp_cheque_date date,
+    csp_trn_code char(8),
+    csp_bank_code char(8),
+    csp_clear_date date,
+    csp_bank_outch money(16,2),
+    csp_desc1 char(45),
+    csp_desc2 char(45),
+    csp_desc3 char(45),
+    csp_desc4 char(45),
+    csp_desc5 char(45),
+    csp_desc6 char(45),
+    csp_desc7 char(45),
+    csp_desc8 char(45),
+    csp_desc9 char(45),
+    csp_amount1 decimal(16,2),
+    csp_amount2 decimal(16,2),
+    csp_amount3 decimal(16,2),
+    csp_amount4 decimal(16,2),
+    csp_amount5 decimal(16,2),
+    csp_amount6 decimal(16,2),
+    csp_amount7 decimal(16,2),
+    csp_amount8 decimal(16,2),
+    csp_amount9 decimal(16,2),
+    csp_says char(150),
+    csp_says2 char(50)
+  );
+revoke all on "mis".cspmas from "public";
+
+
+
+
+

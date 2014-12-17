@@ -1,0 +1,12 @@
+{ TABLE "mis".batmas row size = 48 number of columns = 2 index size = 0 }
+create table "mis".batmas 
+  (
+    bat_id char(8),
+    bat_desc char(40)
+  );
+revoke all on "mis".batmas from "public";
+
+
+
+
+

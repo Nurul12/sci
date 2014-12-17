@@ -1,0 +1,22 @@
+{ TABLE "mis".itfmas row size = 174 number of columns = 11 index size = 21 }
+create table "mis".itfmas 
+  (
+    tfid char(10),
+    tfdate date,
+    tffrom char(8),
+    tfto char(8),
+    status char(1),
+    remark char(100),
+    create_by char(10),
+    create_date date,
+    update_by char(10),
+    update_date date,
+    refno char(15),
+    primary key (tfid)  constraint "mis".u379_3887
+  );
+revoke all on "mis".itfmas from "public";
+
+
+
+
+

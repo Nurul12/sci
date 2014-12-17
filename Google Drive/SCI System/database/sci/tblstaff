@@ -1,0 +1,13 @@
+{ TABLE "mis".staff row size = 36 number of columns = 2 index size = 15 }
+create table "mis".staff 
+  (
+    stf_code char(6),
+    stf_name char(30)
+  );
+revoke all on "mis".staff from "public";
+
+create unique index "mis".i_staff on "mis".staff (stf_code);
+
+
+
+

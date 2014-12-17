@@ -1,0 +1,45 @@
+{ TABLE "mis".phase row size = 384 number of columns = 33 index size = 24 }
+create table "mis".phase 
+  (
+    ph_proj_code char(6) not null ,
+    ph_phase_code char(6) not null ,
+    ph_name char(30) not null ,
+    ph_sdate date,
+    ph_edate date,
+    ph_rem1 char(30),
+    ph_rem2 char(30),
+    ph_rem3 char(30),
+    ph_unit_no integer,
+    ph_unit_flag char(1),
+    ph_bumi_rate decimal(5,2),
+    ph_int_rate decimal(5,2),
+    ph_int_days integer,
+    ph_book_days integer,
+    ph_rem_days integer,
+    ph_site_flag char(1),
+    ph_attr1_desc char(10),
+    ph_attr2_desc char(10),
+    ph_attr3_desc char(10),
+    ph_attr4_desc char(10),
+    ph_amt money(16,2),
+    ph_gl_ac char(8),
+    ph_int_ac char(8),
+    ph_land_title char(8),
+    ph_dis_fin char(6),
+    ph_dis_fin_ref char(30),
+    ph_dis_sol char(6),
+    ph_dis_sol_ref char(30),
+    ph_ch_fin char(6),
+    ph_ch_fin_ref char(30),
+    ph_ch_sol char(6),
+    ph_ch_sol_ref char(30),
+    ph_status char(1)
+  );
+revoke all on "mis".phase from "public";
+
+create unique index "mis".i_phase on "mis".phase (ph_proj_code,
+    ph_phase_code);
+
+
+
+

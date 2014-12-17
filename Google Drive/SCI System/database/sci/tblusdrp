@@ -1,0 +1,11 @@
+{ TABLE "mis".usdrp row size = 8 number of columns = 1 index size = 0 }
+create table "mis".usdrp 
+  (
+    custkode char(8)
+  );
+revoke all on "mis".usdrp from "public";
+
+
+
+
+

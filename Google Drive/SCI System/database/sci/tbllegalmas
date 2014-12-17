@@ -1,0 +1,14 @@
+{ TABLE "mis".legalmas row size = 36 number of columns = 2 index size = 15 }
+create table "mis".legalmas 
+  (
+    legal_code char(6) not null ,
+    legal_desc char(30)
+  );
+revoke all on "mis".legalmas from "public";
+
+create unique index "mis".i_legalmas on "mis".legalmas (legal_code);
+    
+
+
+
+

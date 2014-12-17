@@ -1,0 +1,14 @@
+{ TABLE "mis".jnctrldet row size = 31 number of columns = 4 index size = 0 }
+create table "mis".jnctrldet 
+  (
+    jid char(1),
+    jdesc char(20),
+    jledger char(2),
+    jgl char(8)
+  );
+revoke all on "mis".jnctrldet from "public";
+
+
+
+
+

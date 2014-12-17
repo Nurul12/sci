@@ -1,0 +1,63 @@
+m_admmenu|Update Menu|62|2|
+m_admgroup|Group Maintenace|61|2|
+m_admuser|User Maintenace|60|2|
+m_systemsetup|System Setup|59|2|
+m_admmain|Administrator|58|1|
+m_lapsoadetail|Lap. SOA Detail|57|2|
+m_lapsoasummary|Lap. CC|56|2|
+m_daftartransaksi|Daftar Transaksi|55|2|
+m_importpayment|Import Payment|54|2|
+m_reportccdetail|Report CC Detail|53|3|
+m_rpt_cc_summary|Report CC Summary|52|3|
+m_reports|Reports|51|2|
+m_creditcontrol|Credit Control|50|1|
+m_5|Unlock AR|49|2|
+m_4|Faktur Pajak List|48|2|
+m_revisido|Revisi DO|47|2|
+m_deletedo|Delete DO|46|2|
+m_syncsubdeptandfarm|Sync Subdept and Farmer|45|2|
+m_importsrn|Import SRN|44|2|
+m_importop|Import OP|43|2|
+m_importdo|Import DO|42|2|
+m_transaksilisting|Transaksi Listing|41|2|
+m_exportitem|Export Item|40|2|
+m_exportcustomer|Export Customer|39|2|
+m_accexrate|Exchange Rate|38|2|
+m_accounting|Accounting|37|1|
+m_exportdatafromop|Export Data from OP|36|2|
+m_purchasing|Purchasing|35|1|
+m_rdt|Report Detail Transaksi|34|3|
+m_rsdt|Report Stock Detail Transaksi|33|3|
+m_reportstockperitem|Report Stock Per Item|32|3|
+m_reportstock|Report Stock Per Warehouse|31|3|
+m_report|Report|30|2|
+m_tfdo|Transfer Order from DO|29|3|
+m_tfsrn|Transfer Order from SRN|28|3|
+m_updatesrnwarehouse|Update SRN Warehouse|27|3|
+m_postingtransinv|Posting Trans. Inv|26|3|
+m_transferorder|Transfer Order / TF|25|3|
+m_adjustmentadj|Adjustment / ADJ|24|3|
+m_stockopname|Stock Opname / SO|23|3|
+m_outgoingstock|Outgoing Stock / KLL|22|3|
+m_invothin|Incoming Stock / TLL|21|3|
+m_invtransaction|Transaction|20|2|
+m_item|Item|19|3|
+m_invwhmast|Warehouse|18|3|
+m_invmaster|Master|17|2|
+m_invmain|Inventory|16|1|
+m_salesreport|Sales Report By Branch By Mont|15|2|
+m_salesreportby|Sales Report By Month|14|2|
+m_0|Sales Report By Office By Item|13|2|
+m_3|SDB Summary By Area|12|2|
+m_2|SDB Summary|11|2|
+m_1|SDB By Area|10|2|
+m_salesdaybook|Sales Day Book|9|2|
+m_do|DO|8|2|
+m_sales|Sales|7|1|
+m_teritory|Teritory|6|2|
+m_area|Area|5|2|
+m_subdept|Sub Dept|4|2|
+m_item0|Item|3|2|
+m_customer|Customer|2|2|
+m_master|Master|1|1|
+m_tesxhr|Tes XHR|80|2|

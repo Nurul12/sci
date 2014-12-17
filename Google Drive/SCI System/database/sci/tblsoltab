@@ -1,0 +1,28 @@
+{ TABLE "mis".soltab row size = 294 number of columns = 16 index size = 15 }
+create table "mis".soltab 
+  (
+    sol_code char(6) not null ,
+    sol_gl_code char(8),
+    sol_name char(40) not null ,
+    sol_addr1 char(30),
+    sol_addr2 char(30),
+    sol_addr3 char(20),
+    sol_post_code char(6),
+    sol_city char(15),
+    sol_state char(15),
+    sol_tel1 char(15),
+    sol_tel2 char(15),
+    sol_fax char(15),
+    sol_telex char(18),
+    sol_contact1 char(30),
+    sol_contact2 char(30),
+    sol_status char(1)
+  );
+revoke all on "mis".soltab from "public";
+
+create unique index "mis".i_soltab on "mis".soltab (sol_code);
+    
+
+
+
+

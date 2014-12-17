@@ -1,0 +1,19 @@
+{ TABLE "mis".lstmas row size = 80 number of columns = 7 index size = 15 }
+create table "mis".lstmas 
+  (
+    lst_code char(6) not null ,
+    lst_desc char(30) not null ,
+    lst_name char(12),
+    lst_sort1 char(8),
+    lst_sort2 char(8),
+    lst_sort3 char(8),
+    lst_sort4 char(8)
+  );
+revoke all on "mis".lstmas from "public";
+
+create unique index "mis".i_lstmas on "mis".lstmas (lst_code);
+    
+
+
+
+

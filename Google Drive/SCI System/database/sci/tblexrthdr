@@ -1,0 +1,26 @@
+{ TABLE "mis".exrthdr row size = 90 number of columns = 14 index size = 24 }
+create table "mis".exrthdr 
+  (
+    currtp1 char(4) not null ,
+    currtp2 char(4) not null ,
+    exrtdt date not null ,
+    exrtvl1 decimal(18,12) not null ,
+    exrtvl2 decimal(18,12) not null ,
+    exrtvl3 decimal(18,12) not null ,
+    exrtvl4 decimal(18,12) not null ,
+    exrtvl5 decimal(18,12) not null ,
+    statcd char(1) not null ,
+    compid char(3) not null ,
+    creaid char(8) not null ,
+    creadt date not null ,
+    upd_id char(8) not null ,
+    upd_dt date not null 
+  );
+revoke all on "mis".exrthdr from "public";
+
+create unique index "mis".exrthdr_i1 on "mis".exrthdr (currtp1,
+    currtp2,exrtdt);
+
+
+
+

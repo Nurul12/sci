@@ -1,0 +1,14 @@
+{ TABLE "mis".doprn row size = 19 number of columns = 4 index size = 0 }
+create table "mis".doprn 
+  (
+    donum char(8),
+    cust char(8),
+    prnstat char(1),
+    prnum decimal(2,0)
+  );
+revoke all on "mis".doprn from "public";
+
+
+
+
+

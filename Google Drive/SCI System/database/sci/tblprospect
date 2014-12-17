@@ -1,0 +1,42 @@
+{ TABLE "mis".prospect row size = 334 number of columns = 30 index size = 24 }
+create table "mis".prospect 
+  (
+    pr_proj_code char(6),
+    pr_phase_code char(6),
+    pr_name char(30) not null ,
+    pr_addr1 char(30),
+    pr_addr2 char(30),
+    pr_addr3 char(20),
+    pr_post_code char(6),
+    pr_city char(15),
+    pr_state char(15),
+    pr_tel_off char(15),
+    pr_tel_home char(15),
+    pr_bk_date date,
+    pr_exp_date date,
+    pr_bk_amt money(16,2),
+    pr_remark char(30),
+    pr_unit char(10),
+    pr_pt_code char(6),
+    pr_attr1 char(6),
+    pr_attr2 char(6),
+    pr_attr3 char(6),
+    pr_attr4 char(6),
+    pr_race char(1),
+    pr_bumi_dis_per decimal(5,2),
+    pr_bumi_dis money(16,2),
+    pr_sell_amt money(16,2),
+    pr_tot_sal money(16,2),
+    pr_loan_amt money(16,2),
+    pr_loan_per integer,
+    pr_loan_rate decimal(6,3),
+    pr_repay_amt money(16,2)
+  );
+revoke all on "mis".prospect from "public";
+
+create index "mis".i_prospect on "mis".prospect (pr_proj_code,
+    pr_phase_code);
+
+
+
+

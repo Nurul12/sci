@@ -1,0 +1,22 @@
+{ TABLE "mis".pcrate row size = 62 number of columns = 10 index size = 45 }
+create table "mis".pcrate 
+  (
+    dodate date,
+    donum char(8),
+    srnum char(8),
+    cust char(8),
+    delito char(8),
+    vehicle char(10),
+    dqty integer,
+    rqty integer,
+    rdate date,
+    balance integer
+  );
+revoke all on "mis".pcrate from "public";
+
+create index "mis".i_pcrate on "mis".pcrate (dodate,cust,vehicle,
+    rdate);
+
+
+
+

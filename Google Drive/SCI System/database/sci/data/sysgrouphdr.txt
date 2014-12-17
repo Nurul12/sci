@@ -1,0 +1,3 @@
+acc01|Accounting Group User|
+prc01|Purchasing user group|
+inv01|Inventory , Stock , Warehouse, Item|

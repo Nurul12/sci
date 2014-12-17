@@ -1,0 +1,13 @@
+{ TABLE "mis".sdomasoth row size = 20 number of columns = 3 index size = 0 }
+create table "mis".sdomasoth 
+  (
+    donum char(10) not null constraint "mis".n385_3892,
+    istransfered char(1) not null constraint "mis".n385_3893,
+    exrate decimal(16,2)
+  );
+revoke all on "mis".sdomasoth from "public";
+
+
+
+
+

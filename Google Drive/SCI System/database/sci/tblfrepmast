@@ -1,0 +1,48 @@
+{ TABLE "mis".frepmast row size = 251 number of columns = 37 index size = 18 }
+create table "mis".frepmast 
+  (
+    fid char(8),
+    fdesc char(35),
+    fglcode char(8),
+    fhdr1 char(35),
+    fhdr2 char(35),
+    fftr1 char(35),
+    fftr2 char(35),
+    fyr01 char(1),
+    fop01 char(3),
+    fyr02 char(1),
+    fop02 char(3),
+    fyr03 char(1),
+    fop03 char(3),
+    fyr04 char(1),
+    fop04 char(3),
+    fyr05 char(1),
+    fop05 char(3),
+    fyr06 char(1),
+    fop06 char(3),
+    fyr07 char(1),
+    fop07 char(3),
+    fyr08 char(1),
+    fop08 char(3),
+    fyr09 char(1),
+    fop09 char(3),
+    fyr10 char(1),
+    fop10 char(3),
+    fyr11 char(1),
+    fop11 char(3),
+    fyr12 char(1),
+    fop12 char(3),
+    fyr13 char(1),
+    fop13 char(3),
+    fyr14 char(1),
+    fop14 char(3),
+    fyr15 char(1),
+    fop15 char(3)
+  );
+revoke all on "mis".frepmast from "public";
+
+create unique index "mis".ix897_1 on "mis".frepmast (fid);
+
+
+
+

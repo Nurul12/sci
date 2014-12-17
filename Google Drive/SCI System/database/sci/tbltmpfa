@@ -1,0 +1,11 @@
+{ TABLE "mis".tmpfa row size = 8 number of columns = 1 index size = 0 }
+create table "mis".tmpfa 
+  (
+    fa_num char(8)
+  );
+revoke all on "mis".tmpfa from "public";
+
+
+
+
+

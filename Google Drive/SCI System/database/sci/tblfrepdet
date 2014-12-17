@@ -1,0 +1,13 @@
+{ TABLE "mis".frepdet row size = 10 number of columns = 2 index size = 18 }
+create table "mis".frepdet 
+  (
+    fid char(8),
+    fdep char(2)
+  );
+revoke all on "mis".frepdet from "public";
+
+create index "mis".ix898_1 on "mis".frepdet (fid);
+
+
+
+

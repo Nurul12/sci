@@ -1,0 +1,45 @@
+{ TABLE "mis".arctrl row size = 100 number of columns = 35 index size = 0 }
+create table "mis".arctrl 
+  (
+    ar_company_code char(6) not null ,
+    ar_age_1_from smallint not null ,
+    ar_age_1_to smallint not null ,
+    ar_age_2_from smallint not null ,
+    ar_age_2_to smallint not null ,
+    ar_age_3_from smallint not null ,
+    ar_age_3_to smallint not null ,
+    ar_age_4_from smallint not null ,
+    ar_age_4_to smallint not null ,
+    ar_age_5_from smallint not null ,
+    ar_age_5_to smallint not null ,
+    ar_age_ovr_5 smallint not null ,
+    ar_auto_inv_no char(1) not null ,
+    ar_start_inv_no integer not null ,
+    ar_auto_adj_no char(1) not null ,
+    ar_debit_no integer not null ,
+    ar_credit_no integer not null ,
+    ar_auto_rcp_no char(1) not null ,
+    ar_start_rcp_no integer not null ,
+    ar_start_rf_no integer,
+    ar_auto_lett char(1) not null ,
+    ar_lett_no integer not null ,
+    ar_int_rate decimal(5,2),
+    ar_rem_days integer,
+    ar_multi_curr char(1),
+    ar_cb_feed char(1) not null ,
+    ar_gl_feed char(1) not null ,
+    ar_gl_feed_mode char(1) not null ,
+    ar_acc_code char(8),
+    ar_sale_code char(8),
+    ar_ex_diff char(8),
+    ar_retention smallint,
+    ar_auto_rf_no char(1),
+    ar_auto_cqr_no char(1),
+    ar_start_cqr_no integer
+  );
+revoke all on "mis".arctrl from "public";
+
+
+
+
+

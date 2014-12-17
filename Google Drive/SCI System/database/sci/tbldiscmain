@@ -1,0 +1,16 @@
+{ TABLE "mis".discmain row size = 25 number of columns = 4 index size = 30 }
+create table "mis".discmain 
+  (
+    cust char(8),
+    ddate date,
+    ditem char(8),
+    dprice decimal(7,4)
+  );
+revoke all on "mis".discmain from "public";
+
+create unique index "mis".i_discmain on "mis".discmain (cust,ditem);
+    
+
+
+
+

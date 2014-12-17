@@ -1,0 +1,31 @@
+{ TABLE "mis".sorder row size = 80 number of columns = 16 index size = 97 }
+create table "mis".sorder 
+  (
+    sodate date,
+    custnum char(8) not null ,
+    curr char(3),
+    typ char(1),
+    mode char(1),
+    sostat char(1) not null ,
+    userid char(8),
+    refnum char(8),
+    donum char(8),
+    dept char(2),
+    itemnum char(8),
+    qty decimal(12,2),
+    uprice decimal(10,4),
+    estqty decimal(12,2),
+    actqty decimal(12,2),
+    print char(1)
+  );
+revoke all on "mis".sorder from "public";
+
+create index "mis".i_sorder on "mis".sorder (custnum);
+create index "mis".i_dateit on "mis".sorder (sodate,itemnum);
+create index "mis".i_sorder2 on "mis".sorder (sodate,custnum,sostat,
+    itemnum);
+create index "mis".i_sorder3 on "mis".sorder (donum);
+
+
+
+

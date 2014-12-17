@@ -1,0 +1,31 @@
+{ TABLE "mis".arimas row size = 142 number of columns = 16 index size = 79 }
+create table "mis".arimas 
+  (
+    inv_cust_no char(8) not null ,
+    inv_op_code char(6),
+    inv_no char(8),
+    inv_ref char(8),
+    inv_date date not null ,
+    inv_user_id char(8),
+    inv_curr char(3) not null ,
+    inv_ex_rate decimal(10,6) not null ,
+    inv_desc char(30),
+    inv_desc2 char(30),
+    inv_amt money(16,2) not null ,
+    inv_os_amt money(16,2) not null ,
+    inv_due_date date not null ,
+    inv_int_rate decimal(5,2),
+    inv_status char(1),
+    inv_touch_date date
+  );
+revoke all on "mis".arimas from "public";
+
+create unique index "mis".i_arimas on "mis".arimas (inv_no);
+create index "mis".i_arimas2 on "mis".arimas (inv_cust_no,inv_no,
+    inv_date);
+create index "mis".i_arimas3 on "mis".arimas (inv_status,inv_cust_no,
+    inv_date);
+
+
+
+

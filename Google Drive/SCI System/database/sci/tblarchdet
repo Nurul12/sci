@@ -1,0 +1,15 @@
+{ TABLE "mis".archdet row size = 30 number of columns = 4 index size = 12 }
+create table "mis".archdet 
+  (
+    jnl_number integer,
+    jnl_acc_no char(8),
+    jnl_debit money(16,2),
+    jnl_credit money(16,2)
+  );
+revoke all on "mis".archdet from "public";
+
+create index "mis".i_archdet on "mis".archdet (jnl_number);
+
+
+
+

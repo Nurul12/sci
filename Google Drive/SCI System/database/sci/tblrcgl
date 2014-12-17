@@ -1,0 +1,18 @@
+{ TABLE "mis".rcgl row size = 94 number of columns = 6 index size = 48 }
+create table "mis".rcgl 
+  (
+    r_no char(8),
+    r_gl char(8),
+    r_dr_amt money(16,2),
+    r_cr_amt money(16,2),
+    r_desc char(30),
+    r_desc2 char(30)
+  );
+revoke all on "mis".rcgl from "public";
+
+create index "mis".i_rcgl on "mis".rcgl (r_no);
+create index "mis".i_rcgl2 on "mis".rcgl (r_no,r_gl);
+
+
+
+

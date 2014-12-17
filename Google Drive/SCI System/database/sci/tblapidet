@@ -1,0 +1,22 @@
+{ TABLE "mis".apidet row size = 103 number of columns = 10 index size = 40 }
+create table "mis".apidet 
+  (
+    inv_supp_no char(8) not null ,
+    inv_no char(15),
+    inv_po char(8),
+    inv_ref char(8),
+    inv_par char(30),
+    inv_unit char(4),
+    inv_qty integer,
+    inv_unit_amt money(16,2),
+    inv_ext_amt money(16,2),
+    inv_gl char(8)
+  );
+revoke all on "mis".apidet from "public";
+
+create index "mis".i_apidet on "mis".apidet (inv_supp_no,inv_no);
+    
+
+
+
+

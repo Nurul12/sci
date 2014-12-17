@@ -1,0 +1,31 @@
+{ TABLE "mis".fadispl row size = 171 number of columns = 20 index size = 18 }
+create table "mis".fadispl 
+  (
+    fa_num char(8),
+    fa_status char(1),
+    fa_code char(8),
+    fa_ddate date,
+    fa_uc money(16,2),
+    fa_cost money(16,2),
+    fa_acc_dep money(16,2),
+    fa_dep money(16,2),
+    fa_adep money(16,2),
+    fa_nbv money(16,2),
+    fa_sprice money(16,2) not null ,
+    fa_p_l money(16,2),
+    fa_dept char(2),
+    fa_dqty decimal(7,2),
+    fa_user char(8),
+    fa_par char(30),
+    fa_rem char(30),
+    fa_dtyp char(1),
+    fa_dmethod char(1),
+    fa_dqc char(1)
+  );
+revoke all on "mis".fadispl from "public";
+
+create index "mis".i_fadispl on "mis".fadispl (fa_num);
+
+
+
+

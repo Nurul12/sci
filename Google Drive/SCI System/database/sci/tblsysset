@@ -1,0 +1,21 @@
+{ TABLE "mis".sysset row size = 306 number of columns = 10 index size = 36 }
+create table "mis".sysset 
+  (
+    moducd char(10),
+    settype char(10),
+    settnm char(150),
+    textvl char(100),
+    numevl decimal(20,6),
+    statcd char(1),
+    create_by char(8),
+    create_date date,
+    update_by char(8),
+    update_date date,
+    primary key (moducd,settype) 
+  );
+revoke all on "mis".sysset from "public";
+
+
+
+
+

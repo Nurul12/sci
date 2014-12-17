@@ -1,0 +1,25 @@
+{ TABLE "mis".lethmas row size = 82 number of columns = 12 index size = 60 }
+create table "mis".lethmas 
+  (
+    le_no serial not null ,
+    le_proj_code char(6) not null ,
+    le_phase_code char(6) not null ,
+    le_unit_no char(10) not null ,
+    le_lett_code char(6) not null ,
+    le_att_code char(6),
+    le_sch_stage integer,
+    le_type char(1),
+    le_rem_flag char(1),
+    le_rem_no integer,
+    le_ref char(30),
+    le_date date
+  );
+revoke all on "mis".lethmas from "public";
+
+create index "mis".i_lethmas on "mis".lethmas (le_proj_code,le_phase_code,
+    le_unit_no,le_lett_code);
+create unique index "mis".u_lethmas on "mis".lethmas (le_no);
+
+
+
+

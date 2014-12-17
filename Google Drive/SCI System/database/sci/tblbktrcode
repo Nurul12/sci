@@ -1,0 +1,12 @@
+{ TABLE "mis".bktrcode row size = 36 number of columns = 2 index size = 0 }
+create table "mis".bktrcode 
+  (
+    trn_code char(6),
+    trn_desc char(30)
+  );
+revoke all on "mis".bktrcode from "public";
+
+
+
+
+

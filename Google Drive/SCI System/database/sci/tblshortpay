@@ -1,0 +1,29 @@
+{ TABLE "mis".shortpay row size = 80 number of columns = 15 index size = 60 }
+create table "mis".shortpay 
+  (
+    trno char(8),
+    keyno integer not null ,
+    docid integer,
+    debtor char(8),
+    sman char(6),
+    ttype char(1),
+    docno char(8),
+    docdate date,
+    qtywght decimal(12,2),
+    actual_p decimal(7,4),
+    collect_p decimal(7,4),
+    price_df decimal(7,4),
+    approv_p decimal(7,4),
+    amt money(16,2),
+    coll char(1)
+  );
+revoke all on "mis".shortpay from "public";
+
+create index "mis".i_shortpay3 on "mis".shortpay (trno);
+create index "mis".i_shortpay4 on "mis".shortpay (keyno);
+create index "mis".i_shortpay1 on "mis".shortpay (docid);
+create index "mis".i_shortpay2 on "mis".shortpay (docno);
+
+
+
+

@@ -1,0 +1,15 @@
+{ TABLE "mis".opdet row size = 17 number of columns = 4 index size = 15 }
+create table "mis".opdet 
+  (
+    op_code char(6) not null ,
+    op_dist_acc char(8) not null ,
+    op_dist_dr_cr char(1),
+    op_dist char(2)
+  );
+revoke all on "mis".opdet from "public";
+
+create index "mis".i_opdet on "mis".opdet (op_code);
+
+
+
+

@@ -1,0 +1,17 @@
+{ TABLE "mis".modrwx row size = 19 number of columns = 5 index size = 30 }
+create table "mis".modrwx 
+  (
+    sysuid char(8),
+    progid char(8),
+    r char(1),
+    w char(1),
+    x char(1)
+  );
+revoke all on "mis".modrwx from "public";
+
+create unique index "mis".i_modrwx on "mis".modrwx (sysuid,progid);
+    
+
+
+
+

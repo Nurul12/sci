@@ -1,0 +1,35 @@
+{ TABLE "mis".pcomas row size = 169 number of columns = 22 index size = 54 }
+create table "mis".pcomas 
+  (
+    co_supp_no char(8) not null ,
+    co_no char(8),
+    co_ref char(8),
+    co_op_code char(6),
+    co_date date,
+    co_due_date date,
+    co_user_id char(8),
+    co_desc char(30),
+    co_amt money(16,2),
+    co_bank_code char(8),
+    co_curr char(3),
+    co_ex_rate decimal(10,5),
+    co_cheque_no char(12),
+    co_bank_from char(8),
+    co_trn_code char(6),
+    co_clear_date date,
+    co_cheque_date date,
+    co_bank_inch money(16,2),
+    co_bank_outch money(16,2),
+    co_os_amt money(16,2),
+    co_status char(1),
+    co_touch_date date
+  );
+revoke all on "mis".pcomas from "public";
+
+create unique index "mis".i_pcomas on "mis".pcomas (co_no);
+create index "mis".i_pcomas2 on "mis".pcomas (co_supp_no,co_no,
+    co_date);
+
+
+
+

@@ -1,0 +1,13 @@
+{ TABLE "mis".sysgrouphdr row size = 60 number of columns = 2 index size = 21 }
+create table "mis".sysgrouphdr 
+  (
+    group_id char(10),
+    group_desc char(50),
+    primary key (group_id) 
+  );
+revoke all on "mis".sysgrouphdr from "public";
+
+
+
+
+

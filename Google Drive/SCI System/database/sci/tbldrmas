@@ -1,0 +1,34 @@
+{ TABLE "mis".drmas row size = 207 number of columns = 21 index size = 57 }
+create table "mis".drmas 
+  (
+    dr_proj_code char(6) not null ,
+    dr_phase_code char(6) not null ,
+    dr_unit_code char(10) not null ,
+    dr_type char(1),
+    dr_no char(8) not null ,
+    dr_ref char(8),
+    dr_op_code char(6),
+    dr_addr_to char(1),
+    dr_date date,
+    dr_user_id char(8),
+    dr_amt money(16,2),
+    dr_status char(1),
+    dr_os_amt money(16,2),
+    dr_due_date date,
+    dr_touch_date date,
+    dr_rem1 char(30),
+    dr_rem2 char(30),
+    dr_rem3 char(30),
+    dr_rem4 char(30),
+    dr_for char(1),
+    dr_who_gen char(1)
+  );
+revoke all on "mis".drmas from "public";
+
+create unique index "mis".i_drmas on "mis".drmas (dr_no);
+create index "mis".n_drmas on "mis".drmas (dr_proj_code,dr_phase_code,
+    dr_unit_code);
+
+
+
+

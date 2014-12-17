@@ -1,0 +1,14 @@
+{ TABLE "mis".dbconfig row size = 135 number of columns = 4 index size = 0 }
+create table "mis".dbconfig 
+  (
+    cpname char(10) not null ,
+    dbparm char(100) not null ,
+    doprefix char(10),
+    region char(15)
+  );
+revoke all on "mis".dbconfig from "public";
+
+
+
+
+

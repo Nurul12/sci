@@ -1,0 +1,29 @@
+{ TABLE "mis".umisc row size = 116 number of columns = 17 index size = 48 }
+create table "mis".umisc 
+  (
+    um_proj_code char(6) not null ,
+    um_phase_code char(6) not null ,
+    um_unit_code char(10) not null ,
+    um_code char(6) not null ,
+    um_ref char(8),
+    um_date date,
+    um_desc char(30),
+    um_amt money(16,2),
+    um_stage integer,
+    um_stage_days integer,
+    um_amt_billed money(16,2),
+    um_amt_rcpt money(16,2),
+    um_type char(1),
+    um_prorate char(1),
+    um_repeat char(1),
+    um_start_date date,
+    um_end_date date
+  );
+revoke all on "mis".umisc from "public";
+
+create index "mis".i_umisc on "mis".umisc (um_proj_code,um_phase_code,
+    um_unit_code,um_code);
+
+
+
+

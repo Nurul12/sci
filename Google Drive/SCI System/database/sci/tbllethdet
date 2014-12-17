@@ -1,0 +1,15 @@
+{ TABLE "mis".lethdet row size = 54 number of columns = 4 index size = 12 }
+create table "mis".lethdet 
+  (
+    le_no integer,
+    le_code char(6) not null ,
+    le_var_no integer,
+    le_data char(40)
+  );
+revoke all on "mis".lethdet from "public";
+
+create index "mis".i_lethdet on "mis".lethdet (le_no);
+
+
+
+

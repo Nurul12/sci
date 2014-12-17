@@ -1,0 +1,17 @@
+{ TABLE "mis".cbcgl row size = 94 number of columns = 6 index size = 18 }
+create table "mis".cbcgl 
+  (
+    cbc_ptc_no char(8) not null ,
+    cbc_gl char(8),
+    cbc_dr money(16,2),
+    cbc_cr money(16,2),
+    cbc_desc char(30),
+    cbc_desc2 char(30)
+  );
+revoke all on "mis".cbcgl from "public";
+
+create index "mis".i_cbcgl on "mis".cbcgl (cbc_ptc_no);
+
+
+
+

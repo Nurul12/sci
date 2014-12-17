@@ -1,0 +1,13 @@
+{ TABLE "mis".tbalist row size = 8 number of columns = 1 index size = 18 }
+create table "mis".tbalist 
+  (
+    glac_no char(8)
+  );
+revoke all on "mis".tbalist from "public";
+
+create unique index "mis".i_tbalist on "mis".tbalist (glac_no);
+    
+
+
+
+

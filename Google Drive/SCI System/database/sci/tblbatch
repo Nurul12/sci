@@ -1,0 +1,20 @@
+{ TABLE "mis".batch row size = 46 number of columns = 10 index size = 0 }
+create table "mis".batch 
+  (
+    bat_ledger char(2),
+    bat_number char(6),
+    bat_no_of_trans smallint,
+    bat_date_created date,
+    bat_active money(16,2),
+    bat_posted money(16,2),
+    bat_status char(1),
+    bat_date_posted date,
+    bat_posted_by char(8),
+    bat_type char(1)
+  );
+revoke all on "mis".batch from "public";
+
+
+
+
+

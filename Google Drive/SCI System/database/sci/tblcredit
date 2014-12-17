@@ -1,0 +1,17 @@
+{ TABLE "mis".credit row size = 239 number of columns = 7 index size = 0 }
+create table "mis".credit 
+  (
+    inv_type char(1),
+    inv_add_line1 char(70),
+    inv_add_line2 char(70),
+    inv_sign1 char(30),
+    inv_sign2 char(30),
+    inv_sign3 char(30),
+    inv_user_id char(8)
+  );
+revoke all on "mis".credit from "public";
+
+
+
+
+

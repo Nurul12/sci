@@ -1,0 +1,20 @@
+{ TABLE "mis".tinvdet row size = 60 number of columns = 9 index size = 18 }
+create table "mis".tinvdet 
+  (
+    crno char(8),
+    invnum char(8) not null ,
+    dept char(2),
+    item char(8) not null ,
+    uprice decimal(14,2),
+    qtywght decimal(14,2),
+    packwght decimal(10,2),
+    mortwght decimal(10,2),
+    spoiwght decimal(10,2)
+  );
+revoke all on "mis".tinvdet from "public";
+
+create index "mis".ti_invdet on "mis".tinvdet (invnum);
+
+
+
+

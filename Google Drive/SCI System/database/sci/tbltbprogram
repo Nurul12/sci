@@ -1,0 +1,15 @@
+{ TABLE "mis".tbprogram row size = 81 number of columns = 3 index size = 19 }
+create table "mis".tbprogram 
+  (
+    chprogramid char(9) not null ,
+    chprogramname char(60) not null ,
+    chfolderid char(12) not null 
+  );
+revoke all on "mis".tbprogram from "public";
+
+create unique index "mis".idx_chprogramid on "mis".tbprogram (chprogramid);
+    
+
+
+
+

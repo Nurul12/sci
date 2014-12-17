@@ -1,0 +1,20 @@
+{ TABLE "mis".othoutmas row size = 153 number of columns = 9 index size = 21 }
+create table "mis".othoutmas 
+  (
+    othoutid char(10),
+    othoutdate date,
+    whid char(10),
+    status char(1),
+    remark char(100),
+    create_by char(10),
+    create_date date,
+    update_by char(10),
+    update_date date,
+    primary key (othoutid) 
+  );
+revoke all on "mis".othoutmas from "public";
+
+
+
+
+

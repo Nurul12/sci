@@ -1,0 +1,29 @@
+{ TABLE "mis".podet row size = 114 number of columns = 18 index size = 27 }
+create table "mis".podet 
+  (
+    cocode char(6),
+    potype char(2),
+    pono char(8),
+    pono2 char(8),
+    mrdate date,
+    mrno char(12),
+    fcode char(5),
+    icode char(8),
+    poqty decimal(6,0),
+    uom char(6),
+    uprice decimal(16,2),
+    devdate date,
+    srnqty decimal(6,0),
+    ttyid char(10),
+    create_by char(8),
+    create_date date,
+    update_by char(8),
+    update_date date
+  );
+revoke all on "mis".podet from "public";
+
+create index "mis".podet_01 on "mis".podet (cocode,pono);
+
+
+
+

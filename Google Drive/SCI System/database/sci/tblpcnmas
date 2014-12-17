@@ -1,0 +1,30 @@
+{ TABLE "mis".pcnmas row size = 195 number of columns = 16 index size = 66 }
+create table "mis".pcnmas 
+  (
+    cr_supp_no char(8) not null ,
+    cr_no char(8),
+    cr_op_code char(6),
+    cr_curr char(3),
+    cr_ex_rate decimal(10,5),
+    cr_reg_date date,
+    cr_date date,
+    cr_user_id char(8),
+    cr_ref char(8),
+    cr_amt money(16,2),
+    cr_status char(1),
+    cr_unappl_amt money(16,2),
+    cr_rem1 char(30),
+    cr_rem2 char(30),
+    cr_rem3 char(30),
+    cr_rem4 char(30)
+  );
+revoke all on "mis".pcnmas from "public";
+
+create unique index "mis".i_pcnmas on "mis".pcnmas (cr_supp_no,
+    cr_no);
+create index "mis".i_pcnmas2 on "mis".pcnmas (cr_supp_no,cr_no,
+    cr_reg_date);
+
+
+
+

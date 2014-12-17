@@ -1,0 +1,21 @@
+{ TABLE "mis".rcdet row size = 43 number of columns = 8 index size = 61 }
+create table "mis".rcdet 
+  (
+    r_no char(8) not null ,
+    r_alloc_type char(1),
+    r_doc_no char(8),
+    r_amt money(16,2),
+    r_clear_date date,
+    r_status char(1),
+    r_cust_no char(8),
+    r_doc_date date
+  );
+revoke all on "mis".rcdet from "public";
+
+create index "mis".i_rcdet on "mis".rcdet (r_no);
+create index "mis".i_rcdet2 on "mis".rcdet (r_cust_no,r_no,r_alloc_type,
+    r_doc_no);
+
+
+
+

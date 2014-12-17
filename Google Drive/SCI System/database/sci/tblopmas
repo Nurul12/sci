@@ -1,0 +1,14 @@
+{ TABLE "mis".opmas row size = 37 number of columns = 3 index size = 15 }
+create table "mis".opmas 
+  (
+    op_code char(6) not null ,
+    op_name char(30) not null ,
+    op_type char(1)
+  );
+revoke all on "mis".opmas from "public";
+
+create unique index "mis".i_opmas on "mis".opmas (op_code);
+
+
+
+

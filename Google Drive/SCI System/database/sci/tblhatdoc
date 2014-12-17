@@ -1,0 +1,25 @@
+{ TABLE "mis".hatdoc row size = 40 number of columns = 13 index size = 21 }
+create table "mis".hatdoc 
+  (
+    hat_no char(2) not null ,
+    set_date date,
+    hat_date date,
+    doc_typ char(2),
+    fm_no char(3),
+    hs_no char(3),
+    hat_weeks smallint,
+    set_qty integer,
+    w_eggs smallint,
+    estdoc_per decimal(5,2),
+    doc_qty integer,
+    hat_per decimal(5,2),
+    w_doc smallint
+  );
+revoke all on "mis".hatdoc from "public";
+
+create index "mis".i_hatdoc on "mis".hatdoc (hat_no,set_date,hat_date);
+    
+
+
+
+

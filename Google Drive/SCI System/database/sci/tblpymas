@@ -1,0 +1,32 @@
+{ TABLE "mis".pymas row size = 146 number of columns = 18 index size = 66 }
+create table "mis".pymas 
+  (
+    p_supp_no char(8) not null constraint "mis".n196_166,
+    p_no char(8),
+    p_ref char(10),
+    p_op_code char(6),
+    p_date date,
+    p_user_id char(8),
+    p_desc char(30),
+    p_amt money(16,2),
+    p_bank_code char(8),
+    p_curr char(3),
+    p_ex_rate decimal(10,5),
+    p_cheque_no char(12),
+    p_trn_code char(6),
+    p_clear_date date,
+    p_cheque_date date,
+    p_bank_outch money(16,2),
+    p_unappl_amt money(16,2),
+    p_status char(1)
+  );
+revoke all on "mis".pymas from "public";
+
+create unique index "mis".i_pymas on "mis".pymas (p_supp_no,p_no);
+    
+create index "mis".i_pymas2 on "mis".pymas (p_supp_no,p_no,p_date);
+    
+
+
+
+

@@ -1,0 +1,17 @@
+{ TABLE "mis".custopname row size = 51 number of columns = 7 index size = 0 }
+create table "mis".custopname 
+  (
+    custnum char(10) not null ,
+    tgl_opname date not null ,
+    status char(1) not null ,
+    op_bal decimal(16,2) not null ,
+    last_sales decimal(16,2) not null ,
+    last_coll decimal(16,2) not null ,
+    last_cn decimal(16,2) not null 
+  );
+revoke all on "mis".custopname from "public";
+
+
+
+
+

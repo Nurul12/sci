@@ -1,0 +1,12 @@
+{ TABLE "mis".ascii row size = 3 number of columns = 2 index size = 0 }
+create table "mis".ascii 
+  (
+    code smallint,
+    char char(1)
+  );
+revoke all on "mis".ascii from "public";
+
+
+
+
+

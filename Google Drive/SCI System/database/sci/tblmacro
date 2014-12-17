@@ -1,0 +1,12 @@
+{ TABLE "mis".macro row size = 11 number of columns = 2 index size = 0 }
+create table "mis".macro 
+  (
+    macro char(3),
+    abbrv char(8)
+  );
+revoke all on "mis".macro from "public";
+
+
+
+
+

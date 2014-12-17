@@ -1,0 +1,15 @@
+{ TABLE "mis".ccndet row size = 25 number of columns = 4 index size = 12 }
+create table "mis".ccndet 
+  (
+    recno integer not null ,
+    cnno char(8),
+    cndate date,
+    issued money(16,2)
+  );
+revoke all on "mis".ccndet from "public";
+
+create index "mis".ix739_1 on "mis".ccndet (recno);
+
+
+
+

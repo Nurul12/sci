@@ -1,0 +1,23 @@
+{ TABLE "mis".arjnlmas row size = 104 number of columns = 11 index size = 18 }
+create table "mis".arjnlmas 
+  (
+    jvno char(8),
+    jstat char(1),
+    jsrc char(6),
+    jprd smallint,
+    jfyr integer,
+    jage smallint,
+    jvdate date,
+    juser char(8),
+    jrem1 char(30),
+    jrem2 char(30),
+    jamt money(16,2)
+  );
+revoke all on "mis".arjnlmas from "public";
+
+create unique index "mis".i_arjnlmas on "mis".arjnlmas (jvno);
+    
+
+
+
+

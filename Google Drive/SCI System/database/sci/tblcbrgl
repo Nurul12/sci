@@ -1,0 +1,17 @@
+{ TABLE "mis".cbrgl row size = 94 number of columns = 6 index size = 18 }
+create table "mis".cbrgl 
+  (
+    cbr_no char(8),
+    cbr_gl char(8),
+    cbr_dr_amt money(16,2),
+    cbr_cr_amt money(16,2),
+    cbr_desc char(30),
+    cbr_desc2 char(30)
+  );
+revoke all on "mis".cbrgl from "public";
+
+create index "mis".i_cbrgl on "mis".cbrgl (cbr_no);
+
+
+
+

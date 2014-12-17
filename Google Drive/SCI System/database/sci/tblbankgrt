@@ -1,0 +1,22 @@
+{ TABLE "mis".bankgrt row size = 132 number of columns = 10 index size = 18 }
+create table "mis".bankgrt 
+  (
+    bk_ref char(8),
+    bk_acname char(8),
+    bk_trans_date date,
+    bk_exp_date date,
+    bk_receiver char(30),
+    bk_amt money(16,2),
+    bk_desc1 char(30),
+    bk_desc2 char(30),
+    bk_status char(1),
+    bk_user_id char(8)
+  );
+revoke all on "mis".bankgrt from "public";
+
+create unique index "mis".i_bankgrt on "mis".bankgrt (bk_ref);
+    
+
+
+
+

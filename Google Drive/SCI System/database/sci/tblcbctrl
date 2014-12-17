@@ -1,0 +1,22 @@
+{ TABLE "mis".cbctrl row size = 32 number of columns = 12 index size = 0 }
+create table "mis".cbctrl 
+  (
+    cb_company_code char(6),
+    cb_auto_rcp_no char(1),
+    cb_start_rcp_no integer,
+    cb_auto_pay_no char(1),
+    cb_start_pay_no integer,
+    cb_auto_xfr_no char(1),
+    cb_start_xfr_no integer,
+    cb_auto_ptc_no char(1),
+    cb_start_ptc_no char(6),
+    cb_gl_feed char(1),
+    cb_gl_feed_mode char(1),
+    cb_retention smallint
+  );
+revoke all on "mis".cbctrl from "public";
+
+
+
+
+

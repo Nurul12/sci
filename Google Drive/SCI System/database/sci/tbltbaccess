@@ -1,0 +1,16 @@
+{ TABLE "mis".tbaccess row size = 21 number of columns = 4 index size = 34 }
+create table "mis".tbaccess 
+  (
+    chuserid char(10) not null ,
+    chprogramid char(9) not null ,
+    chupdate char(1) not null ,
+    chprint char(1) not null 
+  );
+revoke all on "mis".tbaccess from "public";
+
+create unique index "mis".idx_chuserprgid on "mis".tbaccess (chuserid,
+    chprogramid);
+
+
+
+

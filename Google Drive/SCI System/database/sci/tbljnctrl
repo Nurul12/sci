@@ -1,0 +1,13 @@
+{ TABLE "mis".jnctrl row size = 9 number of columns = 3 index size = 0 }
+create table "mis".jnctrl 
+  (
+    jauto char(1),
+    jpfx char(2),
+    jno char(6)
+  );
+revoke all on "mis".jnctrl from "public";
+
+
+
+
+

@@ -1,0 +1,16 @@
+{ TABLE "mis".stock_item_code row size = 131 number of columns = 5 index size = 0 
+              }
+create table "mis".stock_item_code 
+  (
+    st_name char(50) not null ,
+    st_icode char(8) not null ,
+    st_info char(50),
+    st_uom char(8),
+    st_batch char(15)
+  );
+revoke all on "mis".stock_item_code from "public";
+
+
+
+
+

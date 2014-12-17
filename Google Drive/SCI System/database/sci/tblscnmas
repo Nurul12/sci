@@ -1,0 +1,23 @@
+{ TABLE "mis".scnmas row size = 92 number of columns = 12 index size = 18 }
+create table "mis".scnmas 
+  (
+    custnum char(8) not null ,
+    cnnum char(8) not null ,
+    cnstat char(1),
+    cndate date,
+    userid char(8),
+    invnum char(8),
+    cnamt money(16,2),
+    age smallint,
+    link char(1),
+    unapplamt money(16,2),
+    remark char(30),
+    disdate date
+  );
+revoke all on "mis".scnmas from "public";
+
+create unique index "mis".i_scnmas on "mis".scnmas (cnnum);
+
+
+
+

@@ -1,0 +1,30 @@
+{ TABLE "mis".letdet row size = 439 number of columns = 19 index size = 15 }
+create table "mis".letdet 
+  (
+    lett_code char(6) not null ,
+    lett_var_no integer,
+    lett_var char(8) not null ,
+    lett_access char(1),
+    lett_file char(10),
+    lett_key1 char(40),
+    lett_u1 char(20),
+    lett_key2 char(40),
+    lett_u2 char(20),
+    lett_key3 char(40),
+    lett_u3 char(20),
+    lett_key4 char(40),
+    lett_u4 char(20),
+    lett_key5 char(40),
+    lett_u5 char(20),
+    lett_key6 char(40),
+    lett_u6 char(20),
+    lett_order char(20),
+    lett_field char(30)
+  );
+revoke all on "mis".letdet from "public";
+
+create index "mis".i_letdet on "mis".letdet (lett_code);
+
+
+
+

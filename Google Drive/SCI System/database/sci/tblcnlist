@@ -1,0 +1,18 @@
+{ TABLE "mis".cnlist row size = 83 number of columns = 7 index size = 12 }
+create table "mis".cnlist 
+  (
+    sysno serial not null ,
+    sman char(6),
+    rem1 char(30),
+    rem2 char(30),
+    user char(8),
+    cldate date,
+    print char(1)
+  );
+revoke all on "mis".cnlist from "public";
+
+create unique index "mis".i_cnlist on "mis".cnlist (sysno);
+
+
+
+

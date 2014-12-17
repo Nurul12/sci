@@ -1,0 +1,19 @@
+{ TABLE "mis".stock_balance row size = 71 number of columns = 9 index size = 0 }
+create table "mis".stock_balance 
+  (
+    icode char(8) not null ,
+    periode integer not null ,
+    tahun integer not null ,
+    stock_balance decimal(16,2),
+    stock_out decimal(16,2),
+    stock_in decimal(16,2),
+    closing_date date,
+    update_by char(20),
+    update_date date
+  );
+revoke all on "mis".stock_balance from "public";
+
+
+
+
+

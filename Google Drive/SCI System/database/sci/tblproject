@@ -1,0 +1,29 @@
+{ TABLE "mis".project row size = 258 number of columns = 17 index size = 15 }
+create table "mis".project 
+  (
+    proj_code char(6) not null ,
+    proj_name char(30) not null ,
+    proj_sdate date,
+    proj_edate date,
+    proj_rem1 char(30),
+    proj_rem2 char(30),
+    proj_rem3 char(30),
+    proj_amt money(16,2),
+    proj_dis_fin char(6),
+    proj_dis_fin_ref char(20),
+    proj_dis_sol char(6),
+    proj_dis_sol_ref char(20),
+    proj_ch_fin char(6),
+    proj_ch_fin_ref char(20),
+    proj_ch_sol char(6),
+    proj_ch_sol_ref char(30),
+    proj_status char(1)
+  );
+revoke all on "mis".project from "public";
+
+create unique index "mis".i_project on "mis".project (proj_code);
+    
+
+
+
+

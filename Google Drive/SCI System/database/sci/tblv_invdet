@@ -1,0 +1,9 @@
+
+
+create view "mis".v_invdet (invnum,dept) as 
+  select x0.invnum ,x0.dept from "mis".invdet x0 ,"mis".sdomas x1 
+    where ((((x0.invnum = x1.invnum ) AND (MONTH (x1.dodate ) 
+    = 6 ) ) AND (YEAR (x1.dodate ) = 2012 ) ) AND (x1.donum [1,
+    3] = 'TMP' ) ) ;               
+
+

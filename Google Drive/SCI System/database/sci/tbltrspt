@@ -1,0 +1,16 @@
+{ TABLE "mis".trspt row size = 26 number of columns = 5 index size = 15 }
+create table "mis".trspt 
+  (
+    acode char(6),
+    c1 decimal(8,4),
+    c2 decimal(8,4),
+    c3 decimal(8,4),
+    c4 decimal(8,4)
+  );
+revoke all on "mis".trspt from "public";
+
+create index "mis".i_trspt on "mis".trspt (acode);
+
+
+
+

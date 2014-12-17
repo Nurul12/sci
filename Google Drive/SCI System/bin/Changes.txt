@@ -1,0 +1,50 @@
+Program Aplikasi SCI
+------------------------------- Version 1.2.7------------- 
+Risci 
+27 Febuari 2013
+Revisi : - Pada Module Credit Control di Import Payment,
+           ada perubahan dari import ke table ccrcmas 
+           diganti ke table rcmas.
+         - perbaikan amount untuk mata uang USD
+
+------------------------------- Version 1.2.6------------- 
+Risci 
+04 Febuari 2013
+Revisi : - Pada Module Accounting di Lap SOA Detail.
+         - Export Item di tambah filter group code "GAS"
+
+------------------------------- Version 1.2.5------------- 
+Risci 
+28 Januari 2013
+Revisi : Pada Module Accounting di Faktur Pajak List.
+
+------------------------------- Version 1.2.4 --------------------------------
+31 Oktober 2012
+Alasan revisi : report disebelumnya, urutan tahun msh bermasalah
+- Revisi Sales Report by Month
+- Revisi Sales Report by Branch by month
+
+------------------------------- Version 1.2.1 --------------------------------
+27 Agustus
+- Revisi Report Sales By Cabang, By Month, By Item dan SDB
+
+------------------------------- Version 1.2.0 --------------------------------
+7 Agustus
+- Report Sales By Cabang, By Month, By Item
+
+------------------------------- Version 1.2.0 --------------------------------
+25 Juni
+- Module Export PO,SRN,DO (Module Purchasing dieksport Purchasing DBest untuk Dutamas)
+- Module Import PO (Tambahan Module Accounting)
+- Module Import SRN (Tambahan Module Accounting)
+- Report SDB (Module Sales kategori Internal & Open Market)
+
+------------------------------- Version 1.1.0 --------------------------------
+10 Juni
+- Revisi Import sdomas,sdodet,invdet apabila sudah ada diabaikan, apabila belum diinsert
+- Format Tgl harus dd-mm-yyyy, apabila tidak sesuai program tidak bisa dibuka
+
+------------------------------- Version 1.0.0 --------------------------------
+25 April 2012
+- Initial Release
+- Module Inventory

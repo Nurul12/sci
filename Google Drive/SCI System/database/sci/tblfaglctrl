@@ -1,0 +1,15 @@
+{ TABLE "mis".faglctrl row size = 12 number of columns = 3 index size = 9 }
+create table "mis".faglctrl 
+  (
+    dcode char(2),
+    grpcode char(2),
+    accdep_gl char(8)
+  );
+revoke all on "mis".faglctrl from "public";
+
+create unique index "mis".i_faglctrl on "mis".faglctrl (dcode);
+    
+
+
+
+

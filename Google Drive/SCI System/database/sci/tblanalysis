@@ -1,0 +1,21 @@
+{ TABLE "mis".analysis row size = 163 number of columns = 9 index size = 39 }
+create table "mis".analysis 
+  (
+    an_proj_code char(6),
+    an_phase_code char(6),
+    an_unit_code char(10),
+    an_spa_stat char(30),
+    an_loan_apply char(30),
+    an_loan_approv char(30),
+    an_doc_stat char(30),
+    an_market_exec char(20),
+    an_status char(1)
+  );
+revoke all on "mis".analysis from "public";
+
+create unique index "mis".i_analysis on "mis".analysis (an_proj_code,
+    an_phase_code,an_unit_code);
+
+
+
+

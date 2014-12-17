@@ -1,0 +1,16 @@
+{ TABLE "mis".author row size = 58 number of columns = 6 index size = 0 }
+create table "mis".author 
+  (
+    module char(10),
+    op char(20),
+    adate date,
+    atime char(8),
+    uid char(8),
+    auid char(8)
+  );
+revoke all on "mis".author from "public";
+
+
+
+
+

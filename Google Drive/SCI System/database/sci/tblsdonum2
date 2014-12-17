@@ -1,0 +1,18 @@
+{ TABLE "mis".sdonum2 row size = 31 number of columns = 8 index size = 0 }
+create table "mis".sdonum2 
+  (
+    prefix char(3),
+    prefix_cnt char(1),
+    suffix char(1),
+    mindono decimal(7,0),
+    maxdono decimal(7,0),
+    nextdono decimal(8,0),
+    ttyid char(10),
+    check char(1)
+  );
+revoke all on "mis".sdonum2 from "public";
+
+
+
+
+

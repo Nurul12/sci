@@ -1,0 +1,19 @@
+{ TABLE "mis".stock_in row size = 81 number of columns = 7 index size = 18 }
+create table "mis".stock_in 
+  (
+    st_in_id char(8) not null ,
+    st_in_stat char(1),
+    st_in_code char(8),
+    st_in_date date,
+    st_in_qty smallint,
+    st_in_remarks char(50),
+    st_in_farm char(8)
+  );
+revoke all on "mis".stock_in from "public";
+
+create unique index "mis".ixstkin on "mis".stock_in (st_in_id);
+    
+
+
+
+

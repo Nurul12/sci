@@ -1,0 +1,28 @@
+{ TABLE "mis".fareval row size = 147 number of columns = 17 index size = 18 }
+create table "mis".fareval 
+  (
+    fa_num char(8) not null ,
+    fa_status char(1),
+    fa_user char(8),
+    fa_rev_date date,
+    fa_dept char(2),
+    fa_code char(8) not null ,
+    fa_dqty decimal(7,2),
+    fa_uc money(16,2),
+    fa_remark char(30),
+    fa_cost money(16,2) not null ,
+    fa_acc_dep money(16,2),
+    fa_dep money(16,2),
+    fa_adep money(16,2),
+    fa_adj money(16,2),
+    fa_nbv money(16,2),
+    fa_rcost money(16,2),
+    fa_spls money(16,2)
+  );
+revoke all on "mis".fareval from "public";
+
+create index "mis".i_fareval on "mis".fareval (fa_num);
+
+
+
+

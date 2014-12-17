@@ -1,0 +1,12 @@
+{ TABLE "mis".inv_curr row size = 18 number of columns = 2 index size = 0 }
+create table "mis".inv_curr 
+  (
+    ccode char(3),
+    cdesc char(15)
+  );
+revoke all on "mis".inv_curr from "public";
+
+
+
+
+

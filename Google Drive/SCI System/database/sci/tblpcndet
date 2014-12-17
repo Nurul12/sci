@@ -1,0 +1,20 @@
+{ TABLE "mis".pcndet row size = 47 number of columns = 8 index size = 30 }
+create table "mis".pcndet 
+  (
+    cr_supp_no char(8),
+    cr_no char(8),
+    cr_alloc_type char(1),
+    cr_doc_no char(12),
+    cr_clear_date date,
+    cr_amt money(16,2),
+    cr_status char(1),
+    cr_doc_date date
+  );
+revoke all on "mis".pcndet from "public";
+
+create index "mis".i_pcndet on "mis".pcndet (cr_supp_no,cr_no);
+    
+
+
+
+

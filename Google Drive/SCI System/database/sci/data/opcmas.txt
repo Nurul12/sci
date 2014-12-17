@@ -1,0 +1,13 @@
+AR|CHQR|A/R CHEQUE RETURN|C|
+GL|GLJNL| | |
+CB|RCPT|C/B Cash Receipt|D|
+CB|PAY|C/B Cash Payment|C|
+AR|C/N|A/R Credit Note|C|
+AR|D/N|A/R Debit Note|D|
+AR|RCPT|A/R Receipts|C|
+AR|INV|A/R Invoices|D|
+AP|C/N|A/P Credit Note|D|
+AP|D/N|A/P Debit Note|C|
+AP|PAY|A/P Payment|D|
+AP|INV|A/P Invoices|C|
+CB|PTCH|C/B Petty Cash|F|

@@ -1,0 +1,31 @@
+{ TABLE "mis".prprop row size = 225 number of columns = 19 index size = 33 }
+create table "mis".prprop 
+  (
+    pt_proj_code char(6) not null ,
+    pt_phase_code char(6) not null ,
+    pt_code char(6) not null ,
+    pt_desc char(30),
+    pt_meas_type char(1),
+    pt_bld_per integer,
+    pt_meas_rem char(30),
+    pt_land_area decimal(10,3),
+    pt_bldup_area decimal(10,3),
+    pt_amt_per_meas money(16,2),
+    pt_sale_amt money(16,2),
+    pt_unit_amt money(16,2),
+    pt_xtra_amt money(16,2),
+    pt_xtra_amt_desc char(30),
+    pt_other_disc_amt money(16,2),
+    pt_other_disc_desc char(30),
+    pt_adj_rate money(16,2),
+    pt_penalty_rate decimal(6,3),
+    pt_improve_cost money(16,2)
+  );
+revoke all on "mis".prprop from "public";
+
+create unique index "mis".i_prprop on "mis".prprop (pt_proj_code,
+    pt_phase_code,pt_code);
+
+
+
+

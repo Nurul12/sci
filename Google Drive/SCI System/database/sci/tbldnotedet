@@ -1,0 +1,22 @@
+{ TABLE "mis".dnotedet row size = 62 number of columns = 11 index size = 18 }
+create table "mis".dnotedet 
+  (
+    dr_no char(8),
+    dr_item char(8),
+    dr_qtywght decimal(12,2),
+    dr_up decimal(14,2),
+    dr_amt money(16,2),
+    dr_os_amt money(16,2),
+    dr_link char(1),
+    dr_regdate date,
+    dr_dayno smallint,
+    dr_wkended date,
+    dr_pgrp char(2)
+  );
+revoke all on "mis".dnotedet from "public";
+
+create index "mis".i_dnotedet on "mis".dnotedet (dr_no);
+
+
+
+

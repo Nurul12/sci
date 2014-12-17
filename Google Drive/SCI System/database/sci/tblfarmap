@@ -1,0 +1,13 @@
+{ TABLE "mis".farmap row size = 24 number of columns = 3 index size = 0 }
+create table "mis".farmap 
+  (
+    fcode1 char(8),
+    fcode2 char(8),
+    cust char(8)
+  );
+revoke all on "mis".farmap from "public";
+
+
+
+
+

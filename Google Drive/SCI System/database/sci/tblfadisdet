@@ -1,0 +1,53 @@
+{ TABLE "mis".fadisdet row size = 363 number of columns = 41 index size = 24 }
+create table "mis".fadisdet 
+  (
+    fa_num char(8) not null ,
+    fa_ddate date,
+    fa_dep01 money(16,2),
+    fa_dep02 money(16,2),
+    fa_dep03 money(16,2),
+    fa_dep04 money(16,2),
+    fa_dep05 money(16,2),
+    fa_dep06 money(16,2),
+    fa_dep07 money(16,2),
+    fa_dep08 money(16,2),
+    fa_dep09 money(16,2),
+    fa_dep10 money(16,2),
+    fa_dep11 money(16,2),
+    fa_dep12 money(16,2),
+    fa_dep13 money(16,2),
+    fa_adep01 money(16,2),
+    fa_adep02 money(16,2),
+    fa_adep03 money(16,2),
+    fa_adep04 money(16,2),
+    fa_adep05 money(16,2),
+    fa_adep06 money(16,2),
+    fa_adep07 money(16,2),
+    fa_adep08 money(16,2),
+    fa_adep09 money(16,2),
+    fa_adep10 money(16,2),
+    fa_adep11 money(16,2),
+    fa_adep12 money(16,2),
+    fa_adep13 money(16,2),
+    fa_adj01 money(16,2),
+    fa_adj02 money(16,2),
+    fa_adj03 money(16,2),
+    fa_adj04 money(16,2),
+    fa_adj05 money(16,2),
+    fa_adj06 money(16,2),
+    fa_adj07 money(16,2),
+    fa_adj08 money(16,2),
+    fa_adj09 money(16,2),
+    fa_adj10 money(16,2),
+    fa_adj11 money(16,2),
+    fa_adj12 money(16,2),
+    fa_adj13 money(16,2)
+  );
+revoke all on "mis".fadisdet from "public";
+
+create unique index "mis".i_fadisdet on "mis".fadisdet (fa_num,
+    fa_ddate);
+
+
+
+

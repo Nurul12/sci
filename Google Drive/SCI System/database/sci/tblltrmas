@@ -1,0 +1,18 @@
+{ TABLE "mis".ltrmas row size = 54 number of columns = 6 index size = 15 }
+create table "mis".ltrmas 
+  (
+    lett_code char(6) not null ,
+    lett_desc char(30) not null ,
+    lett_type char(1) not null ,
+    lett_rem_flag char(1),
+    lett_rem_no integer,
+    lett_name char(12)
+  );
+revoke all on "mis".ltrmas from "public";
+
+create unique index "mis".i_ltrmas on "mis".ltrmas (lett_code);
+    
+
+
+
+

@@ -1,0 +1,27 @@
+{ TABLE "mis".ccttsmas row size = 133 number of columns = 14 index size = 48 }
+create table "mis".ccttsmas 
+  (
+    trno char(8),
+    debtor char(8),
+    trdate date,
+    trstat char(1),
+    camt money(16,2),
+    ibank char(8),
+    chqno char(12),
+    rbank char(8),
+    remarks char(50),
+    src char(1),
+    create_by char(8),
+    create_date date,
+    update_by char(8),
+    update_date date
+  );
+revoke all on "mis".ccttsmas from "public";
+
+create index "mis".i_ccttsmas1 on "mis".ccttsmas (trno);
+create index "mis".i_ccttsmas2 on "mis".ccttsmas (trno,debtor);
+    
+
+
+
+

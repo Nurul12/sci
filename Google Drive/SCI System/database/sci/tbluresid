@@ -1,0 +1,35 @@
+{ TABLE "mis".uresid row size = 285 number of columns = 22 index size = 105 }
+create table "mis".uresid 
+  (
+    ur_proj_code char(6) not null ,
+    ur_phase_code char(6) not null ,
+    ur_unit_code char(10) not null ,
+    ur_pri integer,
+    ur_name char(40) not null ,
+    ur_addr1 char(40),
+    ur_addr2 char(30),
+    ur_addr3 char(30),
+    ur_post_code char(6),
+    ur_city char(15),
+    ur_state char(15),
+    ur_tel_off char(15),
+    ur_tel_home char(15),
+    ur_citizenship char(1),
+    ur_ic char(15),
+    ur_ic_c char(1),
+    ur_sex char(1),
+    ur_marital_stat char(1),
+    ur_occ char(20),
+    ur_mthly_in money(16,2),
+    ur_birth_date date,
+    ur_resid_stat char(1)
+  );
+revoke all on "mis".uresid from "public";
+
+create index "mis".n_uresid on "mis".uresid (ur_name);
+create index "mis".i_uresid on "mis".uresid (ur_proj_code,ur_phase_code,
+    ur_unit_code);
+
+
+
+

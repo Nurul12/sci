@@ -1,0 +1,16 @@
+{ TABLE "mis".factrl row size = 24 number of columns = 6 index size = 0 }
+create table "mis".factrl 
+  (
+    fa_sysno char(8) not null ,
+    fa_fyr integer not null ,
+    fa_nprd smallint not null ,
+    fa_gl_feed char(1),
+    fa_amode char(1),
+    fa_accdep char(8)
+  );
+revoke all on "mis".factrl from "public";
+
+
+
+
+

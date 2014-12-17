@@ -1,0 +1,21 @@
+{ TABLE "mis".adjmas row size = 161 number of columns = 10 index size = 21 }
+create table "mis".adjmas 
+  (
+    adjid char(10),
+    adjdate date,
+    whid char(8),
+    status char(1),
+    remark char(100),
+    create_by char(10),
+    create_date date,
+    update_by char(10),
+    update_date date,
+    stid char(10),
+    primary key (adjid)  constraint "mis".u375_3883
+  );
+revoke all on "mis".adjmas from "public";
+
+
+
+
+

@@ -1,0 +1,19 @@
+{ TABLE "mis".dlock row size = 66 number of columns = 9 index size = 0 }
+create table "mis".dlock 
+  (
+    uid char(8),
+    tty char(12),
+    type char(1),
+    fid integer,
+    fname char(10),
+    fdate date,
+    ftime char(8),
+    factv char(15),
+    rid integer
+  );
+revoke all on "mis".dlock from "public";
+
+
+
+
+

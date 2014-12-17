@@ -1,0 +1,33 @@
+{ TABLE "mis".arfmas row size = 148 number of columns = 19 index size = 55 }
+create table "mis".arfmas 
+  (
+    f_cust_no char(8) not null ,
+    f_no char(8),
+    f_ref char(8),
+    f_op_code char(6),
+    f_date date,
+    f_user_id char(8),
+    f_desc char(30),
+    f_amt money(16,2),
+    f_bank_code char(8),
+    f_curr char(3),
+    f_ex_rate decimal(10,5),
+    f_cheque_no char(12),
+    f_trn_code char(6),
+    f_clear_date date,
+    f_cheque_date date,
+    f_bank_outch money(16,2),
+    f_os_amt money(16,2),
+    f_status char(1),
+    f_touch_date date
+  );
+revoke all on "mis".arfmas from "public";
+
+create unique index "mis".i_arfmas on "mis".arfmas (f_cust_no,
+    f_no);
+create index "mis".i_arfmas2 on "mis".arfmas (f_status,f_cust_no,
+    f_date);
+
+
+
+

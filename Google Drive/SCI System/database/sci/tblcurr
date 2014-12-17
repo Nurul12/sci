@@ -1,0 +1,13 @@
+{ TABLE "mis".curr row size = 23 number of columns = 2 index size = 10 }
+create table "mis".curr 
+  (
+    cr_code char(3),
+    cr_desc char(20)
+  );
+revoke all on "mis".curr from "public";
+
+create unique index "mis".i_curr on "mis".curr (cr_code);
+
+
+
+

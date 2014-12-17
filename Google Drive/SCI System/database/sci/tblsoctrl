@@ -1,0 +1,36 @@
+{ TABLE "mis".soctrl row size = 78 number of columns = 26 index size = 0 }
+create table "mis".soctrl 
+  (
+    company char(6),
+    sysmode char(1),
+    arfeed char(1),
+    stkmain char(1),
+    prcmain char(1),
+    ado char(1),
+    dofx char(3),
+    ndo char(5),
+    ainv char(1),
+    ipfx char(3),
+    ninv char(5),
+    afinv char(1),
+    fipfx char(3),
+    nfinv char(5),
+    acn char(1),
+    cpfx char(1),
+    ncn char(7),
+    adn char(1),
+    dpfx char(1),
+    ndn char(7),
+    arcpt char(1),
+    rpfx char(1),
+    nrcpt char(7),
+    mcurr char(3) not null ,
+    int decimal(10,3),
+    prn char(4)
+  );
+revoke all on "mis".soctrl from "public";
+
+
+
+
+

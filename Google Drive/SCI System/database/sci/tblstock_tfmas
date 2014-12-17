@@ -1,0 +1,20 @@
+{ TABLE "mis".stock_tfmas row size = 103 number of columns = 10 index size = 0 }
+create table "mis".stock_tfmas 
+  (
+    st_tfno char(8),
+    st_tfdate date,
+    st_tofarm char(8),
+    st_frfarm char(8),
+    st_tfstat char(1),
+    st_tfremarks char(50),
+    st_create_by char(8),
+    st_create_date date,
+    st_update_by char(8),
+    st_update_date date
+  );
+revoke all on "mis".stock_tfmas from "public";
+
+
+
+
+

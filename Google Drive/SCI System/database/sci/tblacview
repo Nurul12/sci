@@ -1,0 +1,21 @@
+{ TABLE "mis".acview row size = 49 number of columns = 9 index size = 28 }
+create table "mis".acview 
+  (
+    tty char(6),
+    inv_type char(1),
+    inv_no char(8),
+    inv_ref char(8),
+    inv_date date,
+    inv_curr char(3),
+    inv_amt money(16,2),
+    inv_os_amt money(16,2),
+    inv_status char(1)
+  );
+revoke all on "mis".acview from "public";
+
+create index "mis".i_acview on "mis".acview (tty,inv_type,inv_no);
+    
+
+
+
+

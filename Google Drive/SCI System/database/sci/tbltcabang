@@ -1,0 +1,12 @@
+{ TABLE "mis".tcabang row size = 35 number of columns = 2 index size = 0 }
+create table "mis".tcabang 
+  (
+    kodecabang char(10) not null ,
+    namacabang char(25) not null 
+  );
+revoke all on "mis".tcabang from "public";
+
+
+
+
+

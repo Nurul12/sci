@@ -1,0 +1,21 @@
+{ TABLE "mis".cndet row size = 43 number of columns = 8 index size = 61 }
+create table "mis".cndet 
+  (
+    cr_no char(8),
+    cr_alloc_type char(1),
+    cr_doc_no char(8),
+    cr_clear_date date,
+    cr_amt money(16,2),
+    cr_status char(1),
+    cr_cust_no char(8),
+    cr_doc_date date
+  );
+revoke all on "mis".cndet from "public";
+
+create index "mis".i_cndet on "mis".cndet (cr_no);
+create index "mis".i_cndet2 on "mis".cndet (cr_cust_no,cr_no,cr_alloc_type,
+    cr_doc_no);
+
+
+
+

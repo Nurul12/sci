@@ -1,0 +1,28 @@
+{ TABLE "mis".chqrmas row size = 134 number of columns = 17 index size = 18 }
+create table "mis".chqrmas 
+  (
+    r_cust_no char(8) not null ,
+    r_no char(8),
+    r_ref char(8),
+    r_op_code char(6),
+    r_date date,
+    r_user_id char(8),
+    r_desc char(30),
+    r_amt money(16,2),
+    r_bank_code char(8),
+    r_curr char(3),
+    r_ex_rate decimal(10,5),
+    r_cheque_no char(12),
+    r_bank_from char(8),
+    r_trn_code char(6),
+    r_clear_date date,
+    r_cheque_date date,
+    r_status char(1)
+  );
+revoke all on "mis".chqrmas from "public";
+
+create unique index "mis".i_chqrmas on "mis".chqrmas (r_no);
+
+
+
+

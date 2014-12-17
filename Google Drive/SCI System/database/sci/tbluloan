@@ -1,0 +1,29 @@
+{ TABLE "mis".uloan row size = 215 number of columns = 17 index size = 48 }
+create table "mis".uloan 
+  (
+    ul_proj_code char(6),
+    ul_phase_code char(6),
+    ul_unit_no char(10),
+    ul_fin_code char(6),
+    ul_panel_flag char(1),
+    ul_legal_code char(6),
+    ul_sol_code char(6),
+    ul_loan_rem char(30),
+    ul_amt_applied money(16,2),
+    ul_date_applied date,
+    ul_applied_ref char(40),
+    ul_amt_approved money(16,2),
+    ul_date_approved date,
+    ul_approved_ref char(40),
+    ul_lett_date date,
+    ul_lett_ref char(30),
+    ul_lett_rem_no integer
+  );
+revoke all on "mis".uloan from "public";
+
+create unique index "mis".i_uloan on "mis".uloan (ul_proj_code,
+    ul_phase_code,ul_unit_no,ul_fin_code);
+
+
+
+

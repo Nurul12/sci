@@ -1,0 +1,27 @@
+{ TABLE "mis".arimas_pkp row size = 98 number of columns = 16 index size = 18 }
+create table "mis".arimas_pkp 
+  (
+    form_no char(8),
+    inv_status char(1),
+    tax_type char(1),
+    inv_user_id char(8),
+    inv_no char(8),
+    inv_date date,
+    inv_cust_no char(8),
+    inv_dpp money(16,2),
+    inv_percent decimal(3,0),
+    inv_amt money(16,2),
+    inv_prn smallint,
+    inv_cnno char(8),
+    inv_cndpp money(16,2),
+    inv_dnno char(8),
+    inv_dndpp money(16,2),
+    inv_curr char(3)
+  );
+revoke all on "mis".arimas_pkp from "public";
+
+create index "mis".i_arimaspkp on "mis".arimas_pkp (form_no);
+
+
+
+

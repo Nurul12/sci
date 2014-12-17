@@ -1,0 +1,18 @@
+{ TABLE "mis".cnlistdet row size = 16 number of columns = 3 index size = 66 }
+create table "mis".cnlistdet 
+  (
+    keyno integer,
+    transno integer,
+    dono char(8)
+  );
+revoke all on "mis".cnlistdet from "public";
+
+create index "mis".i_cnlistdet4 on "mis".cnlistdet (keyno);
+create index "mis".i_cnlistdet on "mis".cnlistdet (keyno,dono);
+    
+create index "mis".i_cnlistdet2 on "mis".cnlistdet (dono);
+create index "mis".i_cnlistdet3 on "mis".cnlistdet (transno);
+
+
+
+

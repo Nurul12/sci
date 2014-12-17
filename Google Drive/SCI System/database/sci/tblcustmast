@@ -1,0 +1,32 @@
+{ TABLE "mis".custmast row size = 245 number of columns = 22 index size = 0 }
+create table "mis".custmast 
+  (
+    custnum char(8),
+    custname char(30),
+    userid char(8),
+    custstat char(1),
+    type char(1),
+    addr1 char(30),
+    addr2 char(30),
+    addr3 char(30),
+    postcode char(5),
+    tel char(18),
+    telex char(18),
+    fax char(12),
+    contact char(25),
+    curr char(3),
+    slsman char(6),
+    terr char(6),
+    terms smallint not null ,
+    crdlimit decimal(13,2) not null ,
+    delito char(1),
+    blist char(1),
+    cls char(1),
+    trate char(1)
+  );
+revoke all on "mis".custmast from "public";
+
+
+
+
+

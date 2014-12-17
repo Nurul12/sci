@@ -1,0 +1,21 @@
+cc1|Credit Control Printer|lp -dcc1|
+abrl|Accounting Broiler Lt.2|lp -dabrl|
+mdn1|Medan Accounting Printer|lp -dmdn1|
+acc1|Account IBM Printer|lp -dacc1|
+acc2|Accounting Printer 2|lp -dacc2|
+pur1|Purchasing Printer 1|lp -dpur1|
+cos1|Costing Printer 1|lp -dcos1|
+mkt1|Broiler Marketing Printer|lp -dmkt1|
+sht1|Printer Sehat Lt.1|lp -dsht1|
+prd1|Production Printer 1|lp -dprd1|
+mbd1|Malindo Breeder Printer 1|lp -dmbd1|
+mbd2|Malindo Breeder 2|lp -dmbd2|
+mbd3|Malindo EDP|lp -dmbd3|
+mbd4|printer purch. Lt-1|lp -dmbd4|
+brl2|Accounting Printer 2|lp -dbrl2|
+ccr1|Credit Control|lp -dccr1|
+mis1|MIS Printer|lp -dmis1|
+brl1|Accounting Broiler 1|lp -dbrl1|
+brl3|Accounting Printer 3|lp -dbrl3|
+brl4|Accounting Printer 4|lp -dbrl4|
+test|test printer|lp -dtest|

@@ -1,0 +1,31 @@
+{ TABLE "mis".colldet row size = 79 number of columns = 14 index size = 111 }
+create table "mis".colldet 
+  (
+    trno char(8),
+    ttype char(1),
+    recno integer,
+    docno char(8),
+    docdate date,
+    qtywght decimal(12,2),
+    ap decimal(14,2),
+    docamt money(16,2),
+    cqtywght decimal(12,2),
+    cp decimal(14,2),
+    apply money(16,2),
+    df char(1),
+    xflag char(1),
+    docid integer
+  );
+revoke all on "mis".colldet from "public";
+
+create index "mis".i_colldet1 on "mis".colldet (trno,docno,docid);
+    
+create index "mis".i_colldet2 on "mis".colldet (recno);
+create index "mis".i_colldet3 on "mis".colldet (trno,ttype,docno);
+    
+create index "mis".i_colldet4 on "mis".colldet (ttype,docno);
+create index "mis".i_colldet5 on "mis".colldet (docid);
+
+
+
+

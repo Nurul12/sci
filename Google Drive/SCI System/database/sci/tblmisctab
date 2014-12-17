@@ -1,0 +1,18 @@
+{ TABLE "mis".misctab row size = 48 number of columns = 6 index size = 15 }
+create table "mis".misctab 
+  (
+    m_code char(6) not null ,
+    m_name char(30) not null ,
+    m_type char(1),
+    m_repeat char(1),
+    m_prorate char(1),
+    m_amt money(16,2)
+  );
+revoke all on "mis".misctab from "public";
+
+create unique index "mis".i_misctab on "mis".misctab (m_code);
+    
+
+
+
+

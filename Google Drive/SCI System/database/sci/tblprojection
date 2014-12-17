@@ -1,0 +1,16 @@
+{ TABLE "mis".projection row size = 20 number of columns = 4 index size = 24 }
+create table "mis".projection 
+  (
+    cust char(8),
+    sdate date,
+    eqty integer,
+    aqty integer
+  );
+revoke all on "mis".projection from "public";
+
+create index "mis".i_projection on "mis".projection (cust,sdate);
+    
+
+
+
+

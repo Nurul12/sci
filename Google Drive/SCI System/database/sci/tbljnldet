@@ -1,0 +1,19 @@
+{ TABLE "mis".jnldet row size = 96 number of columns = 8 index size = 12 }
+create table "mis".jnldet 
+  (
+    jnl_number integer,
+    jnl_fyear integer,
+    jnl_fprd smallint,
+    jnl_acc_no char(8),
+    jnl_debit money(16,2),
+    jnl_credit money(16,2),
+    jnl_desc char(30),
+    jnl_desc2 char(30)
+  );
+revoke all on "mis".jnldet from "public";
+
+create index "mis".i_jnldet on "mis".jnldet (jnl_number);
+
+
+
+

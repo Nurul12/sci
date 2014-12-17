@@ -1,0 +1,18 @@
+{ TABLE "mis".currency row size = 30 number of columns = 6 index size = 16 }
+create table "mis".currency 
+  (
+    cr_date date not null ,
+    cr_code char(3) not null ,
+    cr_ex_rate decimal(8,2) not null ,
+    cr_re_rate decimal(10,6),
+    cr_ct_rate decimal(10,6),
+    cr_ws_rate decimal(10,6)
+  );
+revoke all on "mis".currency from "public";
+
+create index "mis".i_currency on "mis".currency (cr_date,cr_code);
+    
+
+
+
+

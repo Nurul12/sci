@@ -1,0 +1,17 @@
+{ TABLE "mis".sdonum row size = 30 number of columns = 7 index size = 0 }
+create table "mis".sdonum 
+  (
+    prefix char(3),
+    prefix_cnt char(1),
+    mindono decimal(7,0),
+    maxdono decimal(7,0),
+    nextdono decimal(8,0),
+    ttyid char(10),
+    check char(1)
+  );
+revoke all on "mis".sdonum from "public";
+
+
+
+
+

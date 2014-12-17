@@ -1,0 +1,30 @@
+{ TABLE "mis".keytab row size = 459 number of columns = 18 index size = 18 }
+create table "mis".keytab 
+  (
+    key_code char(8) not null ,
+    key_desc char(30),
+    key_access char(1),
+    key_file char(10),
+    key_key1 char(40),
+    key_u1 char(20),
+    key_key2 char(40),
+    key_u2 char(20),
+    key_key3 char(40),
+    key_u3 char(20),
+    key_key4 char(40),
+    key_u4 char(20),
+    key_key5 char(40),
+    key_u5 char(20),
+    key_key6 char(40),
+    key_u6 char(20),
+    key_order char(20),
+    key_field char(30)
+  );
+revoke all on "mis".keytab from "public";
+
+create unique index "mis".i_keytab on "mis".keytab (key_code);
+    
+
+
+
+

@@ -1,0 +1,16 @@
+{ TABLE "mis".cdtype row size = 43 number of columns = 4 index size = 21 }
+create table "mis".cdtype 
+  (
+    ledger char(2) not null ,
+    mode char(8),
+    desc char(25),
+    glcode char(8)
+  );
+revoke all on "mis".cdtype from "public";
+
+create unique index "mis".i_cdtype on "mis".cdtype (ledger,mode);
+    
+
+
+
+

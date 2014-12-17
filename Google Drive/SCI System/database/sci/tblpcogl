@@ -1,0 +1,18 @@
+{ TABLE "mis".pcogl row size = 102 number of columns = 7 index size = 18 }
+create table "mis".pcogl 
+  (
+    co_supp_no char(8),
+    co_no char(8),
+    co_gl char(8),
+    co_dr_amt money(16,2),
+    co_cr_amt money(16,2),
+    co_desc char(30),
+    co_desc2 char(30)
+  );
+revoke all on "mis".pcogl from "public";
+
+create index "mis".i_pcogl on "mis".pcogl (co_no);
+
+
+
+

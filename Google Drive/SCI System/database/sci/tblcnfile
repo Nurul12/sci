@@ -1,0 +1,39 @@
+{ TABLE "mis".cnfile row size = 84 number of columns = 18 index size = 169 }
+create table "mis".cnfile 
+  (
+    recno integer,
+    transno serial not null ,
+    dono char(8),
+    dodate date,
+    qtywght decimal(12,2),
+    cnprc decimal(7,4),
+    cnamt money(16,2),
+    unissued money(16,2),
+    debtor char(8),
+    cntype char(2),
+    sman char(6),
+    tag char(1),
+    cnno char(8),
+    mark char(1),
+    ttype char(1),
+    rqty char(1),
+    pgrp char(2),
+    docid integer
+  );
+revoke all on "mis".cnfile from "public";
+
+create index "mis".i_cnfile1 on "mis".cnfile (dono);
+create index "mis".i_cnfile2 on "mis".cnfile (dono,ttype);
+create index "mis".i_cnfile3 on "mis".cnfile (dono,dodate,debtor);
+    
+create index "mis".i_cnfile4 on "mis".cnfile (debtor,dono);
+create index "mis".i_cnfile5 on "mis".cnfile (sman,tag,unissued);
+    
+create unique index "mis".i_cnfile6 on "mis".cnfile (transno);
+    
+create index "mis".i_cnfile7 on "mis".cnfile (recno);
+create index "mis".i_cnfile8 on "mis".cnfile (docid);
+
+
+
+

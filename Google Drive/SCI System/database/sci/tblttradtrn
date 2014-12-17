@@ -1,0 +1,30 @@
+{ TABLE "mis".ttradtrn row size = 123 number of columns = 16 index size = 57 }
+create table "mis".ttradtrn 
+  (
+    trd_fiscal_yr integer,
+    trd_no char(8) not null ,
+    trd_type char(1) not null ,
+    trd_period smallint not null ,
+    trd_bf money(16,2),
+    trd_sls_pur money(16,2),
+    trd_rc_pay money(16,2),
+    trd_jnl money(16,2),
+    trd_cn money(16,2),
+    trd_dn money(16,2),
+    trd_over money(16,2),
+    trd_mm4 money(16,2),
+    trd_mm3 money(16,2),
+    trd_mm2 money(16,2),
+    trd_mm1 money(16,2),
+    trd_cm money(16,2)
+  );
+revoke all on "mis".ttradtrn from "public";
+
+create unique index "mis".i_ttradtrn on "mis".ttradtrn (trd_fiscal_yr,
+    trd_no,trd_type,trd_period);
+create index "mis".i_ttrdtrn on "mis".ttradtrn (trd_no,trd_period,
+    trd_fiscal_yr,trd_type);
+
+
+
+

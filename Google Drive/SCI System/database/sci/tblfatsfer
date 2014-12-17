@@ -1,0 +1,28 @@
+{ TABLE "mis".fatsfer row size = 140 number of columns = 17 index size = 18 }
+create table "mis".fatsfer 
+  (
+    fa_fnum char(8),
+    fa_code char(8),
+    fa_uc money(16,2),
+    fa_ttyp char(1) not null ,
+    fa_cq char(1) not null ,
+    fa_tnum char(8),
+    fa_user char(8),
+    fa_tdate date,
+    fa_status char(1),
+    fa_ffrm char(2),
+    fa_fdesc char(30),
+    fa_tfqty decimal(7,2),
+    fa_tfcost money(16,2) not null ,
+    fa_tfrm char(2) not null ,
+    fa_tdesc char(30),
+    fa_ttqty decimal(7,2),
+    fa_ttcost money(16,2)
+  );
+revoke all on "mis".fatsfer from "public";
+
+create index "mis".i_fatsfer on "mis".fatsfer (fa_fnum);
+
+
+
+

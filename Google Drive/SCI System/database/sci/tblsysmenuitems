@@ -1,0 +1,17 @@
+{ TABLE "mis".sysmenuitems row size = 143 number of columns = 5 index size = 39 }
+create table "mis".sysmenuitems 
+  (
+    imenuname char(18),
+    itemnum integer,
+    mtext char(60),
+    mtype char(1),
+    progname char(60)
+  );
+revoke all on "mis".sysmenuitems from "public";
+
+create unique index "mis".meniidx on "mis".sysmenuitems (imenuname,
+    itemnum);
+
+
+
+

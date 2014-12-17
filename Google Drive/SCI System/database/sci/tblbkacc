@@ -1,0 +1,22 @@
+{ TABLE "mis".bkacc row size = 122 number of columns = 11 index size = 18 }
+create table "mis".bkacc 
+  (
+    bk_acname char(8),
+    bk_ac_no char(15),
+    bk_ac_type char(2),
+    bk_name char(25),
+    bk_branch char(25),
+    bk_od_amt money(16,2),
+    bk_open_bal money(16,2),
+    bk_curr_bal money(16,2),
+    bk_glacc_no char(8),
+    bk_chg_acc char(8),
+    bk_open_date date
+  );
+revoke all on "mis".bkacc from "public";
+
+create unique index "mis".i_bkacc on "mis".bkacc (bk_acname);
+
+
+
+

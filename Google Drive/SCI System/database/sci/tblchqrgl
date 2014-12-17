@@ -1,0 +1,15 @@
+{ TABLE "mis".chqrgl row size = 34 number of columns = 4 index size = 18 }
+create table "mis".chqrgl 
+  (
+    r_no char(8),
+    r_gl char(8),
+    r_dr_amt money(16,2),
+    r_cr_amt money(16,2)
+  );
+revoke all on "mis".chqrgl from "public";
+
+create index "mis".i_chqrgl on "mis".chqrgl (r_no);
+
+
+
+

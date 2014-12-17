@@ -1,0 +1,23 @@
+{ TABLE "mis".gljnlmas row size = 111 number of columns = 11 index size = 18 }
+create table "mis".gljnlmas 
+  (
+    jvno char(8),
+    jstat char(1),
+    jsrc char(6),
+    jprd smallint,
+    jfyr integer,
+    jvdate date,
+    juser char(8),
+    jrem1 char(30),
+    jrem2 char(30),
+    jtdr money(16,2),
+    jtcr money(16,2)
+  );
+revoke all on "mis".gljnlmas from "public";
+
+create unique index "mis".i_gljnlmas on "mis".gljnlmas (jvno);
+    
+
+
+
+

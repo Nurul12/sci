@@ -1,0 +1,21 @@
+{ TABLE "mis".ccinsmark row size = 84 number of columns = 11 index size = 0 }
+create table "mis".ccinsmark 
+  (
+    donum char(8) not null ,
+    dostat char(1) not null ,
+    dodate date not null ,
+    custnum char(8) not null ,
+    qty decimal(10,2),
+    weight decimal(10,2),
+    weightremarks char(25),
+    price decimal(16,2),
+    update_by char(8),
+    update_date date,
+    salesman char(5)
+  );
+revoke all on "mis".ccinsmark from "public";
+
+
+
+
+

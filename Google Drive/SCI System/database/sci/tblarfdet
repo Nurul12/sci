@@ -1,0 +1,15 @@
+{ TABLE "mis".arfdet row size = 55 number of columns = 4 index size = 18 }
+create table "mis".arfdet 
+  (
+    f_no char(8) not null ,
+    f_line_ref char(8),
+    f_line_desc char(30),
+    f_line_amt money(16,2)
+  );
+revoke all on "mis".arfdet from "public";
+
+create index "mis".i_arfdet on "mis".arfdet (f_no);
+
+
+
+

@@ -1,0 +1,29 @@
+{ TABLE "mis".cbrmas row size = 196 number of columns = 18 index size = 18 }
+create table "mis".cbrmas 
+  (
+    cbr_no char(8),
+    cbr_ref char(10),
+    cbr_op_code char(6),
+    cbr_payer char(30),
+    cbr_date date,
+    cbr_user_id char(8),
+    cbr_status char(1),
+    cbr_amt money(16,2),
+    cbr_bank_code char(8),
+    cbr_cheque_no char(12),
+    cbr_bank_from char(8),
+    cbr_trn_code char(6),
+    cbr_clear_date date,
+    cbr_cheque_date date,
+    cbr_bank_inch money(16,2),
+    cbr_bank_outch money(16,2),
+    cbr_desc char(30),
+    cbr_desc2 char(30)
+  );
+revoke all on "mis".cbrmas from "public";
+
+create unique index "mis".i_cbrmas on "mis".cbrmas (cbr_no);
+
+
+
+

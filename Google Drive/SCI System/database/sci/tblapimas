@@ -1,0 +1,32 @@
+{ TABLE "mis".apimas row size = 165 number of columns = 18 index size = 87 }
+create table "mis".apimas 
+  (
+    inv_supp_no char(8) not null ,
+    inv_op_code char(6),
+    inv_no char(15),
+    inv_ref char(12),
+    inv_srn char(8),
+    inv_reg_date date,
+    inv_date date not null ,
+    inv_user_id char(8),
+    inv_curr char(3) not null ,
+    inv_ex_rate decimal(10,6) not null ,
+    inv_desc char(30),
+    inv_desc2 char(30),
+    inv_amt money(16,2) not null ,
+    inv_os_amt money(16,2) not null ,
+    inv_due_date date not null ,
+    inv_int_rate decimal(5,2),
+    inv_status char(1),
+    inv_touch_date date
+  );
+revoke all on "mis".apimas from "public";
+
+create index "mis".i_apimas2 on "mis".apimas (inv_supp_no,inv_no,
+    inv_reg_date);
+create unique index "mis".i_apimas on "mis".apimas (inv_supp_no,
+    inv_no);
+
+
+
+

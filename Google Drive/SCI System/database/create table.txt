@@ -1,0 +1,577 @@
+unload to /hd_ext/yudi/sci/data/access.txt
+select * from access ;    
+unload to /hd_ext/yudi/sci/data/activity.txt
+select * from activity ;    
+unload to /hd_ext/yudi/sci/data/acview.txt
+select * from acview ;    
+unload to /hd_ext/yudi/sci/data/adjdet.txt
+select * from adjdet ;    
+unload to /hd_ext/yudi/sci/data/adjmas.txt
+select * from adjmas ;    
+unload to /hd_ext/yudi/sci/data/analysis.txt
+select * from analysis ;    
+unload to /hd_ext/yudi/sci/data/apctrl.txt
+select * from apctrl ;    
+unload to /hd_ext/yudi/sci/data/apidet.txt
+select * from apidet ;    
+unload to /hd_ext/yudi/sci/data/apigl.txt
+select * from apigl;    
+unload to /hd_ext/yudi/sci/data/apimas.txt
+select * from apimas ;    
+unload to /hd_ext/yudi/sci/data/apjnldet.txt
+select * from apjnldet ;    
+unload to /hd_ext/yudi/sci/data/apjnlmas.txt
+select * from apjnlmas ;    
+unload to /hd_ext/yudi/sci/data/archbat.txt
+select * from archbat;    
+unload to /hd_ext/yudi/sci/data/archdet.txt
+select * from archdet;    
+unload to /hd_ext/yudi/sci/data/archmast.txt
+select * from archmast ;    
+unload to /hd_ext/yudi/sci/data/arctrl.txt
+select * from arctrl ;    
+unload to /hd_ext/yudi/sci/data/area.txt
+select * from area ;    
+unload to /hd_ext/yudi/sci/data/arfdet.txt
+select * from arfdet ;    
+unload to /hd_ext/yudi/sci/data/arfgl.txt
+select * from arfgl;       
+unload to /hd_ext/yudi/sci/data/arfmas.txt
+select * from arfmas ;       
+unload to /hd_ext/yudi/sci/data/aridet.txt
+select * from aridet ;       
+unload to /hd_ext/yudi/sci/data/aridet_pkp.txt
+select * from aridet_pkp ;       
+unload to /hd_ext/yudi/sci/data/arigl.txt
+select * from arigl;       
+unload to /hd_ext/yudi/sci/data/arimas.txt
+select * from arimas ;       
+unload to /hd_ext/yudi/sci/data/arimas_pkp.txt
+select * from arimas_pkp ;       
+unload to /hd_ext/yudi/sci/data/arjnldet.txt
+select * from arjnldet ;       
+unload to /hd_ext/yudi/sci/data/arjnlmas.txt
+select * from arjnlmas ;       
+unload to /hd_ext/yudi/sci/data/ascii.txt
+select * from ascii;       
+unload to /hd_ext/yudi/sci/data/author.txt
+select * from author ;       
+unload to /hd_ext/yudi/sci/data/bankgrt.txt
+select * from bankgrt;       
+unload to /hd_ext/yudi/sci/data/banktrn.txt
+select * from banktrn;       
+unload to /hd_ext/yudi/sci/data/batch.txt
+select * from batch;       
+unload to /hd_ext/yudi/sci/data/batdet.txt
+select * from batdet ;       
+unload to /hd_ext/yudi/sci/data/batmas.txt
+select * from batmas ;       
+unload to /hd_ext/yudi/sci/data/billdet.txt
+select * from billdet;       
+unload to /hd_ext/yudi/sci/data/billgl.txt
+select * from billgl ;       
+unload to /hd_ext/yudi/sci/data/billmas.txt
+select * from billmas;    
+unload to /hd_ext/yudi/sci/data/bkacc.txt
+select * from bkacc;    
+unload to /hd_ext/yudi/sci/data/bktrcode.txt
+select * from bktrcode ;    
+unload to /hd_ext/yudi/sci/data/cbcgl.txt
+select * from cbcgl;    
+unload to /hd_ext/yudi/sci/data/cbctrl.txt
+select * from cbctrl ;    
+unload to /hd_ext/yudi/sci/data/cbpch.txt
+select * from cbpch;    
+unload to /hd_ext/yudi/sci/data/cbpgl.txt
+select * from cbpgl;    
+unload to /hd_ext/yudi/sci/data/cbpmas.txt
+select * from cbpmas ;    
+unload to /hd_ext/yudi/sci/data/cbrgl.txt
+select * from cbrgl;    
+unload to /hd_ext/yudi/sci/data/cbrmas.txt
+select * from cbrmas ;    
+unload to /hd_ext/yudi/sci/data/cbxfr.txt
+select * from cbxfr;    
+unload to /hd_ext/yudi/sci/data/cbxgl.txt
+select * from cbxgl;    
+unload to /hd_ext/yudi/sci/data/cccnmas.txt
+select * from cccnmas;    
+unload to /hd_ext/yudi/sci/data/cccustledger.txt
+select * from cccustledger ;    
+unload to /hd_ext/yudi/sci/data/ccdnmas.txt
+select * from ccdnmas;    
+unload to /hd_ext/yudi/sci/data/ccinsmark.txt
+select * from ccinsmark;    
+unload to /hd_ext/yudi/sci/data/ccndet.txt
+select * from ccndet ;           
+unload to /hd_ext/yudi/sci/data/ccrcmas.txt
+select * from ccrcmas;    
+unload to /hd_ext/yudi/sci/data/ccttsmas.txt
+select * from ccttsmas ;    
+unload to /hd_ext/yudi/sci/data/cdtype.txt
+select * from cdtype ;    
+unload to /hd_ext/yudi/sci/data/chqrgl.txt
+select * from chqrgl ;    
+unload to /hd_ext/yudi/sci/data/chqrmas.txt
+select * from chqrmas;    
+unload to /hd_ext/yudi/sci/data/cndet.txt
+select * from cndet;    
+unload to /hd_ext/yudi/sci/data/cnfile.txt
+select * from cnfile ;    
+unload to /hd_ext/yudi/sci/data/cngl.txt
+select * from cngl ;    
+unload to /hd_ext/yudi/sci/data/cnlist.txt
+select * from cnlist ;    
+unload to /hd_ext/yudi/sci/data/cnlistdet.txt
+select * from cnlistdet;    
+unload to /hd_ext/yudi/sci/data/cnmas.txt
+select * from cnmas;    
+unload to /hd_ext/yudi/sci/data/cntype.txt
+select * from cntype ;    
+unload to /hd_ext/yudi/sci/data/colldet.txt
+select * from colldet;    
+unload to /hd_ext/yudi/sci/data/collmas.txt
+select * from collmas;    
+unload to /hd_ext/yudi/sci/data/company.txt
+select * from company;    
+unload to /hd_ext/yudi/sci/data/company_pkp.txt
+select * from company_pkp;    
+unload to /hd_ext/yudi/sci/data/contmain.txt
+select * from contmain ;    
+unload to /hd_ext/yudi/sci/data/fadispl.txt
+select * from fadispl;    
+unload to /hd_ext/yudi/sci/data/faglctrl.txt
+select * from faglctrl ;    
+unload to /hd_ext/yudi/sci/data/famast.txt
+select * from famast ;    
+unload to /hd_ext/yudi/sci/data/fareval.txt
+select * from fareval;    
+unload to /hd_ext/yudi/sci/data/farmap.txt
+select * from farmap ;    
+unload to /hd_ext/yudi/sci/data/farmast.txt
+select * from farmast;    
+unload to /hd_ext/yudi/sci/data/farmast2.txt
+select * from farmast2 ;    
+unload to /hd_ext/yudi/sci/data/fatran.txt
+select * from fatran ;    
+unload to /hd_ext/yudi/sci/data/fatsfer.txt
+select * from fatsfer;    
+unload to /hd_ext/yudi/sci/data/fintab.txt
+select * from fintab ;    
+unload to /hd_ext/yudi/sci/data/forfeit.txt
+select * from forfeit;    
+unload to /hd_ext/yudi/sci/data/frepdet.txt
+select * from frepdet;    
+unload to /hd_ext/yudi/sci/data/frepmast.txt
+select * from frepmast ;    
+unload to /hd_ext/yudi/sci/data/glacc.txt
+select * from glacc;    
+unload to /hd_ext/yudi/sci/data/glacc2.txt
+select * from glacc2 ;    
+unload to /hd_ext/yudi/sci/data/glctrl.txt
+select * from glctrl ;    
+unload to /hd_ext/yudi/sci/data/gljnldet.txt
+select * from gljnldet ;    
+unload to /hd_ext/yudi/sci/data/misctab.txt
+select * from misctab;         
+unload to /hd_ext/yudi/sci/data/modrwx.txt
+select * from modrwx ;      
+unload to /hd_ext/yudi/sci/data/opcdet.txt
+select * from opcdet ;      
+unload to /hd_ext/yudi/sci/data/opcmas.txt
+select * from opcmas ;      
+unload to /hd_ext/yudi/sci/data/opdet.txt
+select * from opdet;      
+unload to /hd_ext/yudi/sci/data/opmas.txt
+select * from opmas;      
+unload to /hd_ext/yudi/sci/data/othindet.txt
+select * from othindet ;      
+unload to /hd_ext/yudi/sci/data/othinmas.txt
+select * from othinmas ;      
+unload to /hd_ext/yudi/sci/data/othoutdet.txt
+select * from othoutdet;      
+unload to /hd_ext/yudi/sci/data/othoutmas.txt
+select * from othoutmas;      
+unload to /hd_ext/yudi/sci/data/password.txt
+select * from password ;      
+unload to /hd_ext/yudi/sci/data/pbage.txt
+select * from pbage;                                
+unload to /hd_ext/yudi/sci/data/eclass.txt
+select * from eclass ;    
+unload to /hd_ext/yudi/sci/data/edgl.txt
+select * from edgl ;    
+unload to /hd_ext/yudi/sci/data/edtran.txt
+select * from edtran ;    
+unload to /hd_ext/yudi/sci/data/fdet.txt
+select * from fdet ;    
+unload to /hd_ext/yudi/sci/data/fgl.txt
+select * from fgl;    
+unload to /hd_ext/yudi/sci/data/fmas.txt
+select * from fmas ;    
+unload to /hd_ext/yudi/sci/data/ptacc.txt
+select * from ptacc;    
+unload to /hd_ext/yudi/sci/data/ptdet.txt
+select * from ptdet;    
+unload to /hd_ext/yudi/sci/data/ptmast.txt
+select * from ptmast ;    
+unload to /hd_ext/yudi/sci/data/tdet.txt
+select * from tdet ;    
+unload to /hd_ext/yudi/sci/data/tgl.txt
+select * from tgl;    
+unload to /hd_ext/yudi/sci/data/tmas.txt
+select * from tmas ;    
+unload to /hd_ext/yudi/sci/data/chdescdet.txt
+select * from chdescdet;    
+unload to /hd_ext/yudi/sci/data/chdescmas.txt
+select * from chdescmas;    
+unload to /hd_ext/yudi/sci/data/chdet.txt
+select * from chdet;    
+unload to /hd_ext/yudi/sci/data/chmas.txt
+select * from chmas;    
+unload to /hd_ext/yudi/sci/data/cndet.txt
+select * from cndet;       
+unload to /hd_ext/yudi/sci/data/sysset.txt
+select * from sysset ;    
+unload to /hd_ext/yudi/sci/data/sysuser.txt
+select * from sysuser;    
+unload to /hd_ext/yudi/sci/data/tbaccess.txt
+select * from tbaccess ;    
+unload to /hd_ext/yudi/sci/data/tbalist.txt
+select * from tbalist;    
+unload to /hd_ext/yudi/sci/data/tbmodule.txt
+select * from tbmodule ;    
+unload to /hd_ext/yudi/sci/data/tboperator.txt
+select * from tboperator ;    
+unload to /hd_ext/yudi/sci/data/tbprogram.txt
+select * from tbprogram;    
+unload to /hd_ext/yudi/sci/data/tcabang.txt
+select * from tcabang;    
+unload to /hd_ext/yudi/sci/data/tcsdodet.txt
+select * from tcsdodet ;    
+unload to /hd_ext/yudi/sci/data/territory.txt
+select * from territory;    
+unload to /hd_ext/yudi/sci/data/tfoth.txt
+select * from tfoth;    
+unload to /hd_ext/yudi/sci/data/tinvdet.txt
+select * from tinvdet;    
+unload to /hd_ext/yudi/sci/data/tmp_rcpt.txt
+select * from tmp_rcpt ;    
+unload to /hd_ext/yudi/sci/data/tmpfa.txt
+select * from tmpfa;    
+unload to /hd_ext/yudi/sci/data/tmpptc.txt
+select * from tmpptc ;    
+unload to /hd_ext/yudi/sci/data/trader.txt
+select * from trader ;    
+unload to /hd_ext/yudi/sci/data/trspt.txt
+select * from trspt;    
+unload to /hd_ext/yudi/sci/data/contra.txt
+select * from contra ;        
+unload to /hd_ext/yudi/sci/data/crating.txt
+select * from crating;    
+unload to /hd_ext/yudi/sci/data/crdet.txt
+select * from crdet;    
+unload to /hd_ext/yudi/sci/data/credit.txt
+select * from credit ;    
+unload to /hd_ext/yudi/sci/data/crgl.txt
+select * from crgl ;    
+unload to /hd_ext/yudi/sci/data/crmas.txt
+select * from crmas;    
+unload to /hd_ext/yudi/sci/data/csdodet.txt
+select * from csdodet;    
+unload to /hd_ext/yudi/sci/data/csdodet2.txt
+select * from csdodet2 ;    
+unload to /hd_ext/yudi/sci/data/cspmas.txt
+select * from cspmas ;    
+unload to /hd_ext/yudi/sci/data/csrmas.txt
+select * from csrmas ;    
+unload to /hd_ext/yudi/sci/data/curr.txt
+select * from curr ;    
+unload to /hd_ext/yudi/sci/data/currency.txt
+select * from currency ;    
+unload to /hd_ext/yudi/sci/data/custmast.txt
+select * from custmast ;    
+unload to /hd_ext/yudi/sci/data/custopname.txt
+select * from custopname ;    
+unload to /hd_ext/yudi/sci/data/dbconfig.txt
+select * from dbconfig ;    
+unload to /hd_ext/yudi/sci/data/discmain.txt
+select * from discmain ;    
+unload to /hd_ext/yudi/sci/data/dlock.txt
+select * from dlock;    
+unload to /hd_ext/yudi/sci/data/dndet.txt
+select * from dndet;    
+unload to /hd_ext/yudi/sci/data/gljnlmas.txt
+select * from gljnlmas ;    
+unload to /hd_ext/yudi/sci/data/hatch.txt
+select * from hatch;    
+unload to /hd_ext/yudi/sci/data/hatdoc.txt
+select * from hatdoc ;    
+unload to /hd_ext/yudi/sci/data/hfamast.txt
+select * from hfamast;    
+unload to /hd_ext/yudi/sci/data/hfatran.txt
+select * from hfatran;    
+unload to /hd_ext/yudi/sci/data/hglacc.txt
+select * from hglacc ;    
+unload to /hd_ext/yudi/sci/data/inv_curr.txt
+select * from inv_curr ;    
+unload to /hd_ext/yudi/sci/data/invdet.txt
+select * from invdet ;    
+unload to /hd_ext/yudi/sci/data/invdet2.txt
+select * from invdet2;    
+unload to /hd_ext/yudi/sci/data/invoice.txt
+select * from invoice;    
+unload to /hd_ext/yudi/sci/data/itemast.txt
+select * from itemast;    
+unload to /hd_ext/yudi/sci/data/itfdet.txt
+select * from itfdet ;    
+unload to /hd_ext/yudi/sci/data/itfmas.txt
+select * from itfmas ;    
+unload to /hd_ext/yudi/sci/data/jnctrl.txt
+select * from jnctrl ;    
+unload to /hd_ext/yudi/sci/data/jnctrldet.txt
+select * from jnctrldet;    
+unload to /hd_ext/yudi/sci/data/jnldet.txt
+select * from jnldet ;    
+unload to /hd_ext/yudi/sci/data/jnlinv.txt
+select * from jnlinv ;    
+unload to /hd_ext/yudi/sci/data/jnlmast.txt
+select * from jnlmast;    
+unload to /hd_ext/yudi/sci/data/pcndet.txt
+select * from pcndet ;      
+unload to /hd_ext/yudi/sci/data/pcngl.txt
+select * from pcngl;      
+unload to /hd_ext/yudi/sci/data/pcnmas.txt
+select * from pcnmas ;      
+unload to /hd_ext/yudi/sci/data/pcodet.txt
+select * from pcodet ;      
+unload to /hd_ext/yudi/sci/data/pcogl.txt
+select * from pcogl;      
+unload to /hd_ext/yudi/sci/data/pcomas.txt
+select * from pcomas ;      
+unload to /hd_ext/yudi/sci/data/pcrate.txt
+select * from pcrate ;      
+unload to /hd_ext/yudi/sci/data/pdndet.txt
+select * from pdndet ;      
+unload to /hd_ext/yudi/sci/data/pdngl.txt
+select * from pdngl;      
+unload to /hd_ext/yudi/sci/data/pdnmas.txt
+select * from pdnmas ;      
+unload to /hd_ext/yudi/sci/data/period.txt
+select * from period ;      
+unload to /hd_ext/yudi/sci/data/phase.txt
+select * from phase;      
+unload to /hd_ext/yudi/sci/data/pjob.txt
+select * from pjob ;      
+unload to /hd_ext/yudi/sci/data/podet.txt
+select * from podet;      
+unload to /hd_ext/yudi/sci/data/pomas.txt
+select * from pomas;      
+unload to /hd_ext/yudi/sci/data/pomas2.txt
+select * from pomas2 ;      
+unload to /hd_ext/yudi/sci/data/poprod.txt
+select * from poprod ;      
+unload to /hd_ext/yudi/sci/data/scnmas.txt
+select * from scnmas ;    
+unload to /hd_ext/yudi/sci/data/sdodet.txt
+select * from sdodet ;    
+unload to /hd_ext/yudi/sci/data/sdodet2.txt
+select * from sdodet2;    
+unload to /hd_ext/yudi/sci/data/sdomas.txt
+select * from sdomas ;    
+unload to /hd_ext/yudi/sci/data/sdomas2.txt
+select * from sdomas2;    
+unload to /hd_ext/yudi/sci/data/sdomas_x.txt
+select * from sdomas_x ;    
+unload to /hd_ext/yudi/sci/data/sdomasoth.txt
+select * from sdomasoth;    
+unload to /hd_ext/yudi/sci/data/sdonum.txt
+select * from sdonum ;    
+unload to /hd_ext/yudi/sci/data/sdonum2.txt
+select * from sdonum2;    
+unload to /hd_ext/yudi/sci/data/shortpay.txt
+select * from shortpay ;    
+unload to /hd_ext/yudi/sci/data/sinvnum.txt
+select * from sinvnum;    
+unload to /hd_ext/yudi/sci/data/soctrl.txt
+select * from soctrl ;    
+unload to /hd_ext/yudi/sci/data/soltab.txt
+select * from soltab ;    
+unload to /hd_ext/yudi/sci/data/sorder.txt
+select * from sorder ;    
+unload to /hd_ext/yudi/sci/data/srate.txt
+select * from srate;    
+unload to /hd_ext/yudi/sci/data/staff.txt
+select * from staff;    
+unload to /hd_ext/yudi/sci/data/stdet.txt
+select * from stdet;    
+unload to /hd_ext/yudi/sci/data/stmas.txt
+select * from stmas;    
+unload to /hd_ext/yudi/sci/data/tsdodet.txt
+select * from tsdodet;            
+unload to /hd_ext/yudi/sci/data/ttradtrn.txt
+select * from ttradtrn ;    
+unload to /hd_ext/yudi/sci/data/ulegal.txt
+select * from ulegal ;    
+unload to /hd_ext/yudi/sci/data/uloan.txt
+select * from uloan;    
+unload to /hd_ext/yudi/sci/data/umisc.txt
+select * from umisc;    
+unload to /hd_ext/yudi/sci/data/unit.txt
+select * from unit ;    
+unload to /hd_ext/yudi/sci/data/upurch.txt
+select * from upurch ;    
+unload to /hd_ext/yudi/sci/data/uresid.txt
+select * from uresid ;    
+unload to /hd_ext/yudi/sci/data/usched.txt
+select * from usched ;    
+unload to /hd_ext/yudi/sci/data/usdrp.txt
+select * from usdrp;    
+unload to /hd_ext/yudi/sci/data/userid.txt
+select * from userid ;    
+unload to /hd_ext/yudi/sci/data/v_invdet.txt
+select * from v_invdet ;    
+unload to /hd_ext/yudi/sci/data/v_sdomasdet.txt
+select * from v_sdomasdet;    
+unload to /hd_ext/yudi/sci/data/v_subdept.txt
+select * from v_subdept;    
+unload to /hd_ext/yudi/sci/data/whmast.txt
+select * from whmast ;    
+unload to /hd_ext/yudi/sci/data/xjnldet.txt
+select * from xjnldet;    
+unload to /hd_ext/yudi/sci/data/xjnlmas.txt
+select * from xjnlmas;    
+unload to /hd_ext/yudi/sci/data/dngl.txt
+select * from dngl ;    
+unload to /hd_ext/yudi/sci/data/dnmas.txt
+select * from dnmas;    
+unload to /hd_ext/yudi/sci/data/dnotedet.txt
+select * from dnotedet ;    
+unload to /hd_ext/yudi/sci/data/dnotemas.txt
+select * from dnotemas ;    
+unload to /hd_ext/yudi/sci/data/docattr.txt
+select * from docattr;    
+unload to /hd_ext/yudi/sci/data/docdet.txt
+select * from docdet ;    
+unload to /hd_ext/yudi/sci/data/docmas.txt
+select * from docmas ;    
+unload to /hd_ext/yudi/sci/data/doprn.txt
+select * from doprn;    
+unload to /hd_ext/yudi/sci/data/dptmnt.txt
+select * from dptmnt ;    
+unload to /hd_ext/yudi/sci/data/drdet.txt
+select * from drdet;    
+unload to /hd_ext/yudi/sci/data/drgl.txt
+select * from drgl ;    
+unload to /hd_ext/yudi/sci/data/drmas.txt
+select * from drmas;    
+unload to /hd_ext/yudi/sci/data/exrthdr.txt
+select * from exrthdr;    
+unload to /hd_ext/yudi/sci/data/faadj.txt
+select * from faadj;    
+unload to /hd_ext/yudi/sci/data/facat.txt
+select * from facat;    
+unload to /hd_ext/yudi/sci/data/factrl.txt
+select * from factrl ;    
+unload to /hd_ext/yudi/sci/data/fadisdet.txt
+select * from fadisdet ;    
+unload to /hd_ext/yudi/sci/data/keytab.txt
+select * from keytab ;      
+unload to /hd_ext/yudi/sci/data/legaldet.txt
+select * from legaldet ;    
+unload to /hd_ext/yudi/sci/data/legalmas.txt
+select * from legalmas ;    
+unload to /hd_ext/yudi/sci/data/letdet.txt
+select * from letdet ;    
+unload to /hd_ext/yudi/sci/data/lethdet.txt
+select * from lethdet;    
+unload to /hd_ext/yudi/sci/data/lethmas.txt
+select * from lethmas;    
+unload to /hd_ext/yudi/sci/data/letmas.txt
+select * from letmas ;    
+unload to /hd_ext/yudi/sci/data/loantab.txt
+select * from loantab;    
+unload to /hd_ext/yudi/sci/data/loanwk.txt
+select * from loanwk ;    
+unload to /hd_ext/yudi/sci/data/lstdet.txt
+select * from lstdet ;    
+unload to /hd_ext/yudi/sci/data/lstmas.txt
+select * from lstmas ;    
+unload to /hd_ext/yudi/sci/data/ltrdet.txt
+select * from ltrdet ;    
+unload to /hd_ext/yudi/sci/data/ltrhdet.txt
+select * from ltrhdet;    
+unload to /hd_ext/yudi/sci/data/ltrhmas.txt
+select * from ltrhmas;    
+unload to /hd_ext/yudi/sci/data/ltrmas.txt
+select * from ltrmas ;    
+unload to /hd_ext/yudi/sci/data/macro.txt
+select * from macro;    
+unload to /hd_ext/yudi/sci/data/mcntyp.txt
+select * from mcntyp ;    
+unload to /hd_ext/yudi/sci/data/prfin.txt
+select * from prfin;    
+unload to /hd_ext/yudi/sci/data/prmiscgl.txt
+select * from prmiscgl ;    
+unload to /hd_ext/yudi/sci/data/prnfile.txt
+select * from prnfile;    
+unload to /hd_ext/yudi/sci/data/prodcat.txt
+select * from prodcat;    
+unload to /hd_ext/yudi/sci/data/project.txt
+select * from project;    
+unload to /hd_ext/yudi/sci/data/projection.txt
+select * from projection ;    
+unload to /hd_ext/yudi/sci/data/prospect.txt
+select * from prospect ;    
+unload to /hd_ext/yudi/sci/data/prprop.txt
+select * from prprop ;    
+unload to /hd_ext/yudi/sci/data/prschgl.txt
+select * from prschgl;    
+unload to /hd_ext/yudi/sci/data/ptctrl.txt
+select * from ptctrl ;    
+unload to /hd_ext/yudi/sci/data/pydet.txt
+select * from pydet;    
+unload to /hd_ext/yudi/sci/data/pygl.txt
+select * from pygl ;    
+unload to /hd_ext/yudi/sci/data/pymas.txt
+select * from pymas;    
+unload to /hd_ext/yudi/sci/data/rcdet.txt
+select * from rcdet;    
+unload to /hd_ext/yudi/sci/data/rcgl.txt
+select * from rcgl ;    
+unload to /hd_ext/yudi/sci/data/rcmas.txt
+select * from rcmas;    
+unload to /hd_ext/yudi/sci/data/stock.txt
+select * from stock;        
+unload to /hd_ext/yudi/sci/data/stock_balance.txt
+select * from stock_balance;        
+unload to /hd_ext/yudi/sci/data/stock_in.txt
+select * from stock_in ;        
+unload to /hd_ext/yudi/sci/data/stock_in_det.txt
+select * from stock_in_det ;        
+unload to /hd_ext/yudi/sci/data/stock_item_bal.txt
+select * from stock_item_bal ;        
+unload to /hd_ext/yudi/sci/data/stock_item_code.txt
+select * from stock_item_code;        
+unload to /hd_ext/yudi/sci/data/stock_out.txt
+select * from stock_out;        
+unload to /hd_ext/yudi/sci/data/stock_out_det.txt
+select * from stock_out_det;        
+unload to /hd_ext/yudi/sci/data/stock_tfdet.txt
+select * from stock_tfdet;        
+unload to /hd_ext/yudi/sci/data/stock_tfmas.txt
+select * from stock_tfmas;        
+unload to /hd_ext/yudi/sci/data/subdept.txt
+select * from subdept;        
+unload to /hd_ext/yudi/sci/data/subdept_tmp.txt
+select * from subdept_tmp;        
+unload to /hd_ext/yudi/sci/data/sysgroupdet.txt
+select * from sysgroupdet;        
+unload to /hd_ext/yudi/sci/data/sysgrouphdr.txt
+select * from sysgrouphdr;        
+unload to /hd_ext/yudi/sci/data/sysmenu.txt
+select * from sysmenu;        
+unload to /hd_ext/yudi/sci/data/sysmenuitems.txt
+select * from sysmenuitems ;        
+unload to /hd_ext/yudi/sci/data/sysmenus.txt
+select * from sysmenus ;        
+               

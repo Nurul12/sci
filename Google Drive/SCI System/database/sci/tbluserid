@@ -1,0 +1,16 @@
+{ TABLE "mis".userid row size = 74 number of columns = 5 index size = 18 }
+create table "mis".userid 
+  (
+    u_id char(8) not null ,
+    u_name char(30),
+    u_class char(10),
+    u_level smallint not null ,
+    u_pswd char(24)
+  );
+revoke all on "mis".userid from "public";
+
+create index "mis".i_userid on "mis".userid (u_id);
+
+
+
+

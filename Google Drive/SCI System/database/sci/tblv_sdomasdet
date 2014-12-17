@@ -1,0 +1,11 @@
+
+
+create view "mis".v_sdomasdet (donum,sum_sdodet,sum_invdet) as 
+  select x0.donum ,sum((x1.uprice * x1.qtywght ) ) ,sum((x2.uprice 
+    * x2.qtywght ) ) from "mis".sdomas x0 ,"mis".sdodet x1 ,"mis".invdet 
+    x2 where (((x0.donum = x1.donum ) AND (x0.invnum = x2.invnum 
+    ) ) AND ((x0.dodate >= '12/1/2011' ) AND (x0.dodate <= '12/31/2011' 
+    ) ) ) group by x0.donum ;                                
+     
+
+

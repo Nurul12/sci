@@ -1,0 +1,19 @@
+{ TABLE "mis".aridet_pkp row size = 93 number of columns = 9 index size = 0 }
+create table "mis".aridet_pkp 
+  (
+    inv_no char(8),
+    inv_ref char(8),
+    inv_item char(10),
+    inv_par char(30),
+    inv_unit char(4),
+    inv_qty decimal(8,2),
+    inv_unit_amt decimal(16,2),
+    inv_ext_amt decimal(16,2),
+    inv_fe_unit decimal(16,3)
+  );
+revoke all on "mis".aridet_pkp from "public";
+
+
+
+
+

@@ -1,0 +1,27 @@
+{ TABLE "mis".crdet row size = 92 number of columns = 15 index size = 54 }
+create table "mis".crdet 
+  (
+    crno char(8),
+    fcode char(8),
+    pono char(8),
+    crdate date,
+    icode char(8),
+    uom char(6),
+    devdate date,
+    crqty decimal(6,0),
+    invqty decimal(6,0),
+    ttyid char(10),
+    pod_rowid integer,
+    create_by char(8),
+    create_date date,
+    update_by char(8),
+    update_date date
+  );
+revoke all on "mis".crdet from "public";
+
+create index "mis".idx_crdet1 on "mis".crdet (crno,pono,icode,
+    fcode);
+
+
+
+

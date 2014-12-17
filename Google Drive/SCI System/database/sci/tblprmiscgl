@@ -1,0 +1,23 @@
+{ TABLE "mis".prmiscgl row size = 54 number of columns = 11 index size = 42 }
+create table "mis".prmiscgl 
+  (
+    pm_proj_code char(6) not null ,
+    pm_phase_code char(6) not null ,
+    pm_misc_code char(6) not null ,
+    pm_prop_type char(6),
+    pm_gl_ac char(10),
+    pm_amt money(16,2),
+    pm_type char(1),
+    pm_prorate char(1),
+    pm_repeat char(1),
+    pm_start_date date,
+    pm_end_date date
+  );
+revoke all on "mis".prmiscgl from "public";
+
+create unique index "mis".i_prmiscgl on "mis".prmiscgl (pm_proj_code,
+    pm_phase_code,pm_misc_code,pm_prop_type);
+
+
+
+

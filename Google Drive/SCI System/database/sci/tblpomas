@@ -1,0 +1,33 @@
+{ TABLE "mis".pomas row size = 121 number of columns = 22 index size = 27 }
+create table "mis".pomas 
+  (
+    cocode char(6),
+    potype char(2),
+    pono char(8),
+    pono2 char(8),
+    podate date,
+    scode char(8),
+    fcode char(5),
+    poamt decimal(16,2),
+    poprn char(1),
+    ponum decimal(2,0),
+    tcode char(6),
+    ccode char(3),
+    fcrate integer,
+    ttyid char(10),
+    po_xref char(8),
+    dev2branch char(1),
+    create_by char(8),
+    create_date date,
+    update_by char(8),
+    update_date date,
+    taxprc integer,
+    tax22 decimal(14,2)
+  );
+revoke all on "mis".pomas from "public";
+
+create index "mis".pomas_01 on "mis".pomas (cocode,pono);
+
+
+
+

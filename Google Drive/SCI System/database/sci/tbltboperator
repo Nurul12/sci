@@ -1,0 +1,15 @@
+{ TABLE "mis".tboperator row size = 100 number of columns = 3 index size = 21 }
+create table "mis".tboperator 
+  (
+    choperatorid char(10) not null ,
+    chpassword char(60) not null ,
+    choperatorname char(30)
+  );
+revoke all on "mis".tboperator from "public";
+
+create unique index "mis".idx_choperatorid on "mis".tboperator 
+    (choperatorid);
+
+
+
+

@@ -1,0 +1,39 @@
+{ TABLE "mis".docdet row size = 98 number of columns = 18 index size = 213 }
+create table "mis".docdet 
+  (
+    recno integer,
+    dono char(8),
+    invno char(8),
+    qtywght decimal(14,2),
+    bp money(10,2),
+    ap money(10,2),
+    aamt money(16,2),
+    aosamt money(16,2),
+    dodate date,
+    duedate date,
+    sman char(6),
+    debtor char(8),
+    item char(8),
+    spay char(1),
+    dayno smallint,
+    wkended date,
+    stype char(1),
+    pgrp char(2)
+  );
+revoke all on "mis".docdet from "public";
+
+create index "mis".i_docdet on "mis".docdet (recno);
+create index "mis".i_docdet1 on "mis".docdet (dono);
+create index "mis".i_docdet2 on "mis".docdet (dono,debtor);
+create index "mis".i_docdet3 on "mis".docdet (dono,sman);
+create index "mis".i_docdet4 on "mis".docdet (dono,dodate);
+create index "mis".i_docdet5 on "mis".docdet (dono,dodate,debtor);
+    
+create index "mis".i_docdet6 on "mis".docdet (dodate,sman,debtor);
+    
+create index "mis".i_docdet7 on "mis".docdet (debtor,aosamt,spay);
+    
+
+
+
+

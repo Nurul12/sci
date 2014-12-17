@@ -1,0 +1,33 @@
+{ TABLE "mis".faadj row size = 172 number of columns = 22 index size = 24 }
+create table "mis".faadj 
+  (
+    fa_num char(8),
+    fa_stat char(1),
+    fa_user char(8),
+    fa_adate date,
+    fa_reg_date date,
+    fa_code char(8),
+    fa_rem char(30),
+    fa_dept char(2),
+    fa_typ char(1),
+    fa_amt money(16,2),
+    fa_reason char(30),
+    cbf money(16,2),
+    cdsp money(16,2),
+    cadj money(16,2),
+    dbf money(16,2),
+    dyr money(16,2),
+    dadj money(16,2),
+    ddsp money(16,2),
+    cbf_yn char(1),
+    cadj_yn char(1),
+    dbf_yn char(1),
+    dadj_yn char(1)
+  );
+revoke all on "mis".faadj from "public";
+
+create index "mis".i_faadj on "mis".faadj (fa_num,fa_adate);
+
+
+
+

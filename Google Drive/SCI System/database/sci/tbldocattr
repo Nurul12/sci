@@ -1,0 +1,16 @@
+{ TABLE "mis".docattr row size = 33 number of columns = 5 index size = 30 }
+create table "mis".docattr 
+  (
+    invno char(8),
+    item char(8),
+    qty decimal(9,2),
+    up decimal(9,4),
+    ap decimal(7,4)
+  );
+revoke all on "mis".docattr from "public";
+
+create index "mis".i_docattr on "mis".docattr (invno,item);
+
+
+
+

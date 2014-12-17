@@ -1,0 +1,31 @@
+{ TABLE "mis".csrmas row size = 420 number of columns = 21 index size = 0 }
+create table "mis".csrmas 
+  (
+    csr_no char(8),
+    csr_ref char(8),
+    csr_op_code char(6),
+    csr_payer char(60),
+    csr_date date,
+    csr_user_id char(8),
+    csr_status char(1),
+    csr_amt money(16,2),
+    csr_bank_code char(8),
+    csr_cheque_no char(15),
+    csr_bank_from char(15),
+    csr_cheque_date date,
+    csr_trn_code char(6),
+    csr_clear_date date,
+    csr_bank_inch money(12,2),
+    csr_bank_outch money(12,2),
+    csr_desc1 char(50),
+    csr_desc2 char(50),
+    csr_desc3 char(50),
+    csr_desc4 char(50),
+    csr_desc5 char(50)
+  );
+revoke all on "mis".csrmas from "public";
+
+
+
+
+

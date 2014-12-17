@@ -1,0 +1,15 @@
+{ TABLE "mis".crgl row size = 34 number of columns = 4 index size = 18 }
+create table "mis".crgl 
+  (
+    cr_no char(8),
+    cr_gl char(8),
+    cr_cr_amt money(16,2),
+    cr_dr_amt money(16,2)
+  );
+revoke all on "mis".crgl from "public";
+
+create index "mis".i_crgl on "mis".crgl (cr_no);
+
+
+
+

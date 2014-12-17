@@ -1,0 +1,14 @@
+{ TABLE "mis".territory row size = 36 number of columns = 2 index size = 15 }
+create table "mis".territory 
+  (
+    terr_code char(6),
+    terr_name char(30)
+  );
+revoke all on "mis".territory from "public";
+
+create unique index "mis".i_terr on "mis".territory (terr_code);
+    
+
+
+
+

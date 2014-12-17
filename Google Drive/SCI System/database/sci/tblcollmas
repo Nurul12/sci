@@ -1,0 +1,32 @@
+{ TABLE "mis".collmas row size = 221 number of columns = 19 index size = 67 }
+create table "mis".collmas 
+  (
+    trno char(8),
+    orno char(8),
+    debtor char(8),
+    sman char(6),
+    rdate date,
+    trdate date,
+    userid char(8),
+    stat char(1),
+    camt money(16,2),
+    unappl money(16,2),
+    ibank char(8),
+    chqno char(12),
+    rbank char(8),
+    clrdate date,
+    chqdate date,
+    rem1 char(30),
+    rem2 char(30),
+    rem3 char(30),
+    rem4 char(30)
+  );
+revoke all on "mis".collmas from "public";
+
+create index "mis".i_collmas1 on "mis".collmas (trno);
+create index "mis".i_collmas2 on "mis".collmas (trno,debtor);
+create index "mis".i_collmas3 on "mis".collmas (trno,stat);
+
+
+
+

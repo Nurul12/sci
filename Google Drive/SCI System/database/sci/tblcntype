@@ -1,0 +1,14 @@
+{ TABLE "mis".cntype row size = 46 number of columns = 3 index size = 10 }
+create table "mis".cntype 
+  (
+    cncode char(3),
+    cndesc char(35),
+    cngl char(8)
+  );
+revoke all on "mis".cntype from "public";
+
+create unique index "mis".i_cntype on "mis".cntype (cncode);
+
+
+
+
