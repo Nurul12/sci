@@ -1,0 +1,16 @@
+delete from sdodet
+where donum IN(
+select donum
+from sdomas
+where 1=1
+and year(dodate) =2014
+and month(dodate)=09
+);
+
+delete from
+sdomas
+where 1=1
+and year(dodate) =2014
+and month(dodate)=09
+;
+
