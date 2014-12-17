@@ -1,0 +1,159 @@
+Setting penambahan untuk afkir & pupuk;
+1. menambahkan input untuk afkir
+-- isql 
+INSERT INTO sysset values (
+{moducd      }  'SLSAF',
+{settype     }  'NUMSLSAF',
+{settnm      }  'Pengaturan nomor urut untuk DO AFKIR kode awal F',
+{textvl      }  '7F',
+{numevl      }  '0.000000',
+{statcd      }  '',
+{create_by   }  'dba',
+{create_date }  '01/12/2014',
+{update_by   }  'dba',
+{update_date }  '01/12/2014');
+
+2. menambahkan input untuk pupuk
+-- isql 
+INSERT INTO sysset values (
+{moducd      }  'SLSUP',
+{settype     }  'NUMSLSUP',
+{settnm      }  'Pengaturan nomor urut untuk DO PUPUK kode awal P',
+{textvl      }  '7P',
+{numevl      }  '0.000000',
+{statcd      }  '',
+{create_by   }  'dba',
+{create_date }  '01/12/2014',
+{update_by   }  'dba',
+{update_date }  '01/12/2014');
+
+
+3. menambahkan input untuk ayam pullet
+-- isql 
+INSERT INTO sysset values (
+{moducd      }  'SLSUT',
+{settype     }  'NUMSLSUT',
+{settnm      }  'Pengaturan nomor urut untuk DO AYAM PULLET kode awal T',
+{textvl      }  '7T',
+{numevl      }  '0.000000',
+{statcd      }  '',
+{create_by   }  'dba',
+{create_date }  '01/12/2014',
+{update_by   }  'dba',
+{update_date }  '01/12/2014');
+
+
+4. menambahkan input untuk sinkrnisasi PUPUK
+-- isql 
+INSERT INTO sysset values (
+{moducd      }  'SLSPP',
+{settype     }  'NUMSLSPP',
+{settnm      }  'Pengaturan nomor urut untuk DO AYAM PULLET kode awal T',
+{textvl      }  '7P',
+{numevl      }  '0.000000',
+{statcd      }  '',
+{create_by   }  'dba',
+{create_date }  '01/12/2014',
+{update_by   }  'dba',
+{update_date }  '01/12/2014');
+
+
+5. menambahkan input untuk sinkrnisasi AFKIR
+-- isql 
+INSERT INTO sysset values (
+{moducd      }  'SLSFF',
+{settype     }  'NUMSLSFF',
+{settnm      }  'Pengaturan nomor urut untuk DO AYAM PULLET kode awal T',
+{textvl      }  '7F',
+{numevl      }  '0.000000',
+{statcd      }  '',
+{create_by   }  'dba',
+{create_date }  '01/12/2014',
+{update_by   }  'dba',
+{update_date }  '01/12/2014');
+
+
+3. menambahkan table pada masing2 database (doc_malindo,doc_bibit,doc_leong)
+create table sdonum2 
+  (                       
+    prefix char(3),       
+    prefix_cnt char(1),   
+    mindono decimal(7,0), 
+    maxdono decimal(7,0), 
+    nextdono decimal(8,0),
+    ttyid char(10),       
+    ceck char(1),        
+    ipfx char(1),         
+    fipfx char(1),
+    primary key (prefix)
+  );
+{ database bibit under windows}
+-- export DBPATH=/data/bibit  
+-- unload to /hd_ext/yudi/data/sdonumbibit.txt
+-- select * from sdonum
+-- export DBPATH=/hd_ext/yudi/dbase/doc-bibit-dev
+-- insert into sdonum2
+
+
+{ database leong under windows}
+-- export DBPATH=/data/ptlas_brd  
+-- unload to /hd_ext/yudi/data/sdonumbibit.txt
+-- select * from sdonum
+-- export DBPATH=/hd_ext/yudi/dbase/doc-leong-dev
+-- insert into sdonum2
+
+
+4. syncronisasi data
+
+{ database malindo  }
+{1.} dptmnt to supmast
+-- export DBPATH=/data/brd
+   unload to /public/unload-rph/supmast.txt
+   select * from dptmnt where  dpt_code NOT IN (19,34,89,96);
+B011|PURWAKARTA BREEDER 1 |dba|30/10/2014|||1||11|
+
+-- export DBPATH=/data_dev/pupuk-afkir-malindo
+
+-- load from /hd_ext/yudi/data/supmastmlndo.txt
+	 insert into supmast;
+{2.} stock to itemast
+-- export DBPATH=/data/brd
+   unload to /public/unload-rph/itemast.txt
+   select itemnum,desc,userid,'30/10/2014',userid,
+   '30/10/2014',umeas,upmeas,grpdesc,itemstat
+   from stock
+   where  1=1
+     and itemnum IN (
+       select distinct item
+       from sdodet
+     );
+
+-- export DBPATH=/data_dev/pupuk-afkir-malindo
+   load from /public/unload-rph/itemast.txt
+   insert into itemast
+
+{3.} subdept to subdept
+ 
+-- export DBPATH=/data/brd
+   unload to /public/unload-rph/RECsubdept.txt
+select
+custnum,subcode,subdesc,addr1,
+addr2,addr3,'-',area,tel,fax,
+contact,'lhhb','30/10/2014','lhhb','30/10/2014',1
+from subdept
+where 1=1
+and custnum[7] <>''
+and ( custnum[3] ='A'
+OR custnum[3] ='B'
+OR custnum[3] ='C'
+OR custnum[3] ='D')
+
+
+-- export DBPATH=/hd_ext/yudi/data/dev_doc_test2/
+-- cd /home/mis2
+-- fglgo insertrecordsubdept.4gi
+
+Note:
+ -- untuk bibit dan leong lakukan proses dari awal sampai akhir
+ -- untuk subdept pada bibit/leong tidak ada buat dummy. file : (fglgo insertsubdeptdocbibitleongdummy.4gi)
+	 

@@ -1,0 +1,22 @@
+delete from sdodet
+where donum IN(
+select donum
+from sdomas
+where 1=1
+);
+delete from
+sdomas
+where 1=1
+;
+delete from rcmas
+where 1=1
+;
+delete from dnmas
+where 1=1
+;
+delete from cnmas
+where 1=1
+;
+update sysset set  numevl ='1'
+where moducd <> 'GLOBAL'
+;

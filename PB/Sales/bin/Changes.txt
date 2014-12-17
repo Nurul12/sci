@@ -1,0 +1,431 @@
+------------------------------ Version 1.6.6 -------------------------------
+26/12/2014
+-- menambahkan filter untuk inputan DO tidak boleh kosong harus di isi : w_slsafkir & w_slspupuk
+-- merapihkan report Do listing pupuk + Afkir  : w_slsrep13 + w_slsrep14
+-- menambahkan report data (afkir pupuk) berdasarkan batch( tanggal entry)
+-- import data (sdomas,sdodet) : query [Sales\setting data\QueryImportDataBibit2toPB.sql] -> w_arrep10
+-- ISQL
+create view vw_reportdolist 
+(dodate,custnum,custname,
+ scode,sname,icode,pqty,
+ qty,uprice,donum,create_date,avg) as
+select
+		sdomas.dodate,
+		custmast.custnum,
+		custmast.custname,
+		supmast.scode,
+		supmast.sname,
+		sdodet.icode,
+		sdodet.pqty,
+		sdodet.qty,
+		sdodet.uprice,
+		sdomas.donum[1],
+		sdomas.create_date,
+		(sdodet.pqty/sdodet.qty)		
+from sdomas, supmast,sdodet, custmast
+where sdomas.scode = supmast.scode
+and sdomas.custnum = custmast.custnum
+and sdomas.donum = sdodet.donum
+and supmast.balcalc = 1
+
+--- ISQL
+create view vw_reportsolist (dodate,sname,scode,icode,desc,qty,uprice,trspt,pqty,donum,custnum,custname,avg) as 
+  select x2.dodate ,x3.sname ,x3.scode ,x1.icode ,x0.desc ,x1.qty 
+    ,x1.uprice ,x1.trspt ,x1.pqty ,x2.donum [1,1] ,x2.custnum 
+    ,x4.custname ,(x1.pqty / x1.qty ) from itemast x0 ,sdodet 
+    x1 ,sdomas x2 ,supmast x3 ,custmast x4 where 
+    (((((x2.custnum = x4.custnum ) AND (x1.donum = x2.donum ) 
+    ) AND (x2.scode = x3.scode ) ) AND (x0.icode = x1.icode ) 
+    ) AND (x2.dostat != 'X' ) ) ;  
+
+------------------------------ Version 1.6.5 -------------------------------
+12/12/2014: Modul w_slsafkir /  w_slspupuk
+
+-- menambahkan pilihan pada report (DOC,AFKIR,PUPUK) & menambahkan table master: categorymast
+-- menambahkan DO listing Pupuk : w_slsrep13[windows] & d_slsrep14[report]
+-- menambahkan DO listing Afkir : w_slsrep14[windows] & d_slsrep15[report]
+-- merubah inputan pada weight Quantity menjadi bilangan decimal sebelumnya integer:
+-- ISQL 
+-- alter table sdodet MODIFY qty decimal(10,2);
+-- update sysset SET textvl="PT BIBIT INDONESIA" where moducd = "GLOBAL" and settype = "COMPNAME";
+-- 
+ create table categorymast(
+   code char(1) not null,
+   cname char(32),
+   primary key (code)
+  );
+-- insert into categorymast(code,cname) values ('A','DOC');
+-- insert into categorymast(code,cname) values ('F','AFKIR');
+-- insert into categorymast(code,cname) values ('P','PUPUK');
+
+1. menambahkan input untuk afkir
+-- isql 
+INSERT INTO sysset values (
+{moducd      }  'SLSAF',
+{settype     }  'NUMSLSAF',
+{settnm      }  'Pengaturan nomor urut untuk DO AFKIR kode awal F',
+{textvl      }  '7F',
+{numevl      }  '0.000000',
+{statcd      }  '',
+{create_by   }  'dba',
+{create_date }  '01/12/2014',
+{update_by   }  'dba',
+{update_date }  '01/12/2014');
+
+2. menambahkan input untuk pupuk
+-- isql 
+INSERT INTO sysset values (
+{moducd      }  'SLSUP',
+{settype     }  'NUMSLSUP',
+{settnm      }  'Pengaturan nomor urut untuk DO PUPUK kode awal P',
+{textvl      }  '7P',
+{numevl      }  '0.000000',
+{statcd      }  '',
+{create_by   }  'dba',
+{create_date }  '01/12/2014',
+{update_by   }  'dba',
+{update_date }  '01/12/2014');
+
+
+3. menambahkan input untuk pullet
+-- isql 
+INSERT INTO sysset values (
+{moducd      }  'SLSUT',
+{settype     }  'NUMSLSUT',
+{settnm      }  'Pengaturan nomor urut untuk DO AYAM PULLET kode awal T',
+{textvl      }  '7T',
+{numevl      }  '0.000000',
+{statcd      }  '',
+{create_by   }  'dba',
+{create_date }  '01/12/2014',
+{update_by   }  'dba',
+{update_date }  '01/12/2014');
+
+
+
+------------------------------ Version 1.6.3 -------------------------------
+28/11/2014: Modul w_slsafkir /  w_slspupuk
+-- merubah tampilan dan menambahkan average : wgh dibagi qty
+-- merubah table sdodet menjadi 3 primary key:
+-- ISQL 
+-- alter table sdodet drop constraint "mis".u170_117;
+-- alter table sdodet add constraint primary key (donum,icode,uprice);
+-- update itemast set stat ='A' where icode NOT IN ('OB000002','OB000001','LT000001'); // status DOC
+-- update itemast set stat ='X' where icode IN ('OB000002','OB000001'); // status afkir
+-- update itemast set stat ='P' where icode IN ('LT000001'); // status pupuk
+
+------------------------------ Version 1.6.2 -------------------------------
+20/11/2014: Modul w_slsdo
+-- menambahkan field weekly untuk input data ayam pullet
+-- menambahkan menu input untuk pullet w_slspullet
+ISQL 
+--- alter table sdodet add  weekly decimal(10,2) DEFAULT 1;  
+
+------------------------------ Version 1.6.1 -------------------------------
+14/11/2014: Modul w_slsdo
+-- menambahkan field pqty untuk input data afkir dan pupuk
+-- menambahkan menu input untuk afkir / pupuk : w_slsafkir
+-- ISQL 
+	menambahkan itemast field : stat [ A-> DOC , X -> afkir, P -> PUPUK]
+
+ISQL 
+--- alter table sdodet add  pqty decimal(10,2) DEFAULT 0;  
+- menambhkan table untuk filter input data donumact
+create table sdonum2 
+  (                       
+    prefix char(3),       
+    prefix_cnt char(1),   
+    mindono decimal(7,0), 
+    maxdono decimal(7,0), 
+    nextdono decimal(8,0),
+    ttyid char(10),       
+    ceck char(1),        
+    ipfx char(1),         
+    fipfx char(1),
+    primary key (prefix)
+  );
+
+
+------------------------------ Version 1.6.0 -------------------------------
+31/10/2014: Modul w_login_sales
+-- menambahkan pilihan database pada saat login
+------------------------------ Version 1.5.9 -------------------------------
+24/10/2014: Modul sub dept (w_subdept)
+-- validasi untuk input subcode dengan menambahkan input kode ["X"+ initial nama + nomor urut]=> jakarta
+------------------------------ Version 1.5.8 -------------------------------
+10/10/2014: Modul dw (d_dd_customer)
+-- hide data customer yang terkena block sehingga tidak membingungkan saat input data.
+-- sales Order dan Receive Payment modul terkait
+
+------------------------------ Version 1.5.7 -------------------------------
+19/09/2014:
+-- penambahan modul import collmas to rcmas :w_arrep09
+-- penambahan validasi modul receive payment terkait dengan block list : w_arrc
+
+------------------------------ Version 1.5.6 -------------------------------
+12/09/2014:
+-- penambahan modul import customer terkait dengan block list customer :w_arrep08
+
+------------------------------ Version 1.5.5 -------------------------------
+06 september 2014: request team CC(ary.wahyudi) modul: w_slsdo
+-- penambahan validasi untuk custmast yang kena block list tidak bisa disimpan
+- menambahkan field pada table custmast : blist [Y,N]
+-- isql db
+-- alter table custmast add blist char(1) default 'N'
+
+------------------------------ Version 1.5.4 -------------------------------
+29 agustus 2014: request team CC Modul : w_arrupddoact
+- penambahan log history prosses pada update DO Actual (wf_log_data)
+-- SQL:
+ create table syshist(
+    userid        char(16), 
+    logdate  			date,     
+    is_table      char(18), 
+    is_stat       char(18), 
+    description   char(255)
+);
+
+------------------------------ Version 1.5.3 -------------------------------
+14 agustus 2014: request by indah : modul w_arrc
+- penambahan validasi untuk nomor tts tidak boleh ada duplikat
+
+------------------------------ Version 1.5.2 -------------------------------
+22 juli 2014: request by Mr.wansen : modul w_arrc, w_arrcexport
+- Penambahan action export receive payment 
+- tambahkan setting : 7z_program = "C:\7za.exe" pada appl.ini
+-- SQL
+- menambah field pada table rcmas: is_exprt [0,1] 1-> telah di export
+- 1. alter table rcmas add is_exprt char(1) default '0' ;
+- 2. update rcmas set is_exprt ='1' where 1=1 ;
+
+------------------------------ Version 1.5.1 -------------------------------
+04 juli 2014 : request by sukma
+- Perubahan untuk enable input act donum diawal pada sales order untuk 
+  memudahkan dalam penginputan data (mandatory) 
+
+------------------------------ Version 1.5.0 -------------------------------
+26 Juni 2014 : request by mrs.yuli : modul w_slsrep12
+- Penambahan menu DOC SALES REPORT pada menu sales 
+
+------------------------------ Version 1.4.9 -------------------------------
+05 April 2014
+- Perbaikan report receipt listing, penambahan kolom refnum sebagai no TTS
+
+------------------------------ Version 1.4.8 -------------------------------
+17 Maret 2014
+- Perubahan nama "Acknowledged By" dari Mr. Lou Joo Hwa menjadi Bpk. Ary Wahyuni
+
+------------------------------ Version 1.4.7 -------------------------------
+02 September 2013
+- Penambahan validasi prefix donumact sesuai setting di appl.ini
+- Penambahan validasi filter no DO actual tidak boleh ganda
+
+------------------------------ Version 1.4.6 -------------------------------
+07 Mei 2013
+- Perbaikan validasi export sales, status X (SO Cancel) tidak diikutkan export
+
+------------------------------ Version 1.4.5 -------------------------------
+09 Maret 2013
+- Perbaikan penamaan subject dan penamaan file export di modul export sales
+  subject : "Data Sales DOC [tgl awal] s/d [tgl akhir]
+  file export : "[tgl awal, format ddmmyyyy]_[tgl akhir, format ddmmyyyy]
+  
+------------------------------ Version 1.4.4 -------------------------------
+21 Februari 2013
+- Perbaikan validasi saat input subdept, kode subdept harus diawali dengan huruf "XJ"
+
+------------------------------ Version 1.4.3 -------------------------------
+14 Februari 2013
+- Penambahan validasi saat input subdept, kode subdept harus diawali dengan  huruf "X"
+- Perbaikan modul export supaya bisa eksekusi file c:\7zip.exe di folder read only
+
+------------------------------ Version 1.4.2 -------------------------------
+30 Januari 2013
+- Penambahan tool export dan import di modul Service Order (SO)
+- Peralihan database per 1 Feb 2013
+
+------------------------------ Version 1.4.1 -------------------------------
+04 Januari 2013
+- Penambahan filter stat <> "X" untuk memilih item code
+- Perbaikan judul kolom Qty (Ekor) di report alamat bongkar
+- Perubahan kolom transport menjadi  No SO dan Area menjadi Lokasi subdept
+  di report Daily Sales Report
+  
+------------------------------ Version 1.4.0 -------------------------------
+11 Desember 2012
+- Penambahan kolom "No. DO Act" di Daily Sales Report
+- Perbaikan report alamat bongkar by product, ditambahkan group by donum
+
+
+------------------------------ Version 1.3.9 -------------------------------
+22 November 2012
+- Penambahan Modul Update No DO Aktual
+- Penambahan kolom "Act DO Num." di modul Service Order
+- Penambahan kolom "SO Num." di masing-masing Report Alamat Bongkar
+- Penambahan kolom "No DO Act" dan "Subdept" di Report Invoice Listing
+
+
+------------------------------ Version 1.3.8 -------------------------------
+11 Oktober 2012
+- Perubahan Delivery Order menjadi Sales Order
+- Penambahan enable atau disable block DO di sysset
+
+
+------------------------------ Version 1.3.7 -------------------------------
+25 September 2012
+- Penambahan tulisan tanggal cetak dan perjanjian di "Customer Monthly Trans"
+  (Rekening Koran Pelanggan) dan tempat sign untuk Customer
+- Perbaikan Print out customer history, sebelum nya hanya customer yang punya
+  history perubahan saja yang tampil, sekarang semua customer bisa ditampilkan
+  
+------------------------------ Version 1.3.6 -------------------------------
+12 Juni 2012
+- Penambahan filter "supplier dihitung hutang", di "Monthly Sales Report" dan 
+  "Monthly Sales Report 2"
+- Penyesuaian report "Invoice Listing", bisa digenerate untuk semua customer dan
+  ditambahkan kolom supplier.
+- Penyesuaian "Daily Sales Report", font untuk report tersebut di ubah menjadi 
+  agak kecil (menjadi font 8 yang  sebelum nya menggunakan font 10) untuk menyesuaikan
+  nama subdept yang agak panjang
+  
+------------------------------ Version 1.3.5 -------------------------------
+26 Oktober 2010
+- Perbaikan perhitungan customer grade
+
+------------------------------ Version 1.3.4 -------------------------------
+31 Agustus 2010
+- Penambahan kolom customer di laporan receipt listing
+
+------------------------------ Version 1.3.3 -------------------------------
+25 Juni 2010
+- Penambahan kolom trspt decimal(8,2) di table sdodet
+- Penyesuaian semua report dan function untuk menyertakan perhitungan trspt
+
+------------------------------ Version 1.3.2 -------------------------------
+14 April 2010
+- Penambahan laporan baru "Payment to invoice evaluation"
+
+------------------------------ Version 1.3.2 -------------------------------
+10 maret 2010
+- Penambahan laporan baru "Customer Aging"
+
+------------------------------ Version 1.3.1 -------------------------------
+27 January 2010
+- Penambahan laporan baru "Invoice Listing"
+
+------------------------------ Version 1.3.0 -------------------------------
+5 januari 2010
+- Convert ke PB 11.5
+
+
+------------------------------ Version 1.2.0 -------------------------------
+6 November 2009
+- Penambahan receipt listing per customer
+- Penambahan laporan DO Listing per customer
+
+
+------------------------------ Version 1.1.1 -------------------------------
+7 september 2009
+- fix bug di modul DO, untuk subdept dan customer dd window
+
+------------------------------ Version 1.1.0 -------------------------------
+29 Agustus 2009
+- fix bug di laporan doc entering schedule 
+
+------------------------------ Version 1.0.0 -------------------------------
+4 agustus 2008
+- Penambahan table applog, untuk menggantikan syslog
+- Penambahan modul aktivasi DO yang di jalankan oleh bag. Credit Control
+
+10 April 2008
+- perubahan modul report monthly, penambahan subreport item summary
+
+Perubahan tgl 17 apr 2007
+- penambahan tabel sysset
+- nomor DO ambil dari table sysset
+- nama company ambil dari sysset
+- pengapusan table company ( ganti memakai sysset)
+- penghapusan company setup dari menu administrator ( beserta modulnya)
+
+> Dilakukan penambahan DataWindow dan Window dengan nama "d_area","dd_area","w_area"
+
+> Penambahan validasi dilakukan pada "w_subdept","w_itemast","w_supplier","w_customer",
+  "w_arcn","w_ardn","w_arrc"
+  	
+> Window "w_subdept" dilakukan penambahan validasi pada
+  "wf_check_delete" yaitu tidak bisa melakukan "delete" sebelum memilih data
+   dan hanya bisa di edit tanpa bisa di hapus 
+  "wf_check_edit" yaitu tidak bisa melakukan "delete" sebelum memilih data
+  "wf_check_fileds" yaitu antisipasi bila field "Customer ID","Subdept Code","Nama","ko
+   tidak diisi atau kosong, dan antisipasi duplicate "Subdept Code" pada "Customer ID" yang sama
+  "wf_edit" yaitu tidak bisa merubah "Customer ID" dan "Subdept Code" untuk antisipasi
+   jika sudah digunakan di "Delivery Order" 		
+> DataWindow "d_subdept" dilakukan perubahan pada field "area" yang semula 
+  "DropdownListBox" diganti dengan "DropDownDW" karena terhubung dengan tabel area
+
+> Window "w_itemast" dilakukan penambahan validasi pada
+  "wf_check_delete" yaitu tidak bisa melakukan "delete" sebelum memilih data
+   dan hanya bisa di edit tanpa bisa di hapus 
+  "wf_check_edit" yaitu tidak bisa melakukan "edit" sebelum memilih data
+  "wf_check_fileds" yaitu antisipasi bila field "Item Code","Description","UOM","Item Type"
+   tidak diisi atau kosong, dan field "Unit/Meas" diisi dengan nilai minus serta
+   antisipasi duplicate  "Item Code"  
+  "wf_post_add" yaitu memberikan nilai default 0 (nol) di field "Unit/Meas" 
+> DataWindow "d_itemast" dilakukan perubahan pada field "Unit/Meas" yang semula
+  "Edit" diganti dengan "EditMask"
+  
+> Window "w_supplier" dilakukan penambahan validasi pada
+  "wf_check_delete" yaitu tidak bisa melakukan "delete" sebelum memilih data
+   dan hanya bisa di edit tanpa bisa di hapus 
+  "wf_check_edit" yaitu tidak bisa melakukan "edit" sebelum memilih data
+  "wf_check_fileds" yaitu antisipasi bila field "Supplier Code","Name"
+   tidak diisi atau kosong, dan antisipasi duplicate  "Supplier Code"
+   
+> Window "w_customer" dilakukan penambahan validasi pada
+  "wf_check_delete" yaitu tidak bisa melakukan "delete" sebelum memilih data
+   dan hanya bisa menghapus pada data yang masih berstatus "active"
+  "wf_check_edit" yaitu tidak bisa melakukan "edit" sebelum memilih data
+   dan hanya bisa edit data yang masih berstatus "active"
+  "wf_check_fileds" yaitu antisipasi bila field "Customer ID","Name","Kota","Status : Open atau Internal Market" 
+   tidak diisi atau kosong, dan antisipasi duplicate  "Customer ID"
+  "wf_post_add" yaitu memberikan nilai default "1" atau memberikan status "active"
+   saat tombol "add" diclick
+> DataWindow "d_custmast" dilakukan perubahan pada field "area" yang semula 
+  "DropDownListBox" diganti dengan "DropDownDW" karena terhubung dengan tabel area
+  
+> Window "w_arcn" dilakukan penambahan validasi pada
+  "wf_check_delete" yaitu tidak bisa melakukan "delete" sebelum memilih data
+   dan hanya bisa menghapus pada data yang masih berstatus "A"
+  "wf_check_edit" yaitu tidak bisa melakukan "edit" sebelum memilih data
+   dan hanya bisa edit data yang masih berstatus "A"
+  "wf_check_fileds" yaitu antisipasi bila field "Customer","Date"
+   tidak diisi atau kosong, dan ,"Amount" diisi dengan nilai minus
+  "wf_post_add" yaitu memberikan nilai default 0 (nol) pada field "Amount"
+
+> Window "w_ardn" dilakukan penambahan validasi pada
+  "wf_check_delete" yaitu tidak bisa melakukan "delete" sebelum memilih data
+   dan hanya bisa menghapus pada data yang masih berstatus "A"
+  "wf_check_edit" yaitu tidak bisa melakukan "edit" sebelum memilih data
+   dan hanya bisa edit data yang masih berstatus "A"
+   "wf_check_fileds" yaitu antisipasi bila field "Customer","Date"
+   tidak diisi atau kosong, dan ,"Amount" diisi dengan nilai minus
+  "wf_post_add" yaitu memberikan nilai default 0 (nol) pada field "Amount"
+
+> Window "w_arrc" dilakukan penambahan validasi pada
+  "wf_check_delete" yaitu tidak bisa melakukan "delete" sebelum memilih data
+   dan hanya bisa menghapus pada data yang masih berstatus "A"
+  "wf_check_edit" yaitu tidak bisa melakukan "edit" sebelum memilih data
+   dan hanya bisa edit data yang masih berstatus "A"
+  "wf_check_fileds" yaitu antisipasi bila field "Customer","Date"
+   tidak diisi atau kosong, dan ,"Amount" diisi dengan nilai minus
+  "wf_post_add" yaitu memberikan nilai default 0 (nol) pada field "Amount"
+
+> window "w_slsdo" dilakukan penambahan validasi pada 
+  "wf_check_edit" yaitu tidak bisa melakukan "edit" sebelum memilih data
+  
+> DataWindow "d_dd_customer" dilakukan penambahan validasi untuk tidak menampilkan "Customer ID"
+  yang tidak aktif atau dengan status "2"
+
+> Data Window "d_slsrep01","d_slsrep01b","d_slsrep02","d_slsrep03" dilakukan perubahan  
+  pada text nama untuk "Prepared by," yang semula permanen dirubah menjadi sesuai "user_id" 
+> window "w_slsrep01","w_slsrep02","w_slsrep03" ditambahkan syntax sesuai perubahan di atas
